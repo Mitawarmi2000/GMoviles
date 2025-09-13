@@ -174,11 +174,15 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 
 #### Tácticas
 
-- **Mapeo colaborativo de rutas y paraderos**: A través de incentivos a usuarios y conductores, se fomentará la participación ciudadana para alimentar el sistema con datos reales de operación.
-- **Sin necesidad de registro obligatorio**: Reducimos fricciones para nuevos usuarios, permitiendo acceso inmediato a la información básica sobre rutas y paraderos.
-- **Interfaz de bajo consumo y navegación offline**: Considerando la limitada conectividad en algunas zonas, se desarrollará una versión ligera de la aplicación que funcione con funcionalidades clave sin conexión.
-- **Perfiles verificados de conductores**: Se brindará mayor confianza al usuario mostrando información básica validada de los conductores, sin necesidad de formalizarlos completamente en un inicio.
-- **Monitoreo de métricas locales**: Nos enfocaremos en indicadores de adopción por distrito y ruta, para priorizar mejoras específicas por región y escalar de forma controlada.
+- **Mapeo colaborativo gamificado:** Incentivar a usuarios y conductores a alimentar el sistema con información de rutas y paraderos mediante recompensas visibles en la app.
+
+- **Acceso sin fricciones:** Mantener el acceso inmediato a la información sin necesidad de registro obligatorio, aumentando la adopción en usuarios nuevos.
+
+- **Perfiles básicos verificados:** Mostrar información validada de conductores y vehículos para reforzar seguridad sin requerir formalización estricta.
+
+- **Canales de distribución diferenciados:** Promoción no solo digital, sino también a través de radios locales, terminales comunales y asociaciones de transporte.
+
+- **Monitoreo por región:** Uso de métricas locales de adopción (por distrito o ruta) para priorizar mejoras y generar casos de éxito escalables a nivel nacional.
 
 ## 2.2. Entrevistas
 #### 2.2.1. Diseño de entrevistas
