@@ -157,16 +157,20 @@
 </table>
 
 </body>
+
 ### 2.1.2 Estrategias y tácticas frente a competidores
 
-Para enfrentar el entorno competitivo, **Frock** adoptará estrategias diferenciadoras que aprovechen sus ventajas comparativas frente a plataformas como **Moovit**, **RedBus** y **QuickRide**, enfocándose en su conocimiento del contexto rural y periférico peruano y en su cercanía con el transporte colectivo informal.
+Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciadoras que refuercen sus ventajas frente a Moovit, RedBus y QuickRide. La clave estará en capitalizar su condición de pionera en el transporte colectivo informal interurbano del Perú, generando barreras de entrada mediante alianzas locales, mapeo colaborativo y un enfoque inclusivo adaptado a contextos rurales y periurbanos.
 
 #### Estrategias
 
-- **Enfoque en nicho no atendido**: Mientras Moovit y RedBus cubren principalmente rutas urbanas y servicios formales, Frock se especializará en zonas desatendidas por el transporte tradicional, ofreciendo visibilidad y organización a un sistema que actualmente opera sin estructura.
-- **Adaptación cultural y tecnológica**: A diferencia de sus competidores internacionales, Frock se desarrollará desde el entendimiento de las costumbres locales, diseñando una interfaz accesible incluso para usuarios con baja alfabetización digital.
-- **Crecimiento mediante alianzas locales**: Frock buscará colaborar con asociaciones de conductores, municipios y comunidades para generar confianza, acceso a información validada y adopción progresiva del servicio.
-- **Iteración constante basada en datos del usuario**: Utilizaremos técnicas Lean UX para validar con rapidez nuevas funcionalidades, priorizando aquellas que resuelvan las necesidades reales de los pasajeros y conductores.
+- **Enfoque en nicho desatendido:** Mientras Moovit, RedBus y QuickRide se concentran en transporte urbano y formal, Frock se consolidará en el espacio rural e informal, aportando organización y confianza a un sistema invisible para las demás plataformas.
+
+- **Diferenciación cultural y comunitaria:** Se priorizará la participación ciudadana (conductores y pasajeros) en el mapeo y la validación de rutas, creando una base de datos viva que los grandes competidores no podrían replicar fácilmente.
+
+- **Alianzas estratégicas locales:** Colaboración con municipalidades, asociaciones de transporte y ONGs de movilidad para legitimar la plataforma, generar confianza y asegurar una adopción más rápida en zonas rurales.
+
+- **Innovación ligera y accesible:** Interfaz diseñada para usuarios con baja alfabetización digital, bajo consumo de datos y funcionalidades clave en modo offline, asegurando cobertura donde otras apps fallan.
 
 #### Tácticas
 
