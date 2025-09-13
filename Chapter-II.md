@@ -1,15 +1,162 @@
 # Capítulo II: Requirements Elicitation & Analysis
 ## 2.1. Competidores
 ### 2.1.1. Análisis competitivo
-| **Nombre**             | **Moovit**                                                                                                                                   | **RedBus**                                                                                             | **QuickRide**                                                                                                          | **Frock (propuesta)**                                                                                                                                   |
-|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Overview**           | Plataforma global para planificar viajes en transporte público, incluyendo colectivos y buses, con mapas, horarios y rutas.                 | Plataforma digital de compra de pasajes en buses interprovinciales en LATAM y Asia.                   | App india para compartir viajes al trabajo (carpooling) entre particulares con rutas fijas.                           | Plataforma enfocada en el transporte colectivo informal interurbano en zonas rurales y periféricas de Perú. Informa sobre paraderos, rutas, disponibilidad y tarifas. |
-| **Ventajas Competitivas** | Amplia cobertura internacional, mapas en tiempo real, integración con transporte formal e informal.                                         | Facilita pagos seguros y reservas anticipadas, alianzas con empresas de buses formales.               | Permite compartir autos con rutas definidas entre compañeros de trabajo, bajo costo y menor congestión.              | Adaptación cultural y tecnológica al entorno rural y periférico peruano, interfaz sin registro obligatorio, visibilidad de conductores informales, enfoque flexible e inclusivo. |
-| **Modelo de Negocio**  | Freemium para usuarios, venta de datos a operadores de transporte y gobiernos.                                                              | Comisión por pasaje vendido, acuerdos con empresas de transporte.                                     | Comisión por viaje compartido, modelo B2C y B2B.                                                                      | Modelo freemium: gratuito para usuarios, monetización a futuro por suscripciones o tarifas a conductores u organizaciones aliadas.                  |
-| **Usuarios Objetivo**  | Usuarios urbanos y suburbanos que usan transporte público.                                                                                  | Usuarios que viajan entre ciudades con servicios de buses formales.                                   | Profesionales que comparten auto en horarios laborales.                                                               | Pasajeros de zonas rurales o periurbanas (20-60 años), conductores informales independientes, municipios o asociaciones de transporte.              |
-| **Tecnologías Clave**  | GPS, API de mapas, predicción de llegada, alertas de tráfico.                                                                               | Pasarela de pago, integración con operadores formales.                                                 | Geolocalización, agrupación por rutas y horarios.                                                                    | GPS, interfaz simple y perfiles verificados de conductor, mapeo colaborativo de rutas y paraderos.                                                  |
-| **Debilidades**        | Requiere conectividad constante, enfoque urbano.                                                                                            | No cubre colectivos ni rutas informales.                                                               | Limitado a carpooling urbano, no apto para zonas rurales.                                                             | Depende de la adopción digital en zonas con conectividad limitada; requiere mapeo inicial colaborativo.                                             |
+<body>
+<table border="1">
+  <tr>
+    Competitive Analysis Landscape
+  </tr>
+  <tr>
+    <td>¿Por qué llevar a cabo este análisis?</td>
+    <td colspan="6">
+        Se realiza este análisis para entender el entorno competitivo, detectar
+        oportunidades de diferenciación, minimizar los riesgos y construir una
+        propuesta de valor sólida que pueda adaptarse a los usuarios de mejor manera.
+    </td>
+  </tr>
 
+  <tr>
+    <th colspan="2">StartUps</th>
+    <th>Frock(Propuesta)</th>
+    <th>Moovit</th>
+    <th>RedBus</th>
+    <th>QuickRide</th>
+    
+  </tr>
+
+  <tr>
+    <td rowspan="2">Perfil</td>
+    <td>Overview</td>
+    <td>
+     Plataforma enfocada en el transporte colectivo informal interurbano en zonas rurales y periféricas de Perú.
+     Informa sobre paraderos, rutas, disponibilidad y tarifas.
+    </td>
+    <td>
+     App global de movilidad urbana que planifica viajes con transporte público
+    </td>
+    <td>
+     App para la compra de pasajes de buses interprovinciales y rutas dentro del país.
+    </td>
+    <td>
+     App de carpooling ridesharing para usuarios que comparten trayectos fijos, 
+     especialmente para commuting al trabajo.
+    </td>
+  </tr>
+  <tr>
+    <td>Ventaja Competitiva</td>
+    <td>
+     Adaptación cultural y tecnológica al entorno rural y periférico peruano, interfaz sin registro obligatorio, 
+     visibilidad de conductores informales, enfoque flexible e inclusivo.
+    </td>
+    <td>
+     Amplia cobertura internacional, mapas en tiempo real, integración con transporte formal e informal.
+    </td>
+    <td>
+     Facilita pagos seguros y reservas anticipadas, alianzas con empresas de buses formales.
+    </td>
+    <td>
+     Permite compartir autos con rutas definidas entre compañeros de trabajo, bajo costo y menor congestión.
+    </td>
+  </tr>
+
+  <tr>
+    <td rowspan="2">Perfil de Marketing</td> 
+    <td>Mercado Objetivo</td>
+    <td>
+     Pasajeros de zonas rurales o peri urbanas (20-60 años), conductores informales independientes, 
+    municipios o asociaciones de transporte.
+    </td>
+    <td>
+     Usuarios urbanos y suburbanos que usan transporte público.   
+    </td>
+    <td>
+      Usuarios que viajan entre ciudades con servicios de buses formales.  
+    </td>
+    <td>
+     Profesionales que comparten auto en horarios laborales.
+    </td>
+  </tr>
+  <tr>
+    <td>Estrategias de Marketing</td>
+    <td>
+     Crear promotores locales en pueblos y distritos, aliarse con municipalidades y 
+     gobiernos locales para una mayor difusión, realizar ferias móviles en pueblos/distritos
+    con stands presentando la app como solución comunitaria, crear contenido en lenguas locales
+    mostrando testimonios de usuarios y conductores reales en el entorno rural.
+    </td>
+    <td>
+     Suscripción con funciones exclusivas y sin anuncios, 
+     publicidad basada en la localización, heat maps para anunciantes, 
+     alianzas para publicidad nativa en Latinoamérica.
+    </td>
+    <td>
+     Utilización de IA generativa para crear anuncios personalizados, 
+     colaboración con plataformas de insights para segmentar y personalizar la experiencia del usuario, 
+     campañas en redes sociales. 
+    </td>
+    <td>
+     Branding físico/local en edificios residenciales, publicidad en ascensores, 
+     campañas offline combinadas con digital, para lograr recordación en espacios de uso cotidiano.
+    </td>
+  </tr>
+  <tr>
+    <td rowspan="3">Perfil de Producto</td>
+    <td>Productos & Servicios</td>
+    <td>GPS, interfaz simple y perfiles verificados de conductor, mapeo colaborativo de rutas y paraderos.</td>
+    <td>GPS, API de mapas, predicción de llegada, alertas de tráfico./td>
+    <td>Pasarela de pago, integración con operadores formales.</td>
+    <td>Geolocalización, agrupación por rutas y horarios.</td>
+  </tr>
+  <tr>
+    <td>Precios & Servicios</td>
+    <td>Modelo freemium: gratuito para usuarios, monetización a futuro por suscripciones o tarifas a 
+        conductores u organizaciones aliadas.</td>
+    <td>Freemium para usuarios, venta de datos a operadores de transporte y gobiernos.</td>
+    <td>Comisión por pasaje vendido, acuerdos con empresas de transporte.</td>
+    <td>Comisión por viaje compartido, modelo B2C y B2B.</td>
+  </tr>
+  <tr>
+    <td>Canales de Distribución</td>
+    <td>Oficinas de enlace, locales municipales, paradas oficiales de colectivos como puntos físicos de distribución 
+        e información, soporte./td>
+    <td>Integraciones con plataformas de transporte regionales, interurbanas: Moovit permite planificar + comprar 
+        boletos via asociaciones como Distribución (intercity) directamente desde la app</td>
+    <td>Agentes físicos/offline en pueblos/ciudades menores, para ventas de pasajes.</td>
+    <td>Presencia en ciudades importantes como Delhi-NCR, Bengaluru, Pune, Chennai, Mumbai, etc.</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Análisis SWOT</td>
+    <td>Fortalezas</td>
+    <td>Adaptación cultural al transporte colectivo informal rural y periurbano, 
+        donde otras apps no tienen presencia.</td>
+    <td>Datos en tiempo real de transporte público formal.</td>
+    <td>Alianzas fuertes con empresas de transporte formales.</td>
+    <td>Fuerte comunidad de usuarios profesionales en India.</td>
+  </tr>
+  <tr>
+    <td> Debilidades</td>
+    <td>Depende de la adopción digital en zonas con conectividad limitada; requiere mapeo inicial colaborativo.</td>
+    <td>Requiere conectividad constante, enfoque urbano.</td>
+    <td>No cubre colectivos ni rutas informales.</td>
+    <td>Limitado a carpooling urbano, no apto para zonas rurales.</td>
+  </tr>
+  <tr>
+    <td>Oportunidades</td>
+    <td>Digitalización acelerada en zonas rurales gracias al crecimiento de smartphones de bajo costo.</td>
+    <td>Expansión hacia transporte rural en LATAM, aún desatendido.</td>
+    <td>Escalar hacia colectivos informales o semi-formales.</td>
+    <td>Expandirse más allá del ámbito corporativo hacia comunidades más amplias.</td>
+  </tr>
+  <tr>
+    <td>Amenazas</td>
+    <td>Limitaciones de conectividad (zonas sin cobertura 4G/3G), que dificultan el acceso a tiempo real.</td>
+    <td>Competencia con Google Maps y Waze en zonas urbanas.</td>
+    <td>Mercado limitado a buses formales: si colectivos digitales despegan, perdería espacio.</td>
+    <td>Muy dependiente del segmento profesional urbano; difícil replicar en zonas rurales.</td>
+  </tr>
+</table>
+
+</body>
 ### 2.1.2 Estrategias y tácticas frente a competidores
 
 Para enfrentar el entorno competitivo, **Frock** adoptará estrategias diferenciadoras que aprovechen sus ventajas comparativas frente a plataformas como **Moovit**, **RedBus** y **QuickRide**, enfocándose en su conocimiento del contexto rural y periférico peruano y en su cercanía con el transporte colectivo informal.
