@@ -20,11 +20,11 @@ Asimismo, proporcionaremos mayores facilidades a los usuarios, haciendo su día 
     <td>Estudio en la carrera de Ingeniería de Software en la UPC. Tengo conocimientos en C++, Python, Angular, Vue, C#, Unity, Soy una persona que ama la tecnología y crecí en un ambiente de pura tecnología y videojuegos desde pequeño. Siempre he deseado con desarollar mi propio videojuegos. Considero que la comunicación y el aprendizaje constante son las claves que me permitirán progresar en el estudio y el trabajo en equipo.  </td>
   </tr>
   <tr>
-    <th colspan="2">Jesús Castillo Vidal</th>
+    <th colspan="2">Fabrizio Alexander Cutiri Agüero</th>
   </tr>
   <tr>
-    <td> <img src="resources/chapter-1/jesus_castillo_foto.png" style="width=300px" > </td>
-    <td>Actualmente estudiante de la carrera de Ingeniería de Software. Me gusta mucho explorar mi creatividad, los temas de desarrollo de producto, creación de startUps, son los que me llaman mucho la atención en el mundo de la tecnología. Programar para mí es un arte, siento que cada día lo voy perfeccionando poco a poco. La gran satisfacción la obtengo cuando logro poder resolver problemas del mundo que puedan ayudar a personas. Tengo vocación por enseñar, constantemente me estoy retando para mejorar y seguir ofreciendo valor a la comunidad durante mi existencia.</td>
+    <td> <img src="resources/chapter-1/fabrizio-foto.png" style="width:300px" > </td>
+    <td>Mi nombre es Fabrizio Cutiri, tengo 23 años y soy estudiante de la carrera de Ingeniería de Software. Me considero una persona responsable, puntual y capaz de adaptarse a diferentes situaciones. Elegí esta carrera porque me apasiona la tecnología y disfruto diseñar y desarrollar aplicaciones innovadoras que ayuden a las personas y empresas a solucionar sus problemas.</td>
   </tr>
 <tr>
     <th colspan="2"> Amir Gabriel Castro Sanchez </th>
