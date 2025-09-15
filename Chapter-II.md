@@ -362,7 +362,7 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 
 
 ## 2.3. Needfinding
-#### 2.3.1. User Personas
+### 2.3.1. User Personas
 
 **Segmento 1:**
 Jesús Ramírez representa al segmento de pasajeros frecuentes de rutas interurbanas informales (pueblo a pueblo), en especial trabajadores independientes o técnicos que se movilizan por necesidad laboral entre zonas periféricas.
@@ -374,7 +374,7 @@ Elmer representa al segmento de conductores de colectivos interurbanos, es decir
 
 ![Elmer Huamán](https://github.com/user-attachments/assets/d3f75053-5301-4229-8c7e-b5d6714284a8)
 
-#### 2.3.2. User Task Matrix
+### 2.3.2. User Task Matrix
 
 Los segmentos objetivo representados por los User Personas: Jesús Ramírez (pasajero interurbano) y Elmer Huamán (conductor de colectivo), serán una parte crucial para este 'User Task Matrix'. Las tareas listadas reflejan acciones que los usuarios ya realizan actualmente para alcanzar sus objetivos, independientemente del uso de una aplicación o tecnología. Esta matriz permite identificar oportunidades donde la solución digital de Frock puede generar mayor valor.
 
@@ -391,7 +391,7 @@ Los segmentos objetivo representados por los User Personas: Jesús Ramírez (pas
 
 > **F = Frecuencia** | **I = Importancia**
 
-#### 2.3.3. User Journey Mapping
+### 2.3.3. User Journey Mapping
 
 ![User Journey Mapp ](resources/chapter-2/user-journey-map.jpg)
 ### 2.3.4. Empathy Mapping
@@ -402,25 +402,10 @@ Los segmentos objetivo representados por los User Personas: Jesús Ramírez (pas
 #### *Segmento Objetivo 2:Conductores de colectivos*
 <img src="assets/Empathy3.png" style="width: 1000px">
 
-#### 2.3.5. As-is Scenario Mapping
-### AS - IS Scenario Mapping (Segmento: Pasajeros)
-| FASES             | Buscar ruta/colectivo                          | Planificar viaje                                      | Abordar colectivo                                  | Llegada a destino                                   |
-|------------------|------------------------------------------------|------------------------------------------------------|----------------------------------------------------|-----------------------------------------------------|
-| **DOING**        | Preguntar a personas locales sobre rutas y paraderos disponibles. | No hay información clara sobre tarifas, horarios o puntos de embarque. | Llegar al paradero y esperar hasta que el colectivo llegue. | Confirmar llegada al destino mediante señales visuales. |
-| **THINKING**     | "No sé si estoy en la ruta correcta."          | "No tengo idea de cuánto me costará ni a qué hora llegaré." | "¿Será este el colectivo correcto?"                 | "¿Llegué al lugar adecuado?"                        |
-| **FEELING**      | Confusión, incertidumbre.                     | Ansiedad, falta de control.                          | Desconfianza, incomodidad.                         | Estrés, falta de información.                      |
-
-### AS - IS Scenario Mapping (Segmento: Conductores)
-| FASES             | Activar disponibilidad                        | Captar pasajeros                                      | Realizar recorrido                                  | Finalizar viaje                                    |
-|------------------|------------------------------------------------|------------------------------------------------------|----------------------------------------------------|---------------------------------------------------|
-| **DOING**        | No hay plataforma para activar su disponibilidad. | Esperar en el paradero sin saber si hay pasajeros.    | Realizar el recorrido sin un control preciso de tiempo o pasajeros. | No hay seguimiento digital ni estadísticas sobre el viaje. |
-| **THINKING**     | "¿Habrá pasajeros para mi ruta hoy?"           | "¿Estarán los pasajeros listos cuando llegue?"        | "¿Voy a llegar a tiempo o hacer paradas innecesarias?" | "No tengo forma de saber si mi viaje fue rentable." |
-| **FEELING**      | Incertidumbre, frustración.                    | Inseguridad, desorganización.                         | Estrés, falta de control.                          | Desconcierto, falta de retroalimentación.          |
-
-## 2.4. Ubiquitous Language
+### 2.3.5. Ubiquitous Language
 El lenguaje ubicuo es una parte fundamental de la estrategia de UX. Se refiere al conjunto de términos y frases que, aunque no pertenecen al contexto técnico del desarrollo, se utilizan para expresar la lógica del negocio. Esto permite que todos los involucrados en el proyecto, incluidos los usuarios finales, puedan entender y participar mejor en el desarrollo del producto.
 
-## Glosario
+### Glosario
 
 **Colectivo (Vehículo Compartido):**  
 Automóvil que opera en rutas fijas entre pueblos o distritos, transportando varios pasajeros a la vez. Son esenciales en zonas rurales o alejadas, donde no hay transporte formal constante.
@@ -454,3 +439,31 @@ Supervisión del estado y movimiento de los colectivos registrados. Esto incluye
 
 **Coverage areas (Zonas de Cobertura):**  
 Áreas geográficas donde opera el servicio de colectivos registrados en la plataforma. Ayuda a delimitar las regiones con rutas disponibles y mejorar la planificación de nuevas expansiones.
+
+## 2.4. Requirements Specification
+
+### 2.4.1. User Stories
+
+### 2.4.2. Impact Mapping
+
+### 2.4.3. Product Backlog
+
+## 2.5. Strategic-Level Domain-Driven Design
+
+### 2.5.1. EventStorming
+
+#### 2.5.1.1. Candidate Context Discovery
+
+#### 2.5.1.2. Domain Message Flow Modeling
+
+#### 2.5.1.3. Bounded Context Canvases
+
+### 2.5.2. Context Mapping
+
+### 2.5.3. Software Architecture
+
+#### 2.5.3.1. Software Architecture Context Level Diagrams
+
+#### 2.5.3.2. Software Architecture Container Level Diagrams
+
+#### 2.5.3.3. Software Architecture Deployment Diagrams
