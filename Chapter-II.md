@@ -464,7 +464,7 @@ Supervisión del estado y movimiento de los colectivos registrados. Esto incluye
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
-Para el siguiente diagrama de contexto, se muestra la relación entre el sistema de gestión de transporte y los actores externos que interactúan con él. Se representan los dos tipos principales de usuarios: Pasajero, que busca y reserva rutas de transporte, y Gestor de Empresa, que administra rutas, horarios y paradas. También se incluyen los servicios externos utilizados por la plataforma, como el servicio de mapas (para visualización de rutas), el servicio de pagos (para procesar transacciones en línea) y el servicio de notificaciones (para envío de SMS y correos electrónicos).
+Para el siguiente diagrama de contexto, se muestra la relación entre el sistema de gestión de transporte y los actores externos que interactúan con él. Se representan los dos tipos principales de usuarios: Pasajero, que busca y reserva rutas de transporte, y Gestor de Empresa, que administra rutas, horarios y paradas. También se incluyen los servicios externos utilizados por la plataforma, como el servicio de mapas (para visualización de rutas), el servicio de pagos (para procesar transacciones en línea) y el servicio de notificaciones (para envío de SMS y correos electrónicos).<br>
 <img width="693" height="670" alt="image" src="https://github.com/user-attachments/assets/4bba7a29-b15d-4788-80ec-644c90e7d7d1" />
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
