@@ -463,6 +463,8 @@ Supervisión del estado y movimiento de los colectivos registrados. Esto incluye
 ### 2.5.3. Software Architecture
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
+<img width="693" height="670" alt="image" src="https://github.com/user-attachments/assets/4bba7a29-b15d-4788-80ec-644c90e7d7d1" />
+
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
