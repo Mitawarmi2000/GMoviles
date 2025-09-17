@@ -466,7 +466,9 @@ Supervisión del estado y movimiento de los colectivos registrados. Esto incluye
 <img width="693" height="670" alt="image" src="https://github.com/user-attachments/assets/4bba7a29-b15d-4788-80ec-644c90e7d7d1" />
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
-
+**Diagrama de contenedor del bounded context del Registro de Usuario:**<br>
+Este diagrama representa la arquitectura a nivel de contenedor para el flujo de registro de usuarios dentro del Bounded Context de Autenticación.
+Muestra los principales componentes involucrados en el proceso: validación de datos, encriptación de contraseñas, persistencia del usuario y generación de tokens.
 <img width="712" height="969" alt="image" src="https://github.com/user-attachments/assets/7d99fa5e-7642-4e76-92a8-490411224a1d" />
 
 <img width="561" height="796" alt="image" src="https://github.com/user-attachments/assets/96704170-eebe-4aaa-b48b-2b0ce9220d2d" />
