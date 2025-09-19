@@ -515,8 +515,26 @@ El siguiente diagrama de despliegue describe la infraestructura física y lógic
 #### 2.6.3.1. Domain Layer
 
 **Sub-Capa Model**<br>
-|  Tipo  |  Nombre  |  Descripción  |  Responsabilidad Principal  |  Relación con otros Elementos  |
-
+<table border="1">
+  <tr>
+    <th>Tipo</th>
+    <th>Nombre</th>
+    <th>Descripci&oacute;n</th>
+    <th>Responsabilidad Principal</th>
+    <th>Relaci&oacute;n con otros Elementos</th>
+  </tr>
+  <tr>
+    <td>Aggregate</td>
+    <td>Stop</td>
+    <td>Clase para definir un paradero de colectivo.</td>
+    <td>Representar y mantener el estado consistente de una parada dentro del bounded context de Stops, asegurando que los datos sean correctos y actualizados.</td>
+    <td>Se relaciona con los comandos de dominio. Puede ser consumido por otros bounded contexts, como Routes.</td>
+  </tr>
+  <tr>
+    <td>Commands</td>
+    <td>CreateStopCommand</td>
+  </tr>
+</table>
 
 #### 2.6.3.2. Interface Layer
 #### 2.6.3.3. Application Layer
