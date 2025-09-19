@@ -469,6 +469,18 @@ Supervisión del estado y movimiento de los colectivos registrados. Esto incluye
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
+Para el siguiente diagrama de contexto, se muestra la relación entre el sistema de gestión de transporte y los actores externos que interactúan con él. Se representan los dos tipos principales de usuarios: Pasajero, que busca y reserva rutas de transporte, y Gestor de Empresa, que administra rutas, horarios y paradas. También se incluyen los servicios externos utilizados por la plataforma, como el servicio de mapas (para visualización de rutas), el servicio de pagos (para procesar transacciones en línea) y el servicio de notificaciones (para envío de SMS y correos electrónicos).<br>
+<img width="693" height="670" alt="image" src="https://github.com/user-attachments/assets/4bba7a29-b15d-4788-80ec-644c90e7d7d1" />
+
 #### 2.5.3.2. Software Architecture Container Level Diagrams
+**Diagrama de contenedor del bounded context del Registro de Usuario:**<br>
+Este diagrama representa la arquitectura a nivel de contenedor para el flujo de registro de usuarios dentro del Bounded Context de Autenticación.
+Muestra los principales componentes involucrados en el proceso: validación de datos, encriptación de contraseñas, persistencia del usuario y generación de tokens.<br>
+<img width="712" height="969" alt="image" src="https://github.com/user-attachments/assets/7d99fa5e-7642-4e76-92a8-490411224a1d" />
+
+**Diagrama de contenedor del bounded context de Rutas:**<br>
+Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context de Rutas, encargado de la gestión de las rutas. Detalla cómo las solicitudes de usuarios y conductores fluyen a través de controladores y servicios, cómo la información se persiste en MySQL, y cómo el sistema se integra con servicios externos como Google Maps para validar rutas.<br>
+<img width="561" height="796" alt="image" src="https://github.com/user-attachments/assets/96704170-eebe-4aaa-b48b-2b0ce9220d2d" />
+
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
