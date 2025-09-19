@@ -479,6 +479,9 @@ Para el siguiente diagrama de contexto, se muestra la relación entre el sistema
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
+El siguiente diagrama de contenedores representa los principales componentes del sistema y cómo interactúan entre sí.
+Se muestra la aplicación móvil para pasajeros y conductores, el gestor de backend que centraliza la lógica de negocio, y los bounded contexts de IAM, Profile, Routes y Stops, así como la base de datos y la integración con Google Maps.
+
 <img width="1041" height="662" alt="image" src="https://github.com/user-attachments/assets/ade7fbe7-6256-48e1-bf6f-7954d9ce2c01" />
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
