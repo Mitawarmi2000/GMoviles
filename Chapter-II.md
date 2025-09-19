@@ -487,6 +487,9 @@ Se muestra la aplicación móvil para pasajeros y conductores, el gestor de back
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
 
+
+<img width="1705" height="543" alt="image" src="https://github.com/user-attachments/assets/a0b97d71-cfab-4f42-a7cd-6d37958be4e4" />
+
 ## 2.6. Tactical-Level Domain-Driven Design
 ### 2.6.1. Bounded Context: IAM
 ### 2.6.1.1. Domain Layer
