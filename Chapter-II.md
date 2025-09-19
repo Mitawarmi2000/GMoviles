@@ -242,7 +242,10 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 - ¿Te interesaría aparecer como “empresa recomendada”?
 
 #### 2.2.2. Registro de entrevistas
-#### Entrevista N°1 – Segmento 1
+
+**Segemento Objetivo:** Ciudadanos que usan colectivos para movilizarse
+
+#### Entrevista N°1
 ![entrevista_segmento1](assets/entrevista-adrian.jpg) 
 - Nombres: Juan
 - Apellidos: Pescoran
@@ -255,20 +258,20 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 
 ---
 
-#### Entrevistado N°2 - Segmento 1
-![entrevista2_segmento1](assets/entrevista-elvia.jpg) 
-- Nombre: Juan diego
-- Apellidos: Saiten
-- Edad: 21 años
-- Distrito: San Miguel
-- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
-- Duración: 00:05:44 minutos 
+#### Entrevistado N°2
+![entrevista2_segmento1](assets/entrevista-fabrizio.png) 
+- Nombre: Raquel 
+- Apellidos: Agüero Sulca
+- Edad: 52 años
+- Distrito: Chorrillos
+- URL Entrevista: 
+- Duración: 00:04:44 minutos 
 - Resumen:<br>
-   Juan Diego considera que el transporte público es una forma eficiente y económica de llegar a su destino. Sin embargo, comenta que en horas punta suele experimentar incertidumbre, ya que los conductores de colectivos a veces permanecen hasta 15 minutos esperando en un paradero antes de salir. Por ello, le gustaría contar con una aplicación que le permita visualizar su ruta de viaje y planificar mejor sus traslados.
+  La entrevistada se llama Raquel Agüero Sulca, tiene 52 años, trabaja como auxiliar de contabilidad y vive en Chorrillos. La entrevistada utiliza colectivos principalmente en horas punta, ya que el Metropolitano y los micros suelen estar llenos y la hacen perder tiempo. Sin embargo, reconoce que el transporte colectivo es informal y presenta dificultades: a veces los paraderos son intervenidos y cambian de lugar, lo que la ha llevado a equivocarse y perder tiempo, incluso teniendo que optar por un taxi como alternativa. Generalmente se entera de los paraderos porque suelen ubicarse en grifos o estaciones, pero como no son fijos, necesita preguntar a otras personas en la calle, lo que considera medianamente confiable, ya que no proviene de fuentes seguras. Ha tenido varios problemas para encontrar un paradero y cree que una aplicación que muestre paraderos, rutas y tarifas sería muy útil, siempre que ofrezca precios competitivos y accesibles frente a otras opciones de transporte. También le gustaría poder visualizar en un mapa la ubicación de los paraderos antes de salir, ya que le daría mayor comodidad y seguridad. En cuanto al tiempo de espera, sabe que no hay un horario fijo, pues depende de que los conductores llenen el vehículo, lo cual puede ser más lento si hay poca demanda. Por eso, considera importante que una aplicación muestre no solo las rutas, sino también la frecuencia de los colectivos y los precios.
   
 ---
 
-#### Entrevistado N°3 - Segmento 1
+#### Entrevistado N°3
 ![entrevista3_segmento1](assets/entrevista-amir.jpg) 
 - Nombres: Sammy
 - Apellidos: Lindo
@@ -280,7 +283,9 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
     Samy prefiere los colectivos por ser más rápidos que los taxis, aunque las paradas frecuentes pueden causar demoras. A menudo pierde tiempo por no tener información precisa sobre los paraderos. Para conocer rutas, pregunta a conocidos o consulta redes sociales, pero a veces la información es desactualizada. Cree que una app como Chapa Toruta sería útil para ver paraderos, rutas, precios y tiempos de espera en tiempo real, y sugiere incluir detalles como placas de los vehículos para mayor confianza.
 ---
 
-#### Entrevistado N°4 - Segmento 2
+**Segmento Objetivo:** Conductores de colectivo
+
+#### Entrevistado N°1
 ![entrevista1_segmento2](assets/entrevista-yasser1.jpg) 
 - Nombres: Juan Carlos
 - Apellidos: Ramirez
@@ -293,7 +298,7 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 
 ---
 
-#### Entrevistado N°5 - Segmento 2
+#### Entrevistado N°2
 ![entrevista2_segmento2](assets/entrevista-jesus.jpg) 
 - Nombres: Hairo
 - Apellidos: Cadillo
@@ -306,7 +311,7 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 
 ---
 
-#### Entrevistado N°6 - Segmento 2
+#### Entrevistado N°3
 ![entrevista3_segmento2](assets/entrevista-yasser2.jpg) 
 - Nombres: Juan David
 - Apellidos: Linares
@@ -362,7 +367,7 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 
 
 ## 2.3. Needfinding
-#### 2.3.1. User Personas
+### 2.3.1. User Personas
 
 **Segmento 1:**
 Jesús Ramírez representa al segmento de pasajeros frecuentes de rutas interurbanas informales (pueblo a pueblo), en especial trabajadores independientes o técnicos que se movilizan por necesidad laboral entre zonas periféricas.
@@ -374,7 +379,7 @@ Elmer representa al segmento de conductores de colectivos interurbanos, es decir
 
 ![Elmer Huamán](https://github.com/user-attachments/assets/d3f75053-5301-4229-8c7e-b5d6714284a8)
 
-#### 2.3.2. User Task Matrix
+### 2.3.2. User Task Matrix
 
 Los segmentos objetivo representados por los User Personas: Jesús Ramírez (pasajero interurbano) y Elmer Huamán (conductor de colectivo), serán una parte crucial para este 'User Task Matrix'. Las tareas listadas reflejan acciones que los usuarios ya realizan actualmente para alcanzar sus objetivos, independientemente del uso de una aplicación o tecnología. Esta matriz permite identificar oportunidades donde la solución digital de Frock puede generar mayor valor.
 
@@ -391,7 +396,7 @@ Los segmentos objetivo representados por los User Personas: Jesús Ramírez (pas
 
 > **F = Frecuencia** | **I = Importancia**
 
-#### 2.3.3. User Journey Mapping
+### 2.3.3. User Journey Mapping
 
 ![User Journey Mapp ](resources/chapter-2/user-journey-map.jpg)
 ### 2.3.4. Empathy Mapping
@@ -402,25 +407,10 @@ Los segmentos objetivo representados por los User Personas: Jesús Ramírez (pas
 #### *Segmento Objetivo 2:Conductores de colectivos*
 <img src="assets/Empathy3.png" style="width: 1000px">
 
-#### 2.3.5. As-is Scenario Mapping
-### AS - IS Scenario Mapping (Segmento: Pasajeros)
-| FASES             | Buscar ruta/colectivo                          | Planificar viaje                                      | Abordar colectivo                                  | Llegada a destino                                   |
-|------------------|------------------------------------------------|------------------------------------------------------|----------------------------------------------------|-----------------------------------------------------|
-| **DOING**        | Preguntar a personas locales sobre rutas y paraderos disponibles. | No hay información clara sobre tarifas, horarios o puntos de embarque. | Llegar al paradero y esperar hasta que el colectivo llegue. | Confirmar llegada al destino mediante señales visuales. |
-| **THINKING**     | "No sé si estoy en la ruta correcta."          | "No tengo idea de cuánto me costará ni a qué hora llegaré." | "¿Será este el colectivo correcto?"                 | "¿Llegué al lugar adecuado?"                        |
-| **FEELING**      | Confusión, incertidumbre.                     | Ansiedad, falta de control.                          | Desconfianza, incomodidad.                         | Estrés, falta de información.                      |
-
-### AS - IS Scenario Mapping (Segmento: Conductores)
-| FASES             | Activar disponibilidad                        | Captar pasajeros                                      | Realizar recorrido                                  | Finalizar viaje                                    |
-|------------------|------------------------------------------------|------------------------------------------------------|----------------------------------------------------|---------------------------------------------------|
-| **DOING**        | No hay plataforma para activar su disponibilidad. | Esperar en el paradero sin saber si hay pasajeros.    | Realizar el recorrido sin un control preciso de tiempo o pasajeros. | No hay seguimiento digital ni estadísticas sobre el viaje. |
-| **THINKING**     | "¿Habrá pasajeros para mi ruta hoy?"           | "¿Estarán los pasajeros listos cuando llegue?"        | "¿Voy a llegar a tiempo o hacer paradas innecesarias?" | "No tengo forma de saber si mi viaje fue rentable." |
-| **FEELING**      | Incertidumbre, frustración.                    | Inseguridad, desorganización.                         | Estrés, falta de control.                          | Desconcierto, falta de retroalimentación.          |
-
-## 2.4. Ubiquitous Language
+### 2.3.5. Ubiquitous Language
 El lenguaje ubicuo es una parte fundamental de la estrategia de UX. Se refiere al conjunto de términos y frases que, aunque no pertenecen al contexto técnico del desarrollo, se utilizan para expresar la lógica del negocio. Esto permite que todos los involucrados en el proyecto, incluidos los usuarios finales, puedan entender y participar mejor en el desarrollo del producto.
 
-## Glosario
+### Glosario
 
 **Colectivo (Vehículo Compartido):**  
 Automóvil que opera en rutas fijas entre pueblos o distritos, transportando varios pasajeros a la vez. Son esenciales en zonas rurales o alejadas, donde no hay transporte formal constante.
@@ -454,3 +444,90 @@ Supervisión del estado y movimiento de los colectivos registrados. Esto incluye
 
 **Coverage areas (Zonas de Cobertura):**  
 Áreas geográficas donde opera el servicio de colectivos registrados en la plataforma. Ayuda a delimitar las regiones con rutas disponibles y mejorar la planificación de nuevas expansiones.
+
+## 2.4. Requirements Specification
+
+### 2.4.1. User Stories
+
+### 2.4.2. Impact Mapping
+
+El Impact Mapping permite alinear los objetivos del proyecto con las necesidades de conductores de colectivos y pasajeros, mostrando cómo cada decisión impacta en la experiencia de ambos. Así, se convierte en una guía estratégica para diseñar soluciones que generen beneficios reales y respondan efectivamente a sus necesidades.
+
+![impact-mapping.png](assets/impact-mapping.png)
+
+
+### 2.4.3. Product Backlog
+
+## 2.5. Strategic-Level Domain-Driven Design
+
+### 2.5.1. EventStorming
+
+#### 2.5.1.1. Candidate Context Discovery
+
+#### 2.5.1.2. Domain Message Flow Modeling
+
+#### 2.5.1.3. Bounded Context Canvases
+
+### 2.5.2. Context Mapping
+
+### 2.5.3. Software Architecture
+
+#### 2.5.3.1. Software Architecture Context Level Diagrams
+
+Para el siguiente diagrama de contexto, se muestra la relación entre el sistema de gestión de transporte y los actores externos que interactúan con él. Se representan los dos tipos principales de usuarios: Pasajero, que busca y reserva rutas de transporte, y Gestor de Empresa, que administra rutas, horarios y paradas. También se incluyen los servicios externos utilizados por la plataforma, como el servicio de mapas (para visualización de rutas), el servicio de pagos (para procesar transacciones en línea) y el servicio de notificaciones (para envío de SMS y correos electrónicos).<br>
+<img width="693" height="670" alt="image" src="https://github.com/user-attachments/assets/4bba7a29-b15d-4788-80ec-644c90e7d7d1" />
+
+#### 2.5.3.2. Software Architecture Container Level Diagrams
+**Diagrama de contenedor del bounded context del Registro de Usuario:**<br>
+Este diagrama representa la arquitectura a nivel de contenedor para el flujo de registro de usuarios dentro del Bounded Context de Autenticación.
+Muestra los principales componentes involucrados en el proceso: validación de datos, encriptación de contraseñas, persistencia del usuario y generación de tokens.<br>
+<img width="712" height="969" alt="image" src="https://github.com/user-attachments/assets/7d99fa5e-7642-4e76-92a8-490411224a1d" />
+
+**Diagrama de contenedor del bounded context de Rutas:**<br>
+Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context de Rutas, encargado de la gestión de las rutas. Detalla cómo las solicitudes de usuarios y conductores fluyen a través de controladores y servicios, cómo la información se persiste en MySQL, y cómo el sistema se integra con servicios externos como Google Maps para validar rutas.<br>
+<img width="561" height="796" alt="image" src="https://github.com/user-attachments/assets/96704170-eebe-4aaa-b48b-2b0ce9220d2d" />
+
+
+#### 2.5.3.3. Software Architecture Deployment Diagrams
+
+
+## 2.6. Tactical-Level Domain-Driven Design
+### 2.6.1. Bounded Context: IAM
+### 2.6.1.1. Domain Layer
+#### 2.6.1.2. Interface Layer
+#### 2.6.1.3. Application Layer
+#### 2.6.1.4 Infrastructure Layer
+#### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
+#### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
+#### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
+#### 2.6.1.6.2. Bounded Context Database Design Diagram
+
+### 2.6.2. Bounded Context: Profile
+#### 2.6.2.1. Domain Layer
+#### 2.6.2.2. Interface Layer
+#### 2.6.2.3. Application Layer
+#### 2.6.2.4 Infrastructure Layer
+#### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
+#### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
+#### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
+#### 2.6.2.6.2. Bounded Context Database Design Diagram
+
+### 2.6.3. Bounded Context: Stops
+#### 2.6.3.1. Domain Layer
+#### 2.6.3.2. Interface Layer
+#### 2.6.3.3. Application Layer
+#### 2.6.3.4 Infrastructure Layer
+#### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
+#### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
+#### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
+#### 2.6.3.6.2. Bounded Context Database Design Diagram
+
+### 2.6.4. Bounded Context: Carriage Routes
+#### 2.6.4.1. Domain Layer
+#### 2.6.4.2. Interface Layer
+#### 2.6.4.3. Application Layer
+#### 2.6.4.4 Infrastructure Layer
+#### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
+#### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
+#### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
+#### 2.6.4.6.2. Bounded Context Database Design Diagram
