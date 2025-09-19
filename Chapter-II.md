@@ -242,7 +242,10 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 - ¿Te interesaría aparecer como “empresa recomendada”?
 
 #### 2.2.2. Registro de entrevistas
-#### Entrevista N°1 – Segmento 1
+
+**Segemento Objetivo:** Ciudadanos que usan colectivos para movilizarse
+
+#### Entrevista N°1
 ![entrevista_segmento1](assets/entrevista-adrian.jpg) 
 - Nombres: Juan
 - Apellidos: Pescoran
@@ -255,20 +258,20 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 
 ---
 
-#### Entrevistado N°2 - Segmento 1
-![entrevista2_segmento1](assets/entrevista-elvia.jpg) 
-- Nombre: Juan diego
-- Apellidos: Saiten
-- Edad: 21 años
-- Distrito: San Miguel
-- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
-- Duración: 00:05:44 minutos 
+#### Entrevistado N°2
+![entrevista2_segmento1](assets/entrevista-fabrizio.png) 
+- Nombre: Raquel 
+- Apellidos: Agüero Sulca
+- Edad: 52 años
+- Distrito: Chorrillos
+- URL Entrevista: 
+- Duración: 00:04:44 minutos 
 - Resumen:<br>
-   Juan Diego considera que el transporte público es una forma eficiente y económica de llegar a su destino. Sin embargo, comenta que en horas punta suele experimentar incertidumbre, ya que los conductores de colectivos a veces permanecen hasta 15 minutos esperando en un paradero antes de salir. Por ello, le gustaría contar con una aplicación que le permita visualizar su ruta de viaje y planificar mejor sus traslados.
+  La entrevistada se llama Raquel Agüero Sulca, tiene 52 años, trabaja como auxiliar de contabilidad y vive en Chorrillos. La entrevistada utiliza colectivos principalmente en horas punta, ya que el Metropolitano y los micros suelen estar llenos y la hacen perder tiempo. Sin embargo, reconoce que el transporte colectivo es informal y presenta dificultades: a veces los paraderos son intervenidos y cambian de lugar, lo que la ha llevado a equivocarse y perder tiempo, incluso teniendo que optar por un taxi como alternativa. Generalmente se entera de los paraderos porque suelen ubicarse en grifos o estaciones, pero como no son fijos, necesita preguntar a otras personas en la calle, lo que considera medianamente confiable, ya que no proviene de fuentes seguras. Ha tenido varios problemas para encontrar un paradero y cree que una aplicación que muestre paraderos, rutas y tarifas sería muy útil, siempre que ofrezca precios competitivos y accesibles frente a otras opciones de transporte. También le gustaría poder visualizar en un mapa la ubicación de los paraderos antes de salir, ya que le daría mayor comodidad y seguridad. En cuanto al tiempo de espera, sabe que no hay un horario fijo, pues depende de que los conductores llenen el vehículo, lo cual puede ser más lento si hay poca demanda. Por eso, considera importante que una aplicación muestre no solo las rutas, sino también la frecuencia de los colectivos y los precios.
   
 ---
 
-#### Entrevistado N°3 - Segmento 1
+#### Entrevistado N°3
 ![entrevista3_segmento1](assets/entrevista-amir.jpg) 
 - Nombres: Sammy
 - Apellidos: Lindo
@@ -280,7 +283,9 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
     Samy prefiere los colectivos por ser más rápidos que los taxis, aunque las paradas frecuentes pueden causar demoras. A menudo pierde tiempo por no tener información precisa sobre los paraderos. Para conocer rutas, pregunta a conocidos o consulta redes sociales, pero a veces la información es desactualizada. Cree que una app como Chapa Toruta sería útil para ver paraderos, rutas, precios y tiempos de espera en tiempo real, y sugiere incluir detalles como placas de los vehículos para mayor confianza.
 ---
 
-#### Entrevistado N°4 - Segmento 2
+**Segmento Objetivo:** Conductores de colectivo
+
+#### Entrevistado N°1
 ![entrevista1_segmento2](assets/entrevista-yasser1.jpg) 
 - Nombres: Juan Carlos
 - Apellidos: Ramirez
@@ -293,7 +298,7 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 
 ---
 
-#### Entrevistado N°5 - Segmento 2
+#### Entrevistado N°2
 ![entrevista2_segmento2](assets/entrevista-jesus.jpg) 
 - Nombres: Hairo
 - Apellidos: Cadillo
@@ -306,7 +311,7 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 
 ---
 
-#### Entrevistado N°6 - Segmento 2
+#### Entrevistado N°3
 ![entrevista3_segmento2](assets/entrevista-yasser2.jpg) 
 - Nombres: Juan David
 - Apellidos: Linares
