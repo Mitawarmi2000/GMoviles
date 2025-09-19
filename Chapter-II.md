@@ -513,6 +513,11 @@ El siguiente diagrama de despliegue describe la infraestructura física y lógic
 
 ### 2.6.3. Bounded Context: Stops
 #### 2.6.3.1. Domain Layer
+
+**Sub-Capa Model**<br>
+|  Tipo  |  Nombre  |  Descripción  |  Responsabilidad Principal  |  Relación con otros Elementos  |
+
+
 #### 2.6.3.2. Interface Layer
 #### 2.6.3.3. Application Layer
 #### 2.6.3.4 Infrastructure Layer
