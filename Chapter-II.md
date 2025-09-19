@@ -451,6 +451,11 @@ Supervisión del estado y movimiento de los colectivos registrados. Esto incluye
 
 ### 2.4.2. Impact Mapping
 
+El Impact Mapping permite alinear los objetivos del proyecto con las necesidades de conductores de colectivos y pasajeros, mostrando cómo cada decisión impacta en la experiencia de ambos. Así, se convierte en una guía estratégica para diseñar soluciones que generen beneficios reales y respondan efectivamente a sus necesidades.
+
+![impact-mapping.png](assets/impact-mapping.png)
+
+
 ### 2.4.3. Product Backlog
 
 ## 2.5. Strategic-Level Domain-Driven Design
