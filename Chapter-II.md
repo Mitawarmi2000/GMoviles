@@ -486,7 +486,7 @@ Se muestra la aplicación móvil para pasajeros y conductores, el gestor de back
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
-
+El siguiente diagrama de despliegue describe la infraestructura física y lógica en la que se ejecutan los principales componentes del sistema.
 
 <img width="1705" height="543" alt="image" src="https://github.com/user-attachments/assets/a0b97d71-cfab-4f42-a7cd-6d37958be4e4" />
 
