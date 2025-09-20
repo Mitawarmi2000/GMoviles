@@ -251,7 +251,7 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 - Apellidos: Pescoran
 - Edad: 19 años
 - Ciudad: Trujillo 
-- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
+- URL Entrevista: https://shorturl.at/B4oB4
 - Duración: 00:08:46 minutos 
 - Resumen:<br>
     Juan, un estudiante universitario de 19 años, comentó que en su experiencia los "jaladores" de colectivos suelen brindar información incorrecta sobre las rutas, lo que genera confusión. Actualmente, su método para abordar un colectivo consiste en preguntar directamente al conductor sobre el recorrido. Además, considera que sería muy útil poder planificar su viaje antes de salir, especialmente porque en Trujillo no existen paraderos formales. Finalmente, destacó que valoraría mucho un sistema confiable que le permita identificar qué colectivos lo pueden llevar a su destino de manera precisa.
@@ -264,24 +264,14 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 - Apellidos: Agüero Sulca
 - Edad: 52 años
 - Distrito: Chorrillos
-- URL Entrevista: 
+- URL Entrevista: https://shorturl.at/B4oB4
 - Duración: 00:04:44 minutos 
 - Resumen:<br>
   La entrevistada se llama Raquel Agüero Sulca, tiene 52 años, trabaja como auxiliar de contabilidad y vive en Chorrillos. La entrevistada utiliza colectivos principalmente en horas punta, ya que el Metropolitano y los micros suelen estar llenos y la hacen perder tiempo. Sin embargo, reconoce que el transporte colectivo es informal y presenta dificultades: a veces los paraderos son intervenidos y cambian de lugar, lo que la ha llevado a equivocarse y perder tiempo, incluso teniendo que optar por un taxi como alternativa. Generalmente se entera de los paraderos porque suelen ubicarse en grifos o estaciones, pero como no son fijos, necesita preguntar a otras personas en la calle, lo que considera medianamente confiable, ya que no proviene de fuentes seguras. Ha tenido varios problemas para encontrar un paradero y cree que una aplicación que muestre paraderos, rutas y tarifas sería muy útil, siempre que ofrezca precios competitivos y accesibles frente a otras opciones de transporte. También le gustaría poder visualizar en un mapa la ubicación de los paraderos antes de salir, ya que le daría mayor comodidad y seguridad. En cuanto al tiempo de espera, sabe que no hay un horario fijo, pues depende de que los conductores llenen el vehículo, lo cual puede ser más lento si hay poca demanda. Por eso, considera importante que una aplicación muestre no solo las rutas, sino también la frecuencia de los colectivos y los precios.
   
 ---
 
-#### Entrevistado N°3
-![entrevista3_segmento1](assets/entrevista-amir.jpg) 
-- Nombres: Sammy
-- Apellidos: Lindo
-- Edad: 19 años
-- Ciudad: Lima
-- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
-- Duración: 00:04:39
-- Resumen:<br>
-    Samy prefiere los colectivos por ser más rápidos que los taxis, aunque las paradas frecuentes pueden causar demoras. A menudo pierde tiempo por no tener información precisa sobre los paraderos. Para conocer rutas, pregunta a conocidos o consulta redes sociales, pero a veces la información es desactualizada. Cree que una app como Chapa Toruta sería útil para ver paraderos, rutas, precios y tiempos de espera en tiempo real, y sugiere incluir detalles como placas de los vehículos para mayor confianza.
----
+
 
 **Segmento Objetivo:** Conductores de colectivo
 
@@ -291,7 +281,7 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 - Apellidos: Ramirez
 - Edad: 28 años
 - Ciudad: Lima 
-- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
+- URL Entrevista: https://shorturl.at/B4oB4 
 - Duración: 00:02:44
 - Resumen:<br>
     Juan Carlos, conductor de transporte público, explicó que tiene un turno establecido para el despliegue de sus vehículos, pero que la cantidad de personas también es un factor determinante para iniciar el recorrido. Para coordinar sus salidas, utiliza principalmente WhatsApp. Mencionó que sería de gran utilidad contar con una herramienta que permita a las personas conocer dónde encontrar las rutas disponibles, siempre y cuando la plataforma sea fácil de usar.
@@ -299,25 +289,12 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 ---
 
 #### Entrevistado N°2
-![entrevista2_segmento2](assets/entrevista-jesus.jpg) 
-- Nombres: Hairo
-- Apellidos: Cadillo
-- Edad: 21 años
-- Ciudad: Huaral 
-- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
-- Duración: 00:10:54
-- Resumen:<br>
-    Hairo trabaja como administrador de rutas de vehículos menores en transporte interprovincial y zonas céntricas. Su función principal es planificar los tiempos de salida de los vehículos, aunque menciona que estos tiempos a menudo dependen de si las unidades están llenas o no. Desde su experiencia, considera que sería útil y rentable que los paraderos que administra estén integrados dentro de una plataforma digital, lo que permitiría mejorar la organización y la visibilidad del servicio.
-
----
-
-#### Entrevistado N°3
 ![entrevista3_segmento2](assets/entrevista-yasser2.jpg) 
 - Nombres: Juan David
 - Apellidos: Linares
 - Edad: 26 años
 - Ciudad: Lima
-- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
+- URL Entrevista: https://shorturl.at/B4oB4
 - Duración: 00:02:30 
 - Resumen:<br>
       Juan es cobrador de bus en la ciudad de Lima y menciona que en su ruta suelen operar entre 20 y 25 colectivos. La organización de salida y llegada se basa en el principio de "quien llega primero sale primero". Señala que la mayoría de los pasajeros llegan sin saber exactamente cuál es el colectivo adecuado para su destino, lo que genera cierto desorden y confusión.
@@ -386,9 +363,9 @@ Los segmentos objetivo representados por los User Personas: Jesús Ramírez (pas
 
 | **Tarea**                                                  | **User Story ID** | **Jesús Ramírez (Pasajero)** - F | **Jesús Ramírez** - I | **Elmer Huamán (Conductor)** - F | **Elmer Huamán** - I |
 |------------------------------------------------------------|-------------------|-------------------------------|------------------------|-------------------------------|------------------------|
-| Buscar rutas disponibles para llegar a su destino          | US01              | Alta                          | Alta                   | Media                         | Alta                   |
+| Buscar rutas disponibles para llegar a su destino          | US08              | Alta                          | Alta                   | Media                         | Alta                   |
 | Identificar paraderos adecuados para abordar               | US02              | Alta                          | Alta                   | Media                         | Media                  |
-| Ver información del conductor	                             | US03              | Media                         | Alta                   | Media                         | Alta                   |
+| Ver información del conductor	                             | US19              | Media                         | Alta                   | Media                         | Alta                   |
 | Avisar disponibilidad a pasajeros frecuentes               | US08              | Baja                          | Media                  | Alta                          | Alta                   |
 | Ajustar su horario según los momentos de mayor demanda     | US09              | Baja                          | Media                  | Alta                          | Alta                   |
 | Recordar o registrar los viajes que ha hecho               | US05              | Media                         | Baja                   | Baja                          | Baja                   |
@@ -449,33 +426,144 @@ Supervisión del estado y movimiento de los colectivos registrados. Esto incluye
 
 ### 2.4.1. User Stories
 
-### 2.4.2. Impact Mapping
+**Epics**
 
-El Impact Mapping permite alinear los objetivos del proyecto con las necesidades de conductores de colectivos y pasajeros, mostrando cómo cada decisión impacta en la experiencia de ambos. Así, se convierte en una guía estratégica para diseñar soluciones que generen beneficios reales y respondan efectivamente a sus necesidades.
+| Epic ID | Title                                              | Description                                                                                                                                                                                                                                                                       |
+|---------|----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| EP01    | Diseño y Desarrollo de Landing page                | **Como** visitante, <br/> **Quiero** acceder a una landing page clara y atractiva <br/> **Para** entender de que trata la aplicación, si es confiable y me permita acceder a la aplicación si cumple con mis necesidades.                                                         |
+| EP02    | Gestión y visualización de rutas de colectivos     | **Como** usuario, <br/> **Quiero** contar con funcionalidades para crear, administrar, activar y consultar rutas de colectivos <br/> **Para** optimizar la oferta y la demanda del servicio, facilitando la movilidad de los pasajeros y la gestión eficiente de los conductores. |
+| EP03    | Gestión y visualización de paraderos de colectivos | **Como** usuario, <br/> **Quiero** acceder a funcionalidades para visualizar, filtrar y gestionar los paraderos en el sistema <br/> **Para** facilitar la ubicación de puntos de acceso al servicio y asegurar que la información esté siempre actualizada y organizada.          |
+| EP04    | Gestión de perfil de usuario                       | **Como** usuario, <br/> **Quiero** crear y mantener mi perfil actualizado <br/> **Para** presentarme adecuadamente dentro de la aplicación.                                                                                                                                       |
+| EP05    | Acceso y autenticación de usuarios                 | **Como** nuevo usuario <br/> **Quiero** registrarme e iniciar sesión en la plataforma <br/> **Para** acceder a las funcionalidades de la aplicación.                                                                                                                              |
 
-![impact-mapping.png](assets/impact-mapping.png)
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US01</td>
+    <td>Visitante</td>
+    <td>Media</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Navegación Sencilla</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como visitante, <br/>
+Quiero que la landing page me permita navegar fácilmente entre secciones,<br/>
+Para acceder directamente a la sección que me interesa, sin tener que desplazarme por todo el contenido.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+Escenario 01: Acceso a la información sobre el uso del producto
 
+Dado que un visitante accede al landing page,<br>
+Cuando consulta información sobre el uso de la aplicación<br>
+Entonces el landing page lo dirige al contenido que describe como se usa la aplicación
 
-### 2.4.3. Product Backlog
+Escenario 02: Acceso a la información sobre las ventajas de la aplicación
 
-## 2.5. Strategic-Level Domain-Driven Design
+Dado que un visitante accede al landing page,<br/>
+Cuando busca información sobre las ventajas de la aplicación
+Entonces el landing page lo dirige al contenido correspondiente a las ventajas
 
-### 2.5.1. EventStorming
+Escenario 03: Acceso a preguntas frecuentes de los usuarios
 
-#### 2.5.1.1. Candidate Context Discovery
+Dado que un visitante accede al landing page<br>
+Cuando busca información para resolver sus dudas sobre la aplicación.<br> 
+Entonces, el landing page lo dirige a la sección de preguntas frecuentes
+</td>
+  </tr>
+</table>
 
-#### 2.5.1.2. Domain Message Flow Modeling
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US02</td>
+    <td>Visitante</td>
+    <td>Media</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Consultar cómo funciona el servicio</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como visitante, quiero entender cómo funciona el servicio para saber cómo usarlo antes de registrarme.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+Escenario 1: Información disponible
 
-#### 2.5.1.3. Bounded Context Canvases
+Dado que ingreso a la Landing Page,<br>
+Cuando hago clic en el menú "Cómo funciona",<br>
+Entonces debo ser dirigido a una sección donde se explique el funcionamiento del servicio de forma clara.
 
-### 2.5.2. Context Mapping
+Escenario 2: Información no encontrada
 
-### 2.5.3. Software Architecture
+Dado que no existe la información solicitada,<br>
+Cuando intento acceder a "Cómo funciona",<br>
+Entonces el sistema debe mostrar un mensaje indicando que la sección está en construcción o no disponible.
+</td>
+  </tr>
+</table>
 
-#### 2.5.3.1. Software Architecture Context Level Diagrams
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US03</td>
+    <td>Visitante</td>
+    <td>Media</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Conocer las ventajas del servicio</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como visitante, quiero conocer las ventajas de usar la plataforma para decidirme a utilizarla.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+Escenario 1: Visualización de ventajas
 
-Para el siguiente diagrama de contexto, se muestra la relación entre el sistema de gestión de transporte y los actores externos que interactúan con él. Se representan los dos tipos principales de usuarios: Pasajero, que busca y reserva rutas de transporte, y Gestor de Empresa, que administra rutas, horarios y paradas. También se incluyen los servicios externos utilizados por la plataforma, como el servicio de mapas (para visualización de rutas), el servicio de pagos (para procesar transacciones en línea) y el servicio de notificaciones (para envío de SMS y correos electrónicos).<br>
-<img width="693" height="670" alt="image" src="https://github.com/user-attachments/assets/4bba7a29-b15d-4788-80ec-644c90e7d7d1" />
+Dado que ingreso a la Landing Page,<br>
+Cuando hago clic en el menú "Ventajas",<br>
+Entonces debo ser dirigido a una sección donde se describan claramente los beneficios de usar la plataforma.
+
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
@@ -484,33 +572,96 @@ Se muestra la aplicación móvil para pasajeros y conductores, el gestor de back
 
 <img width="652" height="727" alt="image" src="https://github.com/user-attachments/assets/dac1dd93-8866-453c-9243-173040f6adba" />
 
+Escenario 2: Sección no cargada
 
-#### 2.5.3.3. Software Architecture Deployment Diagrams
+Dado que ocurre un error en la página,<br>
+Cuando hago clic en "Ventajas",<br>
+Entonces el sistema debe mostrar un mensaje de error amigable.
+</td>
+  </tr>
+</table>
+
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US04</td>
+    <td>Visitante</td>
+    <td>Media</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Acceder a preguntas frecuentes (FAQ)</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+Como visitante, quiero resolver mis dudas rápidamente leyendo preguntas frecuentes.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+Escenario 1: Acceso a FAQ
+
+Dado que ingreso a la Landing Page,<br>
+Cuando hago clic en el menú "FAQ",<br>
+Entonces debo ser dirigido a una sección de preguntas frecuentes con respuestas claras.
+
 
 El siguiente diagrama de despliegue describe la infraestructura física y lógica en la que se ejecutan los principales componentes del sistema.
 
 <img width="1705" height="543" alt="image" src="https://github.com/user-attachments/assets/a0b97d71-cfab-4f42-a7cd-6d37958be4e4" />
 
-## 2.6. Tactical-Level Domain-Driven Design
-### 2.6.1. Bounded Context: IAM
-### 2.6.1.1. Domain Layer
-#### 2.6.1.2. Interface Layer
-#### 2.6.1.3. Application Layer
-#### 2.6.1.4 Infrastructure Layer
-#### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
-#### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
-#### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
-#### 2.6.1.6.2. Bounded Context Database Design Diagram
+Escenario 2: FAQ no disponible
 
-### 2.6.2. Bounded Context: Profile
-#### 2.6.2.1. Domain Layer
-#### 2.6.2.2. Interface Layer
-#### 2.6.2.3. Application Layer
-#### 2.6.2.4 Infrastructure Layer
-#### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
-#### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
-#### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
-#### 2.6.2.6.2. Bounded Context Database Design Diagram
+
+Dado que ocurre un problema de carga,<br>
+Cuando hago clic en "FAQ",<br>
+Entonces el sistema debe mostrarme un mensaje indicando que el contenido no está disponible temporalmente.
+</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US05</td>
+    <td>Visitante</td>
+    <td>Media</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Postular como colaborador</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como visitante, quiero tener una opción para colaborar con la plataforma para aportar al crecimiento del servicio.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+Escenario 1: Acceso a colaboración
+
 
 ### 2.6.3. Bounded Context: Stops
 #### 2.6.3.1. Domain Layer
@@ -717,9 +868,200 @@ El siguiente diagrama de despliegue describe la infraestructura física y lógic
     <td>
       Se relaciona directamente con el aggregate <b>Stop</b>, los <b>Queries</b> y 
       potencialmente con DTOs para exponer resultados.
+=======
+Dado que ingreso a la Landing Page,<br>
+Cuando hago clic en "Colabora",<br>
+Entonces debo ser dirigido a un formulario o sección que explique cómo puedo colaborar.
+
+Escenario 2: Sección de colaboración no disponible
+
+Dado que la sección de colaboración no esté activa aún,<br>
+Cuando intento acceder,<br>
+Entonces el sistema debe indicarme que aún no está habilitada pero que pronto estará disponible.
+</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US06</td>
+    <td>Visitante</td>
+    <td>Media</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Video about the product</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como visitante
+Quiero que el landing page me muestre visualmente como funciona la aplicación
+Para tener una idea concreta de como debo usarla.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+Escenario 01: Visualización de video de demostración
+
+Dado que un visitante accede al landing page<br>
+Cuando se dirige al contenido relacionado al uso de la aplicación<br>
+Entonces visualiza una demostración audiovisual de la aplicación.
+
+Escenario 02: Controles de reproducción
+
+Dado que un visitante se dirige al contenido relacionado al uso de la aplicación<br>
+Cuando reproduce la demostración audiovisual<br>
+Entonces interactúa con la demostración audiovisual para retroceder, avanzar o pausar el contenido segun su necesidad.
+</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US07</td>
+    <td>Visitante</td>
+    <td>Media</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Video About the team</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como visitante
+Quiero que la landing page me muestre quiénes conforman el equipo detrás de la aplicación
+Para generar confianza y sentir que el producto está respaldado por personas reales y competentes.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+Escenario 1: Reproducción del video
+
+Dado que ingreso a la sección About the Team<br>
+Cuando visualizo el contenido disponible<br>
+Entonces debo encontrar un video del equipo listo para reproducirse (con opción de play/pausa).
+
+Escenario 2: Presentación de roles en el video
+
+Dado que estoy reproduciendo el video del equipo<br>
+Cuando cada integrante se presenta<br>
+Entonces debo escuchar/observar que mencionan su nombre y el rol que desempeñaron en el desarrollo de la aplicación.
+
+</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US08</td>
+    <td>Pasajero</td>
+    <td>Alta</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Buscar rutas disponibles</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+        Como pasajero, quiero buscar rutas de colectivos cercanas para saber qué opciones tengo para movilizarme.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 1: Búsqueda exitosa
+
+Dado que soy un pasajero con acceso a la app,
+Cuando ingreso una ubicación de origen y destino,
+Entonces el sistema debe mostrarme las rutas de colectivos disponibles.
+
+Escenario 2: Sin resultados
+
+Dado que no hay rutas activas entre los puntos seleccionados,
+Cuando realizo la búsqueda,
+Entonces el sistema debe indicarme que no hay resultados disponibles.</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US09</td>
+    <td>Conductor</td>
+    <td>Alta</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Activar disponibilidad de ruta</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+        Como conductor, quiero activar mi ruta disponible para que los pasajeros puedan verla.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">
+        Escenario 1: Activación de ruta
+
+Dado que tengo una ruta registrada,
+Cuando activo mi disponibilidad,
+Entonces los pasajeros deben poder verla en tiempo real.
+
+Escenario 2: Ruta sin activar
+
+Dado que no he activado mi disponibilidad,
+Cuando los pasajeros consultan las rutas,
+Entonces mi ruta no debe aparecer en los resultados.
+
     </td>
   </tr>
 </table>
+
 
 #### 2.6.3.2. Interface Layer
 
@@ -879,3 +1221,1132 @@ El siguiente diagrama de despliegue describe la infraestructura física y lógic
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 #### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
 #### 2.6.4.6.2. Bounded Context Database Design Diagram
+=======
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US10</td>
+    <td>Conductor</td>
+    <td>Alta</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Gestión de Rutas</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como conducto, quiero crear, editar y eliminar rutas, para mantener mi servicio actualizado.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 1: Crear nueva ruta
+
+Dado que estoy en la sección de rutas,
+Cuando creo una nueva ruta,
+Entonces debe aparecer en la lista de rutas.
+
+Escenario 2: Editar o eliminar ruta
+
+Dado que selecciono una ruta existente,
+Cuando la edito o elimino,
+Entonces los cambios deben reflejarse de inmediato.</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US11</td>
+    <td>Pasajero</td>
+    <td>Alta</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Ver detalles completos de una ruta</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como viajero, quiero ver detalles completos de una ruta seleccionada, para conocer la empresa, duración, tarifas y horarios.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 1: Visualización correcta
+
+Dado que selecciono una ruta,
+Cuando ingreso a sus detalles,
+Entonces debo ver la empresa, la dirección, duración, tarifa y horarios.</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US12</td>
+    <td>Conductor</td>
+    <td>Alta</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Ver demanda de rutas por horario</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como conductor, quiero ver los horarios con mayor demanda para decidir cuándo salir a trabajar.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 1: Datos disponibles
+
+Dado que accedo a la sección de análisis,
+Cuando selecciono un distrito,
+Entonces el sistema debe mostrarme los horarios con más búsquedas de esa ruta.
+
+Escenario 2: Sin datos registrados
+
+Dado que no hay suficiente información histórica,
+Cuando intento ver la demanda,
+Entonces el sistema debe indicarme que no hay datos suficientes aún.
+</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US13</td>
+    <td>Pasajero</td>
+    <td>Alta</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Ver paraderos en el mapa</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como pasajero, quiero ver en un mapa los paraderos cercanos para saber dónde tomar el colectivo.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 1: Visualización de paraderos
+
+Dado que ingreso a la sección de mapa,
+Cuando permito el acceso a mi ubicación,
+Entonces el sistema debe mostrar los paraderos cercanos en el mapa.
+
+Escenario 2: Error de ubicación
+
+Dado que no doy acceso a mi ubicación,
+Cuando intento ver el mapa,
+Entonces el sistema debe mostrar un mensaje indicando que no puede mostrar los paraderos.</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US14</td>
+    <td>Conductor</td>
+    <td>Alta</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Gestión de paraderos</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como conductor, quiero agregar, editar o eliminar paraderos, para mantener actualizada mi lista de paraderos.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 1: Agregar nuevo paradero
+
+Dado que estoy en la sección de paraderos,
+Cuando ingreso los datos de un nuevo paradero y confirmo,
+Entonces el paradero debe aparecer en la lista.
+
+Escenario 2: Editar un paradero
+
+Dado que tengo paraderos existentes,
+Cuando selecciono uno y edito sus datos,
+Entonces los cambios deben guardarse correctamente.</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US15</td>
+    <td>Pasajero</td>
+    <td>Alta</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Filtrar paraderos por ubicación</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como viajero, quiero filtrar los paraderos por región, provincia, distrito y localidad, para encontrar las opciones más cercanas a mí.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 1: Filtrado exitoso
+
+Dado que estoy en la página de búsqueda,
+Cuando selecciono una región y provincia,
+Entonces los paraderos deben actualizarse según el filtro.</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US16</td>
+    <td>Conductor</td>
+    <td>Media</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Ver paraderos en la página de inicio</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como conductor, quiero ver un listado de mis paraderos con su ubicación, para gestionarlos fácilmente.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 1: Visualización correcta
+
+Dado que tengo paraderos registrados,
+ Cuando ingreso a la página de inicio,
+ Entonces debo ver el nombre del paradero, su región, localidad, distrito y provincia.
+Escenario 2: Opción de ver ubicación
+
+Dado que estoy en la lista de paraderos,
+Cuando hago clic en "Ver ubicación",
+Entonces debo ser redirigido al mapa del paradero.</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US17</td>
+    <td>Usuario</td>
+    <td>Media</td>
+    <td>EP04</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Crear Perfil</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como usuario, 
+Quiero crear o completar mi perfil con información básica
+Para presentarme en la aplicación</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 01: Crear perfil con datos obligatorios
+
+Dado que el usuario accede a su perfil por primera vez.
+Cuando completa datos obligatorios (nombre, foto, rol: anfitrión u organizador)
+Entonces el sistema guarda la información
+Y actualiza el perfil
+
+Escenario 02: No completa los campos obligatorios
+
+Dado que el usuario accede a su perfil por primera vez
+Cuando no completa todos los campos obligatorios
+Y crea su perfil
+Entonces el sistema muestra un mensaje de error indicando los campos faltantes
+Y no permite continuar hasta que se completen
+
+</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US18</td>
+    <td>Usuario</td>
+    <td>Media</td>
+    <td>EP04</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Editar Perfil</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como usuario,
+Quiero modificar mi información de perfil
+Para mantener mis datos actualizados</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 01: Editar información básica
+
+Dado que el usuario accede a su perfil
+Cuando cambia sus datos personales
+Entonces el sistema guarda los cambios
+Y confirma la actualización exitosa
+
+Escenario 02: Intenta guardar datos inválidos
+
+Dado que un usuario accede a su perfil
+Cuando ingresa información no válida
+Entonces el sistema muestra un mensaje de error indicando el problema
+Y no guarda la información hasta que sea válida
+</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US19</td>
+    <td>Pasajero</td>
+    <td>Media</td>
+    <td>EP04</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Ver información del conductor</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como pasajero, quiero ver información del conductor antes de abordar para mayor confianza.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 1: Información visible
+
+Dado que selecciono una ruta activa,
+Cuando visualizo los detalles del colectivo,
+Entonces debo poder ver el nombre, tipo de vehículo y calificaciones del conductor.
+
+Escenario 2: Información incompleta
+
+Dado que el conductor no ha completado su perfil,
+Cuando visualizo su información,
+Entonces el sistema debe mostrar solo los datos disponibles y un aviso indicando que el perfil no está completo.</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US20</td>
+    <td>Usuario</td>
+    <td>Baja</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Registrar Usuario</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como usuario, quiero registrarme en la aplicación para acceder a los servicios que ofrece.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 1: Registro exitoso
+
+Dado que completo el formulario de registro con todos los datos requeridos,
+Cuando envío el formulario,
+Entonces debo recibir una confirmación de que el registro fue exitoso.
+
+Escenario 2: Datos incompletos
+
+Dado que no completo todos los campos requeridos,
+Cuando intento registrarme,
+Entonces el sistema debe indicarme los campos faltantes.</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US21</td>
+    <td>Usuario</td>
+    <td>Baja</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Iniciar Sesión</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como usuario, quiero iniciar sesión en la aplicación para acceder a los servicios que ofrece</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 1: Inicio de sesión exitoso
+
+Dado que soy un usuario registrada,
+Cuando ingreso mis credenciales correctamente,
+Entonces debo ser redirigido a mi panel de administración.</td>
+  </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>US22</td>
+    <td>Usuario</td>
+    <td>Baja</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Cerrar Sesión</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como usuario de la plataforma quiero poder salir de la sesión iniciada para ya no estar más en ella</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 1: Cierre de sesión exitoso
+
+Dado que tengo una sesión activa,
+Cuando selecciono la opción de cerrar sesión,
+Entonces el sistema debe cerrar mi sesión y redirigirme a la página de inicio.</td>
+  </tr>
+</table>
+
+**Spike Stories**
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td><b>Story ID</b></td>
+    <td><b>User</b></td>
+    <td><b>Priority</b></td>
+    <td><b>Epic</b></td>
+  </tr>
+  <tr>
+    <td>SS01</td>
+    <td>Desarrollador</td>
+    <td>Alta</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <td><b>Title</b></td>
+    <td colspan="3">Integración de Google Maps</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Description</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Como desarrollador,Quiero investigar e implementar un prototipo básico con el servicio de Google Maps en la aplicación
+Para comprender cómo mostrar mapas, colocar pines (markers) y generar rutas entre ellos.</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center"><b>Acceptance Criteria</b></td>
+  </tr>
+  <tr>
+    <td colspan="4">Escenario 1: Consulta de la documentación oficial
+
+Dado que necesito integrar Google Maps en la aplicación móvil
+Cuando accedo a la documentación oficial de la API/SDK de Google Maps
+Entonces debo identificar los pasos básicos para configurar la clave de API, mostrar un mapa, añadir pines y generar rutas, documentando lo aprendido para el equipo.
+
+Escenario 2: Mostrar mapa básico
+
+Dado que ejecuto la aplicación en un dispositivo o emulador
+Cuando ingreso a la pantalla de mapas
+Entonces debo visualizar un mapa cargado correctamente usando la API de Google Maps.
+
+Escenario 3: Colocar un pin en el mapa
+
+Dado que tengo un mapa cargado en la aplicación
+Cuando selecciono una ubicación específica o la defino en el código
+Entonces debo ver un marcador (pin) colocado en esa ubicación.
+
+Escenario 4: Generar ruta entre dos pines
+Dado que tengo al menos dos pines en el mapa
+Cuando activo la opción de generar ruta
+Entonces debo visualizar una línea que conecte ambos pines, representando el recorrido sugerido.
+</td>
+  </tr>
+</table>
+
+### 2.4.2. Impact Mapping
+
+El Impact Mapping permite alinear los objetivos del proyecto con las necesidades de conductores de colectivos y pasajeros, mostrando cómo cada decisión impacta en la experiencia de ambos. Así, se convierte en una guía estratégica para diseñar soluciones que generen beneficios reales y respondan efectivamente a sus necesidades.
+
+![impact-mapping.png](assets/impact-mapping.png)
+
+
+### 2.4.3. Product Backlog
+
+| #Orden | ID    | User Story                                               | Story Points |
+|:-------|:------|:---------------------------------------------------------|:-------------|
+| 01     | SS01  | Integración de Google Maps                               | 8            |
+| 02     | US08  | Buscar rutas disponibles                                 | 8            |
+| 03     | US09  | Activar disponibilidad de ruta                           | 8            |
+| 04     | US10  | Gestión de Rutas                                         | 8            |
+| 05     | US11  | Ver detalles completos de una ruta                       | 8            |
+| 06     | US12  | Ver demanda de rutas por horario                         | 8            |
+| 07     | US13  | Ver paraderos en el mapa                                 | 8            |
+| 08     | US14  | Gestión de paraderos                                     | 8            |
+| 09     | US15  | Ver paraderos en la página de inicio                     | 8            |
+| 10     | US16  | Hacer una búsqueda de colectivos cercanos a mi ubicación | 5            |
+| 11     | US01  | Navegación Sencilla                                      | 5            |
+| 12     | US02  | Consultar cómo funciona el servicio                      | 5            |
+| 13     | US03  | Conocer las ventajas del servicio                        | 5            |
+| 14     | US04  | Acceder a preguntas frecuentes (FAQ)                     | 5            |
+| 15     | US05  | Postular como colaborador                                | 5            |
+| 16     | US06  | Video about the product                                  | 5            |
+| 17     | US07  | Video About the team                                     | 5            |
+| 18     | US17  | Crear Perfil                                             | 3            |
+| 19     | US18  | Editar Perfil                                            | 3            |
+| 20     | US19  | Ver información del conductor                            | 3            |
+| 21     | US20  | Registrar Usuario                                        | 3            |
+| 22     | US21  | Iniciar Sesión                                           | 3            |
+| 23     | US22  | Cerrar Sesión                                            | 3            |
+
+
+## 2.5. Strategic-Level Domain-Driven Design
+
+### 2.5.1. EventStorming
+
+Para el proceso de EventStorming utilizamos la herramienta Miro y realizamos 4 pasos para llegar a definir los bounded context que se van a trabajar.
+
+En primer lugar, debemos identificar los eventos y trazarlos mediante una linea de tiempo imaginaria que va de izquierda a derecha. Además, se usa post-it anaranjado para identificar a los eventos.
+
+![event-storming-step-1.png](assets/event-storming-step-1.png)
+
+Como segundo paso, identificamos los comandos que disparan o llevan a acabo el evento. Identificamos a estos con un post-it de color azul.
+
+![event-storming-step-2.png](assets/event-storming-step-2.png)
+
+Como tercer paso, identificamos los agentes que realizan o usan el comando. Estos se representan mediante un post-it de color amarillo.
+
+![event-storming-step-3.png](assets/event-storming-step-3.png)
+
+Como último paso, identificamos los eventos que se relacionen entre sí mediante los agregados y entidades que utilizan, agrupandolos por Bounded Context.
+
+![event-storming-step-4.png](assets/event-storming-step-4.png)
+
+#### 2.5.1.1. Candidate Context Discovery
+
+En esta sesión aplicamos la técnica de Candidate Context Discovery para identificar y separar los posibles bounded contexts. Para ello, aplicamos principalmente la técnica look-for-pivotal-events para analizar los eventos que marcan un cambio de estado en el negocio. Al identificar eventos como **ParaderoCreado**, **RutaCreada**,  **UsuarioRegistrado**, entre otros; pudimos detectar que cada uno implicaba responsabilidades y reglas distintas.
+
+Este proceso nos llevo a crear los siguientes Bounded Contexts:
+
+| Bounded Context       | Descripción                                                                 | Eventos clave                                                   |
+|-----------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------|
+| IAM                   | Maneja la autenticación y autorización de los usuarios, asegurando accesos. | `Usuario Registrado`, `Usuario Autenticado`                     |
+| Profile               | Administra la información de perfil de conductores y pasajeros.             | `Perfil Creado`, `Perfil Actualizado`                           |
+| Gestión de Paraderos  | Permite crear, editar y eliminar paraderos, que sirven como puntos de ruta. | `Paradero Creado`, `Paradero Actualizado`, `Paradero Eliminado` |
+| Gestión de Rutas      | Administra la creación, edición y eliminación de rutas con paraderos.       | `Ruta Creada`, `Ruta Actualizada`, `Ruta Eliminada`             |
+
+
+#### 2.5.1.2. Domain Message Flow Modeling
+
+El Domain Message Flow Modelling es una técnica que permite representar cómo fluyen los mensajes de dominio (commands, events y queries) entre los distintos bounded contexts del sistema. Su propósito es clarificar las interacciones, dependencias y responsabilidades de cada contexto
+
+![message-flow-scenary-1.png](assets/message-flow-scenary-1.png)
+
+![message-flow-scenary-2.png](assets/message-flow-scenary-2.png)
+
+![message-flow-scenary-3.png](assets/message-flow-scenary-3.png)
+
+![message-flow-scenary-4.png](assets/message-flow-scenary-4.png)
+
+![message-flow-scenary-5.png](assets/message-flow-scenary-5.png)
+
+![message-flow-scenary-6.png](assets/message-flow-scenary-6.png)
+
+#### 2.5.1.3. Bounded Context Canvases
+
+El Bounded Context Canvas es una herramienta visual aplicada en el marco del Domain-Driven Design (DDD) que permite representar de manera clara los límites, responsabilidades e interacciones de cada contexto dentro de un sistema complejo. Su propósito es facilitar que los equipos construyan una visión compartida sobre el nombre y objetivo de cada contexto, las entidades y agregados que lo conforman, así como las reglas de negocio que gobiernan su funcionamiento.
+
+En esta sección se presentan los Bounded Context Canvases correspondientes a los contextos identificados en nuestro proyecto.
+
+![canvas-routes.png](assets/canvas-routes.png)
+
+![canvas-stops.png](assets/canvas-stops.png)
+
+![canvas-profile.png](assets/canvas-profile.png)
+
+![canvas-iam.png](assets/canvas-iam.png)
+
+### 2.5.2. Context Mapping
+
+![context-mapping.png](assets/context-mapping.png)
+
+**IAM – Profile (ACL)**
+
+* En esta relación, IAM es Upstream, pues provee la identidad validada de los usuarios.
+
+* Profile es Downstream, ya que consume la información de identidad para complementarla con atributos datos personales.
+
+* Se propone el uso de un Anti-Corruption Layer (ACL) en Profile, ya que esto garantiza que cambios en IAM no afecten directamente al contexto Profile.
+
+
+**Profile – Rutas (Conformist)**
+
+* El contexto de Rutas necesita información de los conductores o usuarios para registrar qué persona creó y administra una ruta.
+
+* Profile es Upstream, ya que provee los datos del usuario.
+
+* Rutas es Downstream, adoptando el modelo de Profile de forma directa.
+* La relación es de tipo Conformist, ya que Rutas depende del modelo definido en Profile
+
+**Profile – Paraderos (Conformist)**
+
+De manera similar, el contexto de Paraderos depende de los datos de usuario para registrar quién creó, modificó o eliminó un paradero.
+
+* Profile es Upstream, como fuente de información de usuario.
+
+* Paraderos es Downstream, ajustándose al modelo de Profile.
+* La relación se establece como Conformist, ya que Paraderos adopta directamente el modelo de usuario de Profile para mantener coherencia e integridad en los datos.
+
+**Rutas – Paraderos (Customer/Supplier)**
+
+El contexto de Rutas necesita consumir información de los paraderos para construir recorridos y definir los puntos de inicio, intermedio y final.
+
+* En esta relación, Paraderos es Upstream (Supplier), ya que provee la información de los paraderos disponibles.
+
+* Rutas es Downstream (Customer), pues consume esa información para asociarla a una ruta.
+
+### 2.5.3. Software Architecture
+
+#### 2.5.3.1. Software Architecture Context Level Diagrams
+
+Para el siguiente diagrama de contexto, se muestra la relación entre el sistema de gestión de transporte y los actores externos que interactúan con él. Se representan los dos tipos principales de usuarios: Pasajero, que busca y reserva rutas de transporte, y Gestor de Empresa, que administra rutas, horarios y paradas. También se incluyen los servicios externos utilizados por la plataforma, como el servicio de mapas (para visualización de rutas), el servicio de pagos (para procesar transacciones en línea) y el servicio de notificaciones (para envío de SMS y correos electrónicos).<br>
+<img width="693" height="670" alt="image" src="https://github.com/user-attachments/assets/4bba7a29-b15d-4788-80ec-644c90e7d7d1" />
+
+#### 2.5.3.2. Software Architecture Container Level Diagrams
+**Diagrama de contenedor del bounded context del Registro de Usuario:**<br>
+Este diagrama representa la arquitectura a nivel de contenedor para el flujo de registro de usuarios dentro del Bounded Context de Autenticación.
+Muestra los principales componentes involucrados en el proceso: validación de datos, encriptación de contraseñas, persistencia del usuario y generación de tokens.<br>
+<img width="712" height="969" alt="image" src="https://github.com/user-attachments/assets/7d99fa5e-7642-4e76-92a8-490411224a1d" />
+
+**Diagrama de contenedor del bounded context de Rutas:**<br>
+Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context de Rutas, encargado de la gestión de las rutas. Detalla cómo las solicitudes de usuarios y conductores fluyen a través de controladores y servicios, cómo la información se persiste en MySQL, y cómo el sistema se integra con servicios externos como Google Maps para validar rutas.<br>
+<img width="561" height="796" alt="image" src="https://github.com/user-attachments/assets/96704170-eebe-4aaa-b48b-2b0ce9220d2d" />
+
+
+#### 2.5.3.3. Software Architecture Deployment Diagrams
+
+
+# 2.6. Tactical-Level Domain-Driven Design
+
+## 2.6.1. Bounded Context: IAM
+
+Siguiendo el modelo de arquitectura "Clean Architecture" hemos dividido el proyecto en capas. A continuación detallamos las capas del Bounded Context referenciado.
+
+### 2.6.1.1. Domain Layer
+
+#### Sub-capa Model - Aggregates:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Aggregate | User | Clase para definir el Usuario de la aplicación | Ser el punto de entrada para modificar y mantener la integridad del usuario como entidad del dominio de identidad | Relacionado con los demás boundedContext, ya que encapsula toda la lógica de negocio. |
+
+#### Sub-capa Model - Commands:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Command | SignInCommand | Comando para el inicio de sesión | Representar la intención de iniciar sesión | Usado en la implementación del servicio de autenticación. |
+| Command | SignUpCommand | Comando para registro | Representa la intención de registrarse a la aplicación | Usado en la implementación del servicio de autenticación |
+
+#### Sub-capa Model - Queries:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Query | GetAllUsersQuery | Consulta para obtener todos los usuarios | Representar la intención de obtener la lista completa de usuarios | Usado en la implementación del servicio de consultas |
+| Query | GetUserByEmailQuery | Consulta para obtener un usuario por email | Representar la intención de buscar un usuario específico por su dirección de email | Usado en la implementación del servicio de consultas |
+| Query | GetUserByIdQuery | Consulta para obtener un usuario por ID | Representar la intención de buscar un usuario específico por su identificador único | Usado en la implementación del servicio de consultas |
+| Query | GetUserByUsernameQuery | Consulta para obtener un usuario por nombre de usuario | Representar la intención de buscar un usuario específico por su nombre de usuario | Usado en la implementación del servicio de consultas |
+
+#### Sub-capa Model - Value Objects:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Value Object | Role | Rol del usuario en el sistema | Representar los diferentes roles y permisos que puede tener un usuario | usado en "User" |
+
+#### Sub-capa Services:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IUserCommandService | Servicio para métodos de autenticación | Estipular una estructura clara a seguir | Uso en la capa "application" para implementar los métodos dados |
+| Interface | IUserQueryService | Servicio para métodos de consulta de usuarios | Estipular una estructura clara a seguir | uso en la capa "Infrastructure" para la implementación de los métodos. |
+
+#### Sub-capa Repositories:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IUserRepository | Repositorio para operaciones de persistencia del modelo User | Definir contratos para operaciones CRUD del usuario | Implementado en la capa de Infrastructure |
+
+### 2.6.1.2. Interface Layer
+
+#### Sub-capa REST - Resources:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Resource | AuthenticatedUserResource | Estructura de respuesta para usuario autenticado | Representar datos del usuario autenticado de forma estructurada | Usado en AuthenticationController para respuestas de autenticación exitosa |
+| Resource | SignInResource | Estructura de una petición para iniciar sesión | Representar y exponer datos del dominio de forma accesible y estructurada para el cliente | Uso en el "AuthenticationController" para peticionar datos de una manera predeterminada en la autenticación |
+| Resource | SignUpResource | Estructura de una petición para registrar un usuario | Representar y exponer datos del dominio de forma accesible y estructurada para el cliente | Uso en el "AuthenticationController" para peticionar datos de una manera predeterminada en el registro |
+| Resource | UserResource | Estructura de datos del usuario | Representar y exponer datos del dominio de forma accesible y estructurada para el cliente | Uso en el "UsersController" para emitir datos de una manera predeterminada sobre usuarios |
+
+#### Sub-capa REST - Transform:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Assembler | AuthenticatedUserResourceFromEntityAssembler | Transformador de entidad User a AuthenticatedUserResource | Convertir la entidad del dominio a su representación REST correspondiente | Usado en controladores para transformar respuestas |
+| Assembler | SignInCommandFromResourceAssembler | Transformador de SignInResource a SignInCommand | Convertir la petición REST a comando del dominio | Usado en AuthenticationController para procesar peticiones de login |
+| Assembler | SignUpCommandFromResourceAssembler | Transformador de SignUpResource a SignUpCommand | Convertir la petición REST a comando del dominio | Usado en AuthenticationController para procesar peticiones de registro |
+| Assembler | UserResourceFromEntityAssembler | Transformador de entidad User a UserResource | Convertir la entidad del dominio a su representación REST correspondiente | Usado en UsersController para transformar respuestas |
+
+#### Sub-capa REST - Controllers:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Controller | AuthenticationController | Controlador para operaciones de autenticación | Manejar las peticiones HTTP relacionadas con autenticación y registro | Usa los services de aplicación y los assemblers para procesar peticiones |
+| Controller | UsersController | Controlador para operaciones de gestión de usuarios | Manejar las peticiones HTTP relacionadas con operaciones CRUD de usuarios | Usa los query services y assemblers para procesar peticiones |
+
+#### Sub-capa ACL:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Service | IamContextFacade | Servicio de fachada para IAM | Proporcionar una interfaz simplificada para interactuar con el contexto IAM desde otros bounded contexts | Relacionado con otros bounded contexts que necesitan servicios de identidad y acceso |
+
+### 2.6.1.3. Application Layer
+
+#### Sub-capa Internal - CommandServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| CommandHandler | UserCommandService | Implementación de los Comandos de Autenticación | Implementar los métodos para el servicio de autenticación | Implementa los métodos de la interface de su mismo nombre en la capa de "Services". |
+
+#### Sub-capa Internal - OutboundServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Service | IHashingService | Interfaz para servicios de hashing | Definir contratos para operaciones de hash de contraseñas | Implementado en la capa Infrastructure |
+| Service | ITokenService | Interfaz para servicios de tokens | Definir contratos para generación y validación de tokens | Implementado en la capa Infrastructure |
+
+#### Sub-capa Internal - QueryServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| QueryHandler | UserQueryService | Implementación de las consultas de usuarios | Implementar los métodos para las consultas de usuarios | Implementa los métodos de la interface de su mismo nombre en la capa de "Services". |
+
+### 2.6.1.4. Infrastructure Layer
+
+#### Sub-capa Hashing (BCrypt):
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Service | HashingService | Servicio para el hash de contraseñas usando BCrypt | Proporcionar métodos para hashear y verificar contraseñas de forma segura | Relacionado con la seguridad de la aplicación y usado en UserCommandService |
+
+#### Sub-capa Persistence (EFC):
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Repository | UserRepository | Repositorio para usar del modelo "User" con Entity Framework Core | Acceder y manipular datos persistidos en la base de datos | Usado en la Capa "Application" para implementar el registro y autenticación de un usuario. |
+
+#### Sub-capa Pipeline (Middleware):
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Attribute | AllowAnonymousAttribute | Atributo para permitir acceso anónimo | Marcar endpoints que no requieren autenticación | Usado en controladores para endpoints públicos |
+| Attribute | AuthorizeAttribute | Atributo para requerir autorización | Marcar endpoints que requieren autenticación y/o autorización específica | Usado en controladores para proteger endpoints |
+| Component | RequestAuthorizationMiddleware | Middleware para autorización de peticiones | Interceptar y validar autorización en cada petición HTTP | Relacionado con el pipeline de la aplicación |
+| Extension | RequestAuthorizationMiddlewareExtensions | Extensiones para el middleware de autorización | Proporcionar métodos de extensión para configurar el middleware | Usado para configurar el pipeline de autorización |
+
+#### Sub-capa Tokens (JWT):
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Config | TokenSettings | Configuración de tokens JWT | Almacenar configuraciones relacionadas con la generación y validación de tokens | Usado por TokenService para configurar JWT |
+| Service | TokenService | Servicio para manejo de tokens JWT | Encapsular toda la lógica relacionada con el manejo de tokens JWT (generación, validación, decodificación) | Relacionado con la seguridad de la aplicación y usado en autenticación |
+
+### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+Este diagrama representa la descomposición interna del container IAM Application, correspondiente al bounded context de identidad y autenticación (IAM) dentro del sistema. Se trata de un backend desarrollado bajo los principios de Clean Architecture y Domain-Driven Design (DDD), y se ilustra aquí en el Nivel 3 del C4 Model (Component Diagram).
+
+![IAM Component Diagram](assets/ClassIAM.png)
+
+### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+**Diagrama de clases de la capa Domain:**
+
+En esta presente imagen, las clases del dominio IAM incluyen User como aggregate root, Commands para las operaciones de autenticación y registro, Value Objects para encapsular datos importantes, e interfaces para los servicios de dominio con sus respectivas implementaciones.
+
+![IAM Domain Class Diagram](assets/CompIAM.png)
+
+#### 2.6.1.6.2. Bounded Context Database Design Diagram
+
+![IAM Database Diagram](assets/DiagramBaseIAM.PNG)
+
+| Nombre | Descripción |
+|--------|-------------|
+| id | Identificador único del registro, generalmente una clave primaria. |
+| created_at | Fecha y hora en que se creó el registro. |
+| updated_at | Fecha y hora de la última actualización del registro. |
+| company_name | Nombre de la empresa asociada al usuario o entidad. |
+| email | Dirección de correo electrónico del usuario. |
+| first_name | Primer nombre del usuario. |
+| last_name | Apellido del usuario. |
+| password | Contraseña del usuario (almacenada de forma segura, usualmente encriptada). |
+| trial | Indica si el usuario está en un período de prueba (true/false). |
+| username | Nombre de usuario único utilizado para iniciar sesión. |
+
+## 2.6.2. Bounded Context: Profile
+
+Siguiendo el modelo de arquitectura "Clean Architecture" hemos dividido el proyecto en capas. A continuación detallamos las capas del Bounded Context Profile referenciado.
+
+### 2.6.2.1. Domain Layer
+
+#### Sub-capa Model - Aggregates:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Aggregate | Profile | Entidad que representa un perfil en el sistema | Ser el punto de entrada para modificar y mantener la integridad de la información del perfil como entidad del dominio | Relacionado con otros bounded contexts que requieren información de perfiles |
+
+#### Sub-capa Model - Commands:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Command | CreateProfileCommand | Comando para crear un nuevo perfil | Representar la intención de crear un nuevo perfil en el sistema | Usado en la implementación del servicio de comandos de perfil |
+| Command | CreateProfileWithFileCommand | Comando para crear un perfil con archivo adjunto | Representar la intención de crear un nuevo perfil incluyendo archivos de documentación | Usado en la implementación del servicio de comandos de perfil |
+| Command | DeleteProfileCommand | Comando para eliminar un perfil | Representar la intención de eliminar un perfil del sistema | Usado en la implementación del servicio de comandos de perfil |
+| Command | UpdateProfileCommand | Comando para actualizar información de perfil | Representar la intención de modificar los datos de un perfil existente | Usado en la implementación del servicio de comandos de perfil |
+
+#### Sub-capa Model - Queries:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Query | GetAllProfilesQuery | Consulta para obtener todos los perfiles | Representar la intención de obtener la lista completa de perfiles registrados | Usado en la implementación del servicio de consultas |
+| Query | GetProfileByRucUserQuery | Consulta para obtener perfil por RUC de usuario | Representar la intención de buscar un perfil específico por el RUC del usuario asociado | Usado en la implementación del servicio de consultas |
+| Query | GetProfileByIdQuery | Consulta para obtener perfil por ID | Representar la intención de buscar un perfil específico por su identificador único | Usado en la implementación del servicio de consultas |
+| Query | GetProfileByNameQuery | Consulta para obtener perfil por nombre | Representar la intención de buscar un perfil específico por su nombre comercial | Usado en la implementación del servicio de consultas |
+
+#### Sub-capa Repositories:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IProfileRepository | Repositorio para operaciones de persistencia del modelo Profile | Definir contratos para operaciones CRUD de perfiles | Implementado en la capa de Infrastructure |
+
+#### Sub-capa Services:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IProfileCommandService | Servicio para métodos de comandos de perfil | Estipular una estructura clara a seguir para operaciones de escritura | Uso en la capa "application" para implementar los métodos dados |
+| Interface | IProfileQueryService | Servicio para métodos de consulta de perfil | Estipular una estructura clara a seguir para operaciones de lectura | Usado en la capa "Infrastructure" para la implementación de los métodos |
+
+### 2.6.2.2. Interface Layer
+
+#### Sub-capa REST - Resources:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Resource | ProfileResource | Estructura de datos de perfil para API | Representar y exponer datos de perfil de forma accesible y estructurada para el cliente | Usado en controladores para estructurar respuestas de perfil |
+| Resource | CreateProfileFormResource | Estructura de petición para crear perfil con formulario | Representar datos de entrada para creación de perfil a través de formulario | Usado en controlador para procesar peticiones de creación |
+| Resource | CreateProfileResource | Estructura de petición para crear perfil | Representar datos de entrada para creación de perfil | Usado en controlador para procesar peticiones de creación estándar |
+| Resource | CreateProfileWithFileResource | Estructura de petición para crear perfil con archivos | Representar datos de entrada para creación de perfil incluyendo archivos adjuntos | Usado en controlador para procesar peticiones con documentos |
+| Resource | DeleteProfileResource | Estructura de petición para eliminar perfil | Representar datos necesarios para identificar y eliminar un perfil | Usado en controlador para procesar peticiones de eliminación |
+| Resource | UpdateProfileResource | Estructura de petición para actualizar perfil | Representar datos de entrada para actualización de información de perfil | Usado en controlador para procesar peticiones de actualización |
+| Resource | UpdateProfileWithFileResource | Estructura de petición para actualizar perfil con archivos | Representar datos de entrada para actualización de perfil incluyendo archivos adjuntos | Usado en controlador para procesar actualizaciones con documentos |
+
+#### Sub-capa REST - Transform:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Assembler | ProfileResourceFromEntityAssembler | Transformador de entidad Profile a ProfileResource | Convertir la entidad del dominio a su representación REST correspondiente | Usado en controladores para transformar respuestas |
+| Assembler | CreateProfileCommandFromResourceAssembler | Transformador de CreateProfileResource a CreateProfileCommand | Convertir la petición REST a comando del dominio | Usado en controlador para procesar peticiones de creación |
+| Assembler | DeleteProfileCommandFromResourceAssembler | Transformador de DeleteProfileResource a DeleteProfileCommand | Convertir la petición REST a comando del dominio | Usado en controlador para procesar peticiones de eliminación |
+| Assembler | UpdateProfileCommandFromResourceAssembler | Transformador de UpdateProfileResource a UpdateProfileCommand | Convertir la petición REST a comando del dominio | Usado en controlador para procesar peticiones de actualización |
+
+### 2.6.2.3. Application Layer
+
+#### Sub-capa Internal - CommandServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| CommandHandler | ProfileCommandService | Implementación de comandos de perfil | Implementar los métodos para el servicio de gestión de perfiles | Implementa los métodos de la interface IProfileCommandService en la capa de "Services" |
+
+#### Sub-capa Internal - QueryServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| QueryHandler | ProfileQueryService | Implementación de consultas de perfil | Implementar los métodos para las consultas de perfiles | Implementa los métodos de la interface IProfileQueryService en la capa de "Services" |
+
+### 2.6.2.4. Infrastructure Layer
+
+#### Sub-capa Persistence - Repositories:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Repository | ProfileRepository | Repositorio para usar del modelo "Profile" | Acceder y manipular datos persistidos de perfiles en la base de datos | Usado en la Capa "Application" para implementar operaciones CRUD de perfiles |
+
+### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+Este diagrama representa la descomposición interna del container Profile Application, correspondiente al bounded context de gestión de perfiles de empresa dentro del sistema. Se trata de un backend desarrollado bajo los principios de Clean Architecture y Domain-Driven Design (DDD), y se ilustra aquí en el Nivel 3 del C4 Model (Component Diagram).
+
+![Profile Component Diagram](assets/CompProfile.png)
+
+### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+**Diagrama de clases de la capa Domain:**
+
+En esta imagen se muestran las clases del dominio Profile que incluyen Company como aggregate root, Commands para las operaciones CRUD de empresas, Queries para las consultas de información, e interfaces para los servicios de dominio con sus respectivas implementaciones.
+
+![Profile Domain Class Diagram](assets/ClassProfile.png)
+
+#### 2.6.2.6.2. Bounded Context Database Design Diagram
+
+![Profile Database Diagram](assets/BaseProfile.PNG)
+
+| Nombre | Descripción |
+|--------|-------------|
+| id | Identificador único del registro, generalmente una clave primaria. |
+| created_at | Fecha y hora en que se creó el registro. |
+| updated_at | Fecha y hora de la última actualización del registro. |
+| profile_name | Nombre oficial del perfil. |
+| profile_email | Dirección de correo electrónico del perfil. |
+| profile_phone | Número de teléfono principal del perfil. |
+| profile_address | Dirección física del perfil. |
+| profile_ruc | Registro Único de Contribuyentes del perfil. |
+| profile_description | Descripción detallada de las actividades y servicios del perfil. |
+| profile_logo_url | URL del logotipo del perfil almacenado en el sistema. |
+
+### 2.6.3. Bounded Context: Stops
+#### 2.6.3.1. Domain Layer
+#### 2.6.3.2. Interface Layer
+#### 2.6.3.3. Application Layer
+#### 2.6.3.4 Infrastructure Layer
+#### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
+#### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
+#### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
+#### 2.6.3.6.2. Bounded Context Database Design Diagram
+
+### 2.6.4. Bounded Context: Carriage Routes
+#### 2.6.4.1. Domain Layer
+**Sub-capa Model:**  
+
+| Tipo      | Nombre                 | Descripción                                      | Responsabilidad Principal                                                                                   |
+| --------- | ---------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| Aggregate | Route                  | Clase para definir una ruta en la aplicación     | Ser el punto de entrada para modificar y mantener la integridad de la entidad ruta                           |
+| Entity    | RouteStops             | Representa las paradas que conforman una ruta    | Encapsular la lógica de negocio de cada parada de la ruta                                                    |
+| Entity    | Schedule               | Representa los horarios de una ruta              | Manejar los tiempos asociados a una ruta                                                                     |
+| Command   | CreateFullRouteCommand | Comando para la creación de rutas completas      | Representar la intención de crear una ruta                                                                   |
+| Command   | UpdateRouteCommand     | Comando para actualizar rutas                    | Representar la intención de actualizar una ruta                                                              |
+| Command   | DeleteRouteCommand     | Comando para eliminar rutas                      | Representar la intención de eliminar una ruta                                                                |
+| Query     | GetAllRoutesQuery      | Consulta de todas las rutas                      | Obtener el listado de rutas registradas                                                                      |
+| Query     | GetRouteByIdQuery      | Consulta de una ruta específica por ID           | Obtener la información detallada de una ruta                                                                 |
+
+**Sub-capa Services:**  
+
+| Tipo      | Nombre               | Descripción                                      | Responsabilidad Principal                                                           |
+| --------- | -------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| Interface | IRouteCommandService | Servicio para manejar los comandos de rutas      | Estipular una estructura clara a seguir para operaciones de creación, actualización y eliminación |
+| Interface | IRouteQueryService   | Servicio para manejar las consultas de rutas     | Estipular una estructura clara a seguir para operaciones de consulta                 |
+| Interface | IRouteRepository     | Servicio para operaciones de persistencia        | Definir contrato para acceso y manipulación de datos de rutas                        |
+
+  
+#### 2.6.4.2. Interface Layer
+| Tipo       | Nombre                            | Descripción                                          | Responsabilidad Principal                                                  |
+| ---------- | --------------------------------- | ---------------------------------------------------- | -------------------------------------------------------------------------- |
+| Controller | RoutesController                  | Controlador principal de rutas                       | Recibir solicitudes HTTP, coordinar la ejecución y devolver respuestas     |
+| Resource   | CreateFullRouteResource           | DTO para creación de rutas completas                 | Representar datos de entrada para creación de rutas                        |
+| Resource   | UpdateRouteResource               | DTO para actualización de rutas                      | Representar datos de entrada para actualizar rutas                         |
+| Assembler  | CreateFullRouteCommandFromResource| Convierte un recurso en un comando                   | Evitar la corrupción entre la comunicación de datos                        |
+
+#### 2.6.4.3. Application Layer
+**Sub-capa Internal:**  
+
+| Tipo            | Nombre              | Descripción                                  | Responsabilidad Principal                                   |
+| --------------- | ------------------- | -------------------------------------------- | ----------------------------------------------------------- |
+| CommandHandlers | RouteCommandService | Implementación de los comandos de rutas      | Implementar los métodos definidos en `IRouteCommandService` |
+| QueryHandlers   | RouteQueryService   | Implementación de las consultas de rutas     | Implementar los métodos definidos en `IRouteQueryService`   |
+
+
+#### 2.6.4.4 Infrastructure Layer
+**Sub-capa Repository:**  
+
+| Tipo       | Nombre          | Descripción                          | Responsabilidad Principal                      |
+| ---------- | --------------- | ------------------------------------ | ---------------------------------------------- |
+| Repository | RouteRepository | Repositorio de persistencia de rutas | Acceder y manipular datos persistidos de rutas |
+  
+#### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
+![ImagenDiagramaRoutes](assets/Bounded-Context-Software-Architecture-Component-Level-Diagrams.png)
+
+#### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
+#### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
+El diagrama implementa Domain-Driven Design (DDD) con CQRS, donde Route actúa como Aggregate Root controlando las entidades RouteStop y Schedule. Los CommandService y QueryService separan las operaciones de escritura y lectura, utilizando el Repository Pattern para abstraer la persistencia. Esta arquitectura garantiza consistencia de dominio, separación de responsabilidades y alta testabilidad mediante la centralización de la lógica de negocio en el agregado principal.
+
+![Domainlayer](assets/domain-layer.png)
+
+#### 2.6.4.6.2. Bounded Context Database Design Diagram
+![RouteD](assets/RoutesD.png)
+
+### Tabla: `Routes`
+
+| Campo        | Tipo   | Nulo | Default | Comentario                                |
+|--------------|--------|------|---------|-------------------------------------------|
+| id           | TEXT   | N-N  | default | Identificador único de la ruta             |
+| price        | FLOAT  | NULL | default | Precio de la ruta                          |
+| duration_min | INT    | NULL | default | Duración estimada de la ruta en minutos    |
+
+---
+
+### Tabla: `Stops_routes`
+
+| Campo        | Tipo | Nulo | Default | Comentario                                            |
+|--------------|------|------|---------|-------------------------------------------------------|
+| id           | TEXT | N-N  | default | Identificador único de la parada en la ruta           |
+| fk_id_route  | TEXT | N-N  | default | Clave foránea que referencia la tabla `Routes`        |
+| fk_id_stop   | TEXT | N-N  | default | Clave foránea que referencia la tabla de `Stops`      |
+
+---
+
+### Tabla: `Schedules`
+
+| Campo        | Tipo    | Nulo | Default | Comentario                                           |
+|--------------|---------|------|---------|------------------------------------------------------|
+| id           | TEXT    | N-N  | default | Identificador único del horario                       |
+| city         | TEXT    | NULL | default | Ciudad del horario                                   |
+| time_from    | TEXT    | NULL | default | Hora de inicio del horario                           |
+| time_to      | TEXT    | NULL | default | Hora de fin del horario                              |
+| is_available | BOOLEAN | NULL | default | Indica si el horario está disponible                 |
+| fk_id_route  | TEXT    | N-N  | default | Clave foránea que referencia la tabla `Routes`       |
+
+
