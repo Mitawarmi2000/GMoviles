@@ -43,7 +43,26 @@
 # Project Report Collaboration Insights  
 Analiza cómo la colaboración y la gestión de tareas influyeron en los resultados del proyecto, destacando fortalezas y áreas de mejora para optimizar futuras estrategias.
 
+**Link del Repositorio del Informe:** https://github.com/Mitawarmi2000/GMoviles
 
+## Reporte de Colaboración Entrega TB1
+
+En esta entrega se redactó el informe hasta la sección de Tactical Level Domain Driven Design. Siendo las tareas más releventes el desarrollo del Event Storming, el diseño de los diagramas de Domaing Message Flow Modelling, Bounded Context Canvasses y Context Mapping.
+Además, se definio el diagrama de Componentes, Diagrama de Clases y Diagrama de bases de datos de cada Bounded context identificado mediante el Event Storming.
+
+Para evidenciar nuestros avances y que todos los miembros del equipo participaron en la redacción del informe, se presenta a continuación, las capturas obtenidas de los analíticos de colaboración en el repositorio de GitHub del Informe:
+
+**Contributors**
+
+En el analítico de Contributors, se evidencia las contribuciones que hizo cada integrante del equipo para la redacción del informe durante el periodo de esta primera entrega. Se puede observar la cantidad de commits que realizó cada integrante, asi como la cantidad de addiciones y eliminaciones que se realizaron en el informe.
+
+![contributors-insights.png](assets/contributors-insights.png)
+
+**Pulse**
+
+En el analítico de Pulse se evidencian los commits que realizó cada integrante del equipo durante el periodo definido para esta primera entrega
+
+![pulse-insights.png](assets/pulse-insights.png)
 
 # Student Outcome 
 
