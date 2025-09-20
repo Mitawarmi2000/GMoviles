@@ -2307,9 +2307,9 @@ En esta imagen se muestran las clases del dominio Profile que incluyen Company c
 
 #### 2.6.3.6.2. Bounded Context Database Design Diagram
 
-### 2.6.4. Bounded Context: Carriage Routes
-
 <img width="314" height="713" alt="image" src="https://github.com/user-attachments/assets/ba7cbc1d-0cb8-4023-8290-910e88739e1a" />
+
+### 2.6.4. Bounded Context: Carriage Routes
 
 
 #### 2.6.4.1. Domain Layer
