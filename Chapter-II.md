@@ -539,7 +539,12 @@ Esta capa maneja la comunicación externa del sistema para las operaciones de ru
 - **Transformadores:** Clases como `CreateFullRouteCommandFromResource` convierten los recursos en comandos.
 
 #### 2.6.4.3. Application Layer
+Esta capa orquesta las operaciones de negocio para la gestión de rutas.
+
+- **Servicios:** Las clases `RouteCommandService` y `RouteQueryService` implementan las interfaces correspondientes de la capa de Dominio.
+
 #### 2.6.4.4 Infrastructure Layer
+
 #### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 #### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
