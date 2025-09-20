@@ -1578,26 +1578,292 @@ Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
 
-## 2.6. Tactical-Level Domain-Driven Design
-### 2.6.1. Bounded Context: IAM
+# 2.6. Tactical-Level Domain-Driven Design
+
+## 2.6.1. Bounded Context: IAM
+
+Siguiendo el modelo de arquitectura "Clean Architecture" hemos dividido el proyecto en capas. A continuación detallamos las capas del Bounded Context referenciado.
+
 ### 2.6.1.1. Domain Layer
-#### 2.6.1.2. Interface Layer
-#### 2.6.1.3. Application Layer
-#### 2.6.1.4 Infrastructure Layer
-#### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
-#### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### Sub-capa Model - Aggregates:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Aggregate | User | Clase para definir el Usuario de la aplicación | Ser el punto de entrada para modificar y mantener la integridad del usuario como entidad del dominio de identidad | Relacionado con los demás boundedContext, ya que encapsula toda la lógica de negocio. |
+
+#### Sub-capa Model - Commands:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Command | SignInCommand | Comando para el inicio de sesión | Representar la intención de iniciar sesión | Usado en la implementación del servicio de autenticación. |
+| Command | SignUpCommand | Comando para registro | Representa la intención de registrarse a la aplicación | Usado en la implementación del servicio de autenticación |
+
+#### Sub-capa Model - Queries:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Query | GetAllUsersQuery | Consulta para obtener todos los usuarios | Representar la intención de obtener la lista completa de usuarios | Usado en la implementación del servicio de consultas |
+| Query | GetUserByEmailQuery | Consulta para obtener un usuario por email | Representar la intención de buscar un usuario específico por su dirección de email | Usado en la implementación del servicio de consultas |
+| Query | GetUserByIdQuery | Consulta para obtener un usuario por ID | Representar la intención de buscar un usuario específico por su identificador único | Usado en la implementación del servicio de consultas |
+| Query | GetUserByUsernameQuery | Consulta para obtener un usuario por nombre de usuario | Representar la intención de buscar un usuario específico por su nombre de usuario | Usado en la implementación del servicio de consultas |
+
+#### Sub-capa Model - Value Objects:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Value Object | Role | Rol del usuario en el sistema | Representar los diferentes roles y permisos que puede tener un usuario | usado en "User" |
+
+#### Sub-capa Services:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IUserCommandService | Servicio para métodos de autenticación | Estipular una estructura clara a seguir | Uso en la capa "application" para implementar los métodos dados |
+| Interface | IUserQueryService | Servicio para métodos de consulta de usuarios | Estipular una estructura clara a seguir | uso en la capa "Infrastructure" para la implementación de los métodos. |
+
+#### Sub-capa Repositories:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IUserRepository | Repositorio para operaciones de persistencia del modelo User | Definir contratos para operaciones CRUD del usuario | Implementado en la capa de Infrastructure |
+
+### 2.6.1.2. Interface Layer
+
+#### Sub-capa REST - Resources:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Resource | AuthenticatedUserResource | Estructura de respuesta para usuario autenticado | Representar datos del usuario autenticado de forma estructurada | Usado en AuthenticationController para respuestas de autenticación exitosa |
+| Resource | SignInResource | Estructura de una petición para iniciar sesión | Representar y exponer datos del dominio de forma accesible y estructurada para el cliente | Uso en el "AuthenticationController" para peticionar datos de una manera predeterminada en la autenticación |
+| Resource | SignUpResource | Estructura de una petición para registrar un usuario | Representar y exponer datos del dominio de forma accesible y estructurada para el cliente | Uso en el "AuthenticationController" para peticionar datos de una manera predeterminada en el registro |
+| Resource | UserResource | Estructura de datos del usuario | Representar y exponer datos del dominio de forma accesible y estructurada para el cliente | Uso en el "UsersController" para emitir datos de una manera predeterminada sobre usuarios |
+
+#### Sub-capa REST - Transform:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Assembler | AuthenticatedUserResourceFromEntityAssembler | Transformador de entidad User a AuthenticatedUserResource | Convertir la entidad del dominio a su representación REST correspondiente | Usado en controladores para transformar respuestas |
+| Assembler | SignInCommandFromResourceAssembler | Transformador de SignInResource a SignInCommand | Convertir la petición REST a comando del dominio | Usado en AuthenticationController para procesar peticiones de login |
+| Assembler | SignUpCommandFromResourceAssembler | Transformador de SignUpResource a SignUpCommand | Convertir la petición REST a comando del dominio | Usado en AuthenticationController para procesar peticiones de registro |
+| Assembler | UserResourceFromEntityAssembler | Transformador de entidad User a UserResource | Convertir la entidad del dominio a su representación REST correspondiente | Usado en UsersController para transformar respuestas |
+
+#### Sub-capa REST - Controllers:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Controller | AuthenticationController | Controlador para operaciones de autenticación | Manejar las peticiones HTTP relacionadas con autenticación y registro | Usa los services de aplicación y los assemblers para procesar peticiones |
+| Controller | UsersController | Controlador para operaciones de gestión de usuarios | Manejar las peticiones HTTP relacionadas con operaciones CRUD de usuarios | Usa los query services y assemblers para procesar peticiones |
+
+#### Sub-capa ACL:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Service | IamContextFacade | Servicio de fachada para IAM | Proporcionar una interfaz simplificada para interactuar con el contexto IAM desde otros bounded contexts | Relacionado con otros bounded contexts que necesitan servicios de identidad y acceso |
+
+### 2.6.1.3. Application Layer
+
+#### Sub-capa Internal - CommandServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| CommandHandler | UserCommandService | Implementación de los Comandos de Autenticación | Implementar los métodos para el servicio de autenticación | Implementa los métodos de la interface de su mismo nombre en la capa de "Services". |
+
+#### Sub-capa Internal - OutboundServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Service | IHashingService | Interfaz para servicios de hashing | Definir contratos para operaciones de hash de contraseñas | Implementado en la capa Infrastructure |
+| Service | ITokenService | Interfaz para servicios de tokens | Definir contratos para generación y validación de tokens | Implementado en la capa Infrastructure |
+
+#### Sub-capa Internal - QueryServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| QueryHandler | UserQueryService | Implementación de las consultas de usuarios | Implementar los métodos para las consultas de usuarios | Implementa los métodos de la interface de su mismo nombre en la capa de "Services". |
+
+### 2.6.1.4. Infrastructure Layer
+
+#### Sub-capa Hashing (BCrypt):
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Service | HashingService | Servicio para el hash de contraseñas usando BCrypt | Proporcionar métodos para hashear y verificar contraseñas de forma segura | Relacionado con la seguridad de la aplicación y usado en UserCommandService |
+
+#### Sub-capa Persistence (EFC):
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Repository | UserRepository | Repositorio para usar del modelo "User" con Entity Framework Core | Acceder y manipular datos persistidos en la base de datos | Usado en la Capa "Application" para implementar el registro y autenticación de un usuario. |
+
+#### Sub-capa Pipeline (Middleware):
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Attribute | AllowAnonymousAttribute | Atributo para permitir acceso anónimo | Marcar endpoints que no requieren autenticación | Usado en controladores para endpoints públicos |
+| Attribute | AuthorizeAttribute | Atributo para requerir autorización | Marcar endpoints que requieren autenticación y/o autorización específica | Usado en controladores para proteger endpoints |
+| Component | RequestAuthorizationMiddleware | Middleware para autorización de peticiones | Interceptar y validar autorización en cada petición HTTP | Relacionado con el pipeline de la aplicación |
+| Extension | RequestAuthorizationMiddlewareExtensions | Extensiones para el middleware de autorización | Proporcionar métodos de extensión para configurar el middleware | Usado para configurar el pipeline de autorización |
+
+#### Sub-capa Tokens (JWT):
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Config | TokenSettings | Configuración de tokens JWT | Almacenar configuraciones relacionadas con la generación y validación de tokens | Usado por TokenService para configurar JWT |
+| Service | TokenService | Servicio para manejo de tokens JWT | Encapsular toda la lógica relacionada con el manejo de tokens JWT (generación, validación, decodificación) | Relacionado con la seguridad de la aplicación y usado en autenticación |
+
+### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+Este diagrama representa la descomposición interna del container IAM Application, correspondiente al bounded context de identidad y autenticación (IAM) dentro del sistema. Se trata de un backend desarrollado bajo los principios de Clean Architecture y Domain-Driven Design (DDD), y se ilustra aquí en el Nivel 3 del C4 Model (Component Diagram).
+
+![IAM Component Diagram](assets/ClassIAM.png)
+
+### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
+
 #### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+**Diagrama de clases de la capa Domain:**
+
+En esta presente imagen, las clases del dominio IAM incluyen User como aggregate root, Commands para las operaciones de autenticación y registro, Value Objects para encapsular datos importantes, e interfaces para los servicios de dominio con sus respectivas implementaciones.
+
+![IAM Domain Class Diagram](assets/CompIAM.png)
+
 #### 2.6.1.6.2. Bounded Context Database Design Diagram
 
-### 2.6.2. Bounded Context: Profile
-#### 2.6.2.1. Domain Layer
-#### 2.6.2.2. Interface Layer
-#### 2.6.2.3. Application Layer
-#### 2.6.2.4 Infrastructure Layer
-#### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
-#### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
+![IAM Database Diagram](assets/DiagramBaseIAM.PNG)
+
+| Nombre | Descripción |
+|--------|-------------|
+| id | Identificador único del registro, generalmente una clave primaria. |
+| created_at | Fecha y hora en que se creó el registro. |
+| updated_at | Fecha y hora de la última actualización del registro. |
+| company_name | Nombre de la empresa asociada al usuario o entidad. |
+| email | Dirección de correo electrónico del usuario. |
+| first_name | Primer nombre del usuario. |
+| last_name | Apellido del usuario. |
+| password | Contraseña del usuario (almacenada de forma segura, usualmente encriptada). |
+| trial | Indica si el usuario está en un período de prueba (true/false). |
+| username | Nombre de usuario único utilizado para iniciar sesión. |
+
+## 2.6.2. Bounded Context: Profile
+
+Siguiendo el modelo de arquitectura "Clean Architecture" hemos dividido el proyecto en capas. A continuación detallamos las capas del Bounded Context Profile referenciado.
+
+### 2.6.2.1. Domain Layer
+
+#### Sub-capa Model - Aggregates:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Aggregate | Profile | Entidad que representa un perfil en el sistema | Ser el punto de entrada para modificar y mantener la integridad de la información del perfil como entidad del dominio | Relacionado con otros bounded contexts que requieren información de perfiles |
+
+#### Sub-capa Model - Commands:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Command | CreateProfileCommand | Comando para crear un nuevo perfil | Representar la intención de crear un nuevo perfil en el sistema | Usado en la implementación del servicio de comandos de perfil |
+| Command | CreateProfileWithFileCommand | Comando para crear un perfil con archivo adjunto | Representar la intención de crear un nuevo perfil incluyendo archivos de documentación | Usado en la implementación del servicio de comandos de perfil |
+| Command | DeleteProfileCommand | Comando para eliminar un perfil | Representar la intención de eliminar un perfil del sistema | Usado en la implementación del servicio de comandos de perfil |
+| Command | UpdateProfileCommand | Comando para actualizar información de perfil | Representar la intención de modificar los datos de un perfil existente | Usado en la implementación del servicio de comandos de perfil |
+
+#### Sub-capa Model - Queries:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Query | GetAllProfilesQuery | Consulta para obtener todos los perfiles | Representar la intención de obtener la lista completa de perfiles registrados | Usado en la implementación del servicio de consultas |
+| Query | GetProfileByRucUserQuery | Consulta para obtener perfil por RUC de usuario | Representar la intención de buscar un perfil específico por el RUC del usuario asociado | Usado en la implementación del servicio de consultas |
+| Query | GetProfileByIdQuery | Consulta para obtener perfil por ID | Representar la intención de buscar un perfil específico por su identificador único | Usado en la implementación del servicio de consultas |
+| Query | GetProfileByNameQuery | Consulta para obtener perfil por nombre | Representar la intención de buscar un perfil específico por su nombre comercial | Usado en la implementación del servicio de consultas |
+
+#### Sub-capa Repositories:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IProfileRepository | Repositorio para operaciones de persistencia del modelo Profile | Definir contratos para operaciones CRUD de perfiles | Implementado en la capa de Infrastructure |
+
+#### Sub-capa Services:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IProfileCommandService | Servicio para métodos de comandos de perfil | Estipular una estructura clara a seguir para operaciones de escritura | Uso en la capa "application" para implementar los métodos dados |
+| Interface | IProfileQueryService | Servicio para métodos de consulta de perfil | Estipular una estructura clara a seguir para operaciones de lectura | Usado en la capa "Infrastructure" para la implementación de los métodos |
+
+### 2.6.2.2. Interface Layer
+
+#### Sub-capa REST - Resources:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Resource | ProfileResource | Estructura de datos de perfil para API | Representar y exponer datos de perfil de forma accesible y estructurada para el cliente | Usado en controladores para estructurar respuestas de perfil |
+| Resource | CreateProfileFormResource | Estructura de petición para crear perfil con formulario | Representar datos de entrada para creación de perfil a través de formulario | Usado en controlador para procesar peticiones de creación |
+| Resource | CreateProfileResource | Estructura de petición para crear perfil | Representar datos de entrada para creación de perfil | Usado en controlador para procesar peticiones de creación estándar |
+| Resource | CreateProfileWithFileResource | Estructura de petición para crear perfil con archivos | Representar datos de entrada para creación de perfil incluyendo archivos adjuntos | Usado en controlador para procesar peticiones con documentos |
+| Resource | DeleteProfileResource | Estructura de petición para eliminar perfil | Representar datos necesarios para identificar y eliminar un perfil | Usado en controlador para procesar peticiones de eliminación |
+| Resource | UpdateProfileResource | Estructura de petición para actualizar perfil | Representar datos de entrada para actualización de información de perfil | Usado en controlador para procesar peticiones de actualización |
+| Resource | UpdateProfileWithFileResource | Estructura de petición para actualizar perfil con archivos | Representar datos de entrada para actualización de perfil incluyendo archivos adjuntos | Usado en controlador para procesar actualizaciones con documentos |
+
+#### Sub-capa REST - Transform:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Assembler | ProfileResourceFromEntityAssembler | Transformador de entidad Profile a ProfileResource | Convertir la entidad del dominio a su representación REST correspondiente | Usado en controladores para transformar respuestas |
+| Assembler | CreateProfileCommandFromResourceAssembler | Transformador de CreateProfileResource a CreateProfileCommand | Convertir la petición REST a comando del dominio | Usado en controlador para procesar peticiones de creación |
+| Assembler | DeleteProfileCommandFromResourceAssembler | Transformador de DeleteProfileResource a DeleteProfileCommand | Convertir la petición REST a comando del dominio | Usado en controlador para procesar peticiones de eliminación |
+| Assembler | UpdateProfileCommandFromResourceAssembler | Transformador de UpdateProfileResource a UpdateProfileCommand | Convertir la petición REST a comando del dominio | Usado en controlador para procesar peticiones de actualización |
+
+### 2.6.2.3. Application Layer
+
+#### Sub-capa Internal - CommandServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| CommandHandler | ProfileCommandService | Implementación de comandos de perfil | Implementar los métodos para el servicio de gestión de perfiles | Implementa los métodos de la interface IProfileCommandService en la capa de "Services" |
+
+#### Sub-capa Internal - QueryServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| QueryHandler | ProfileQueryService | Implementación de consultas de perfil | Implementar los métodos para las consultas de perfiles | Implementa los métodos de la interface IProfileQueryService en la capa de "Services" |
+
+### 2.6.2.4. Infrastructure Layer
+
+#### Sub-capa Persistence - Repositories:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Repository | ProfileRepository | Repositorio para usar del modelo "Profile" | Acceder y manipular datos persistidos de perfiles en la base de datos | Usado en la Capa "Application" para implementar operaciones CRUD de perfiles |
+
+### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+Este diagrama representa la descomposición interna del container Profile Application, correspondiente al bounded context de gestión de perfiles de empresa dentro del sistema. Se trata de un backend desarrollado bajo los principios de Clean Architecture y Domain-Driven Design (DDD), y se ilustra aquí en el Nivel 3 del C4 Model (Component Diagram).
+
+![Profile Component Diagram](assets/CompProfile.png)
+
+### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
+
 #### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+**Diagrama de clases de la capa Domain:**
+
+En esta imagen se muestran las clases del dominio Profile que incluyen Company como aggregate root, Commands para las operaciones CRUD de empresas, Queries para las consultas de información, e interfaces para los servicios de dominio con sus respectivas implementaciones.
+
+![Profile Domain Class Diagram](assets/ClassProfile.png)
+
 #### 2.6.2.6.2. Bounded Context Database Design Diagram
+
+![Profile Database Diagram](assets/BaseProfile.PNG)
+
+| Nombre | Descripción |
+|--------|-------------|
+| id | Identificador único del registro, generalmente una clave primaria. |
+| created_at | Fecha y hora en que se creó el registro. |
+| updated_at | Fecha y hora de la última actualización del registro. |
+| profile_name | Nombre oficial del perfil. |
+| profile_email | Dirección de correo electrónico del perfil. |
+| profile_phone | Número de teléfono principal del perfil. |
+| profile_address | Dirección física del perfil. |
+| profile_ruc | Registro Único de Contribuyentes del perfil. |
+| profile_description | Descripción detallada de las actividades y servicios del perfil. |
+| profile_logo_url | URL del logotipo del perfil almacenado en el sistema. |
 
 ### 2.6.3. Bounded Context: Stops
 #### 2.6.3.1. Domain Layer
