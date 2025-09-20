@@ -575,7 +575,9 @@ Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context 
 
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 #### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
+El diagrama implementa Domain-Driven Design (DDD) con CQRS, donde Route actúa como Aggregate Root controlando las entidades RouteStop y Schedule. Los CommandService y QueryService separan las operaciones de escritura y lectura, utilizando el Repository Pattern para abstraer la persistencia. Esta arquitectura garantiza consistencia de dominio, separación de responsabilidades y alta testabilidad mediante la centralización de la lógica de negocio en el agregado principal.
 
+![Domainlayer](assets/domain-layer.png)
 
 #### 2.6.4.6.2. Bounded Context Database Design Diagram
 ![RouteD](assets/RoutesD.png)
