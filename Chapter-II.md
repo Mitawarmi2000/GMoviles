@@ -2303,7 +2303,7 @@ En esta imagen se muestran las clases del dominio Profile que incluyen Company c
 #### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
 #### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
 
-
+<img width="2398" height="545" alt="image" src="https://github.com/user-attachments/assets/858e4deb-e10e-4f86-987d-c717ae2bfc05" />
 
 #### 2.6.3.6.2. Bounded Context Database Design Diagram
 
