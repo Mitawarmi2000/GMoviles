@@ -1508,13 +1508,13 @@ Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
 
-# 4.2. Tactical-Level Domain-Driven Design
+# 2.6. Tactical-Level Domain-Driven Design
 
-## 4.2.1. Bounded Context: IAM
+## 2.6.1. Bounded Context: IAM
 
 Siguiendo el modelo de arquitectura "Clean Architecture" hemos dividido el proyecto en capas. A continuación detallamos las capas del Bounded Context referenciado.
 
-### 4.2.1.1. Domain Layer
+### 2.6.1.1. Domain Layer
 
 #### Sub-capa Model - Aggregates:
 
@@ -1557,7 +1557,7 @@ Siguiendo el modelo de arquitectura "Clean Architecture" hemos dividido el proye
 |------|--------|-------------|---------------------------|------------------------------|
 | Interface | IUserRepository | Repositorio para operaciones de persistencia del modelo User | Definir contratos para operaciones CRUD del usuario | Implementado en la capa de Infrastructure |
 
-### 4.2.1.2. Interface Layer
+### 2.6.1.2. Interface Layer
 
 #### Sub-capa REST - Resources:
 
@@ -1590,7 +1590,7 @@ Siguiendo el modelo de arquitectura "Clean Architecture" hemos dividido el proye
 |------|--------|-------------|---------------------------|------------------------------|
 | Service | IamContextFacade | Servicio de fachada para IAM | Proporcionar una interfaz simplificada para interactuar con el contexto IAM desde otros bounded contexts | Relacionado con otros bounded contexts que necesitan servicios de identidad y acceso |
 
-### 4.2.1.3. Application Layer
+### 2.6.1.3. Application Layer
 
 #### Sub-capa Internal - CommandServices:
 
@@ -1611,7 +1611,7 @@ Siguiendo el modelo de arquitectura "Clean Architecture" hemos dividido el proye
 |------|--------|-------------|---------------------------|------------------------------|
 | QueryHandler | UserQueryService | Implementación de las consultas de usuarios | Implementar los métodos para las consultas de usuarios | Implementa los métodos de la interface de su mismo nombre en la capa de "Services". |
 
-### 4.2.1.4. Infrastructure Layer
+### 2.6.1.4. Infrastructure Layer
 
 #### Sub-capa Hashing (BCrypt):
 
@@ -1641,15 +1641,15 @@ Siguiendo el modelo de arquitectura "Clean Architecture" hemos dividido el proye
 | Config | TokenSettings | Configuración de tokens JWT | Almacenar configuraciones relacionadas con la generación y validación de tokens | Usado por TokenService para configurar JWT |
 | Service | TokenService | Servicio para manejo de tokens JWT | Encapsular toda la lógica relacionada con el manejo de tokens JWT (generación, validación, decodificación) | Relacionado con la seguridad de la aplicación y usado en autenticación |
 
-### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
+### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
 
 Este diagrama representa la descomposición interna del container IAM Application, correspondiente al bounded context de identidad y autenticación (IAM) dentro del sistema. Se trata de un backend desarrollado bajo los principios de Clean Architecture y Domain-Driven Design (DDD), y se ilustra aquí en el Nivel 3 del C4 Model (Component Diagram).
 
 ![IAM Component Diagram](assets/ClassIAM.png)
 
-### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
+### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
 
-#### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
+#### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
 
 **Diagrama de clases de la capa Domain:**
 
@@ -1657,7 +1657,7 @@ En esta presente imagen, las clases del dominio IAM incluyen User como aggregate
 
 ![IAM Domain Class Diagram](assets/CompIAM.png)
 
-#### 4.2.1.6.2. Bounded Context Database Design Diagram
+#### 2.6.1.6.2. Bounded Context Database Design Diagram
 
 ![IAM Database Diagram](assets/DiagramBaseIAM.PNG)
 
