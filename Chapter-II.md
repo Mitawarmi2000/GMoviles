@@ -832,6 +832,33 @@ El siguiente diagrama de despliegue describe la infraestructura física y lógic
 
 #### 2.6.3.4 Infrastructure Layer
 
+<table border="1" style="border-collapse:collapse; text-align:left; width:100%;">
+  <tr style="background-color:#f2f2f2;">
+    <th>Tipo</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Responsabilidad Principal</th>
+    <th>Relación con otros Elementos</th>
+  </tr>
+
+  <!-- STOP REPOSITORY -->
+  <tr>
+    <td>Repository</td>
+    <td>StopRepository</td>
+    <td>Implementación concreta de <b>IStopRepository</b> utilizando Entity Framework Core.</td>
+    <td>Acceder y manipular datos persistidos de la entidad <b>Stop</b> en la base de datos. Provee métodos específicos como búsqueda por compañía, distrito y nombre.</td>
+    <td>Extiende de <b>BaseRepository&lt;Stop&gt;</b>. Depende de <b>AppDbContext</b>. Es utilizado por <b>StopCommandService</b> y <b>StopQueryService</b> en la capa Application.</td>
+  </tr>
+
+  <!-- GEOGRAPHIC DATA SEEDER -->
+  <tr>
+    <td>Seeder</td>
+    <td>GeographicDataSeeder</td>
+    <td>Clase encargada de inicializar datos de regiones, provincias y distritos consumiendo información de una API externa.</td>
+    <td>Consultar la API de geolocalización mediante <b>IGeoImportService</b>, y poblar la base de datos con <b>Region</b>, <b>Province</b> y <b>District</b> usando servicios de comando.</td>
+    <td>Depende de <b>IGeoImportService</b>, <b>IRegionCommandService</b>, <b>IRegionQueryService</b>, <b>IProvinceCommandService</b>, <b>IDistrictCommandService</b> y <b>ILogger</b>. Se ejecuta típicamente en la fase de inicialización del sistema para preparar datos base.</td>
+  </tr>
+</table>
 
 
 #### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
