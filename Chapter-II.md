@@ -1479,13 +1479,106 @@ El Impact Mapping permite alinear los objetivos del proyecto con las necesidades
 
 ### 2.5.1. EventStorming
 
+Para el proceso de EventStorming utilizamos la herramienta Miro y realizamos 4 pasos para llegar a definir los bounded context que se van a trabajar.
+
+En primer lugar, debemos identificar los eventos y trazarlos mediante una linea de tiempo imaginaria que va de izquierda a derecha. Además, se usa post-it anaranjado para identificar a los eventos.
+
+![event-storming-step-1.png](assets/event-storming-step-1.png)
+
+Como segundo paso, identificamos los comandos que disparan o llevan a acabo el evento. Identificamos a estos con un post-it de color azul.
+
+![event-storming-step-2.png](assets/event-storming-step-2.png)
+
+Como tercer paso, identificamos los agentes que realizan o usan el comando. Estos se representan mediante un post-it de color amarillo.
+
+![event-storming-step-3.png](assets/event-storming-step-3.png)
+
+Como último paso, identificamos los eventos que se relacionen entre sí mediante los agregados y entidades que utilizan, agrupandolos por Bounded Context.
+
+![event-storming-step-4.png](assets/event-storming-step-4.png)
+
 #### 2.5.1.1. Candidate Context Discovery
+
+En esta sesión aplicamos la técnica de Candidate Context Discovery para identificar y separar los posibles bounded contexts. Para ello, aplicamos principalmente la técnica look-for-pivotal-events para analizar los eventos que marcan un cambio de estado en el negocio. Al identificar eventos como **ParaderoCreado**, **RutaCreada**,  **UsuarioRegistrado**, entre otros; pudimos detectar que cada uno implicaba responsabilidades y reglas distintas.
+
+Este proceso nos llevo a crear los siguientes Bounded Contexts:
+
+| Bounded Context       | Descripción                                                                 | Eventos clave                                                   |
+|-----------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------|
+| IAM                   | Maneja la autenticación y autorización de los usuarios, asegurando accesos. | `Usuario Registrado`, `Usuario Autenticado`                     |
+| Profile               | Administra la información de perfil de conductores y pasajeros.             | `Perfil Creado`, `Perfil Actualizado`                           |
+| Gestión de Paraderos  | Permite crear, editar y eliminar paraderos, que sirven como puntos de ruta. | `Paradero Creado`, `Paradero Actualizado`, `Paradero Eliminado` |
+| Gestión de Rutas      | Administra la creación, edición y eliminación de rutas con paraderos.       | `Ruta Creada`, `Ruta Actualizada`, `Ruta Eliminada`             |
+
 
 #### 2.5.1.2. Domain Message Flow Modeling
 
+El Domain Message Flow Modelling es una técnica que permite representar cómo fluyen los mensajes de dominio (commands, events y queries) entre los distintos bounded contexts del sistema. Su propósito es clarificar las interacciones, dependencias y responsabilidades de cada contexto
+
+![message-flow-scenary-1.png](assets/message-flow-scenary-1.png)
+
+![message-flow-scenary-2.png](assets/message-flow-scenary-2.png)
+
+![message-flow-scenary-3.png](assets/message-flow-scenary-3.png)
+
+![message-flow-scenary-4.png](assets/message-flow-scenary-4.png)
+
+![message-flow-scenary-5.png](assets/message-flow-scenary-5.png)
+
+![message-flow-scenary-6.png](assets/message-flow-scenary-6.png)
+
 #### 2.5.1.3. Bounded Context Canvases
 
+El Bounded Context Canvas es una herramienta visual aplicada en el marco del Domain-Driven Design (DDD) que permite representar de manera clara los límites, responsabilidades e interacciones de cada contexto dentro de un sistema complejo. Su propósito es facilitar que los equipos construyan una visión compartida sobre el nombre y objetivo de cada contexto, las entidades y agregados que lo conforman, así como las reglas de negocio que gobiernan su funcionamiento.
+
+En esta sección se presentan los Bounded Context Canvases correspondientes a los contextos identificados en nuestro proyecto.
+
+![canvas-routes.png](assets/canvas-routes.png)
+
+![canvas-stops.png](assets/canvas-stops.png)
+
+![canvas-profile.png](assets/canvas-profile.png)
+
+![canvas-iam.png](assets/canvas-iam.png)
+
 ### 2.5.2. Context Mapping
+
+![context-mapping.png](assets/context-mapping.png)
+
+**IAM – Profile (ACL)**
+
+* En esta relación, IAM es Upstream, pues provee la identidad validada de los usuarios.
+
+* Profile es Downstream, ya que consume la información de identidad para complementarla con atributos datos personales.
+
+* Se propone el uso de un Anti-Corruption Layer (ACL) en Profile, ya que esto garantiza que cambios en IAM no afecten directamente al contexto Profile.
+
+
+**Profile – Rutas (Conformist)**
+
+* El contexto de Rutas necesita información de los conductores o usuarios para registrar qué persona creó y administra una ruta.
+
+* Profile es Upstream, ya que provee los datos del usuario.
+
+* Rutas es Downstream, adoptando el modelo de Profile de forma directa.
+* La relación es de tipo Conformist, ya que Rutas depende del modelo definido en Profile
+
+**Profile – Paraderos (Conformist)**
+
+De manera similar, el contexto de Paraderos depende de los datos de usuario para registrar quién creó, modificó o eliminó un paradero.
+
+* Profile es Upstream, como fuente de información de usuario.
+
+* Paraderos es Downstream, ajustándose al modelo de Profile.
+* La relación se establece como Conformist, ya que Paraderos adopta directamente el modelo de usuario de Profile para mantener coherencia e integridad en los datos.
+
+**Rutas – Paraderos (Customer/Supplier)**
+
+El contexto de Rutas necesita consumir información de los paraderos para construir recorridos y definir los puntos de inicio, intermedio y final.
+
+* En esta relación, Paraderos es Upstream (Supplier), ya que provee la información de los paraderos disponibles.
+
+* Rutas es Downstream (Customer), pues consume esa información para asociarla a una ruta.
 
 ### 2.5.3. Software Architecture
 
