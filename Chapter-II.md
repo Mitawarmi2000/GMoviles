@@ -496,6 +496,20 @@ Este proceso nos llevo a crear los siguientes Bounded Contexts:
 
 #### 2.5.1.2. Domain Message Flow Modeling
 
+El Domain Message Flow Modelling es una técnica que permite representar cómo fluyen los mensajes de dominio (commands, events y queries) entre los distintos bounded contexts del sistema. Su propósito es clarificar las interacciones, dependencias y responsabilidades de cada contexto
+
+![message-flow-scenary-1.png](assets/message-flow-scenary-1.png)
+
+![message-flow-scenary-2.png](assets/message-flow-scenary-2.png)
+
+![message-flow-scenary-3.png](assets/message-flow-scenary-3.png)
+
+![message-flow-scenary-4.png](assets/message-flow-scenary-4.png)
+
+![message-flow-scenary-5.png](assets/message-flow-scenary-5.png)
+
+![message-flow-scenary-6.png](assets/message-flow-scenary-6.png)
+
 #### 2.5.1.3. Bounded Context Canvases
 
 ### 2.5.2. Context Mapping
