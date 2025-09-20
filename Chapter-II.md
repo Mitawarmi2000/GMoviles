@@ -251,7 +251,7 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 - Apellidos: Pescoran
 - Edad: 19 años
 - Ciudad: Trujillo 
-- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
+- URL Entrevista: https://shorturl.at/B4oB4
 - Duración: 00:08:46 minutos 
 - Resumen:<br>
     Juan, un estudiante universitario de 19 años, comentó que en su experiencia los "jaladores" de colectivos suelen brindar información incorrecta sobre las rutas, lo que genera confusión. Actualmente, su método para abordar un colectivo consiste en preguntar directamente al conductor sobre el recorrido. Además, considera que sería muy útil poder planificar su viaje antes de salir, especialmente porque en Trujillo no existen paraderos formales. Finalmente, destacó que valoraría mucho un sistema confiable que le permita identificar qué colectivos lo pueden llevar a su destino de manera precisa.
@@ -264,24 +264,14 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 - Apellidos: Agüero Sulca
 - Edad: 52 años
 - Distrito: Chorrillos
-- URL Entrevista: 
+- URL Entrevista: https://shorturl.at/B4oB4
 - Duración: 00:04:44 minutos 
 - Resumen:<br>
   La entrevistada se llama Raquel Agüero Sulca, tiene 52 años, trabaja como auxiliar de contabilidad y vive en Chorrillos. La entrevistada utiliza colectivos principalmente en horas punta, ya que el Metropolitano y los micros suelen estar llenos y la hacen perder tiempo. Sin embargo, reconoce que el transporte colectivo es informal y presenta dificultades: a veces los paraderos son intervenidos y cambian de lugar, lo que la ha llevado a equivocarse y perder tiempo, incluso teniendo que optar por un taxi como alternativa. Generalmente se entera de los paraderos porque suelen ubicarse en grifos o estaciones, pero como no son fijos, necesita preguntar a otras personas en la calle, lo que considera medianamente confiable, ya que no proviene de fuentes seguras. Ha tenido varios problemas para encontrar un paradero y cree que una aplicación que muestre paraderos, rutas y tarifas sería muy útil, siempre que ofrezca precios competitivos y accesibles frente a otras opciones de transporte. También le gustaría poder visualizar en un mapa la ubicación de los paraderos antes de salir, ya que le daría mayor comodidad y seguridad. En cuanto al tiempo de espera, sabe que no hay un horario fijo, pues depende de que los conductores llenen el vehículo, lo cual puede ser más lento si hay poca demanda. Por eso, considera importante que una aplicación muestre no solo las rutas, sino también la frecuencia de los colectivos y los precios.
   
 ---
 
-#### Entrevistado N°3
-![entrevista3_segmento1](assets/entrevista-amir.jpg) 
-- Nombres: Sammy
-- Apellidos: Lindo
-- Edad: 19 años
-- Ciudad: Lima
-- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
-- Duración: 00:04:39
-- Resumen:<br>
-    Samy prefiere los colectivos por ser más rápidos que los taxis, aunque las paradas frecuentes pueden causar demoras. A menudo pierde tiempo por no tener información precisa sobre los paraderos. Para conocer rutas, pregunta a conocidos o consulta redes sociales, pero a veces la información es desactualizada. Cree que una app como Chapa Toruta sería útil para ver paraderos, rutas, precios y tiempos de espera en tiempo real, y sugiere incluir detalles como placas de los vehículos para mayor confianza.
----
+
 
 **Segmento Objetivo:** Conductores de colectivo
 
@@ -291,7 +281,7 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 - Apellidos: Ramirez
 - Edad: 28 años
 - Ciudad: Lima 
-- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
+- URL Entrevista: https://shorturl.at/B4oB4 
 - Duración: 00:02:44
 - Resumen:<br>
     Juan Carlos, conductor de transporte público, explicó que tiene un turno establecido para el despliegue de sus vehículos, pero que la cantidad de personas también es un factor determinante para iniciar el recorrido. Para coordinar sus salidas, utiliza principalmente WhatsApp. Mencionó que sería de gran utilidad contar con una herramienta que permita a las personas conocer dónde encontrar las rutas disponibles, siempre y cuando la plataforma sea fácil de usar.
@@ -299,25 +289,12 @@ Para enfrentar el entorno competitivo, Frock adoptará estrategias diferenciador
 ---
 
 #### Entrevistado N°2
-![entrevista2_segmento2](assets/entrevista-jesus.jpg) 
-- Nombres: Hairo
-- Apellidos: Cadillo
-- Edad: 21 años
-- Ciudad: Huaral 
-- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
-- Duración: 00:10:54
-- Resumen:<br>
-    Hairo trabaja como administrador de rutas de vehículos menores en transporte interprovincial y zonas céntricas. Su función principal es planificar los tiempos de salida de los vehículos, aunque menciona que estos tiempos a menudo dependen de si las unidades están llenas o no. Desde su experiencia, considera que sería útil y rentable que los paraderos que administra estén integrados dentro de una plataforma digital, lo que permitiría mejorar la organización y la visibilidad del servicio.
-
----
-
-#### Entrevistado N°3
 ![entrevista3_segmento2](assets/entrevista-yasser2.jpg) 
 - Nombres: Juan David
 - Apellidos: Linares
 - Edad: 26 años
 - Ciudad: Lima
-- URL Entrevista: https://tinyurl.com/EntrevistasFROCK-WEB
+- URL Entrevista: https://shorturl.at/B4oB4
 - Duración: 00:02:30 
 - Resumen:<br>
       Juan es cobrador de bus en la ciudad de Lima y menciona que en su ruta suelen operar entre 20 y 25 colectivos. La organización de salida y llegada se basa en el principio de "quien llega primero sale primero". Señala que la mayoría de los pasajeros llegan sin saber exactamente cuál es el colectivo adecuado para su destino, lo que genera cierto desorden y confusión.
@@ -386,9 +363,9 @@ Los segmentos objetivo representados por los User Personas: Jesús Ramírez (pas
 
 | **Tarea**                                                  | **User Story ID** | **Jesús Ramírez (Pasajero)** - F | **Jesús Ramírez** - I | **Elmer Huamán (Conductor)** - F | **Elmer Huamán** - I |
 |------------------------------------------------------------|-------------------|-------------------------------|------------------------|-------------------------------|------------------------|
-| Buscar rutas disponibles para llegar a su destino          | US01              | Alta                          | Alta                   | Media                         | Alta                   |
+| Buscar rutas disponibles para llegar a su destino          | US08              | Alta                          | Alta                   | Media                         | Alta                   |
 | Identificar paraderos adecuados para abordar               | US02              | Alta                          | Alta                   | Media                         | Media                  |
-| Ver información del conductor	                             | US03              | Media                         | Alta                   | Media                         | Alta                   |
+| Ver información del conductor	                             | US19              | Media                         | Alta                   | Media                         | Alta                   |
 | Avisar disponibilidad a pasajeros frecuentes               | US08              | Baja                          | Media                  | Alta                          | Alta                   |
 | Ajustar su horario según los momentos de mayor demanda     | US09              | Baja                          | Media                  | Alta                          | Alta                   |
 | Recordar o registrar los viajes que ha hecho               | US05              | Media                         | Baja                   | Baja                          | Baja                   |
