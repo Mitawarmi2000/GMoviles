@@ -524,7 +524,15 @@ Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context 
 
 ### 2.6.4. Bounded Context: Carriage Routes
 #### 2.6.4.1. Domain Layer
+Esta capa contiene la lógica de negocio central del dominio de **"rutas"**.
+
+- **Modelo:** El Aggregate principal es `Route`. Las Entities son `RoutesStops` y `Schedule`.  
+- **Comandos:** Se definen los Commands `CreateFullRouteCommand`, `DeleteRouteCommand` y `UpdateRouteCommand`.  
+- **Consultas:** Se definen Queries como `GetAllRoutesQuery` y `GetRouteByIdQuery`.  
+- **Interfaces:** Se establecen las interfaces `IRouteCommandService`, `IRouteQueryService` e `IRouteRepository`.
+  
 #### 2.6.4.2. Interface Layer
+
 #### 2.6.4.3. Application Layer
 #### 2.6.4.4 Infrastructure Layer
 #### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
