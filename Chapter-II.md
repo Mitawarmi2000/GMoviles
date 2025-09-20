@@ -575,4 +575,38 @@ Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context 
 
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 #### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
+
+
 #### 2.6.4.6.2. Bounded Context Database Design Diagram
+![RouteD](RoutesD.png)
+
+### Tabla: `Routes`
+
+| Campo        | Tipo   | Nulo | Default | Comentario                                |
+|--------------|--------|------|---------|-------------------------------------------|
+| id           | TEXT   | N-N  | default | Identificador único de la ruta             |
+| price        | FLOAT  | NULL | default | Precio de la ruta                          |
+| duration_min | INT    | NULL | default | Duración estimada de la ruta en minutos    |
+
+---
+
+### Tabla: `Stops_routes`
+
+| Campo        | Tipo | Nulo | Default | Comentario                                            |
+|--------------|------|------|---------|-------------------------------------------------------|
+| id           | TEXT | N-N  | default | Identificador único de la parada en la ruta           |
+| fk_id_route  | TEXT | N-N  | default | Clave foránea que referencia la tabla `Routes`        |
+| fk_id_stop   | TEXT | N-N  | default | Clave foránea que referencia la tabla de `Stops`      |
+
+---
+
+### Tabla: `Schedules`
+
+| Campo        | Tipo    | Nulo | Default | Comentario                                           |
+|--------------|---------|------|---------|------------------------------------------------------|
+| id           | TEXT    | N-N  | default | Identificador único del horario                       |
+| city         | TEXT    | NULL | default | Ciudad del horario                                   |
+| time_from    | TEXT    | NULL | default | Hora de inicio del horario                           |
+| time_to      | TEXT    | NULL | default | Hora de fin del horario                              |
+| is_available | BOOLEAN | NULL | default | Indica si el horario está disponible                 |
+| fk_id_route  | TEXT    | N-N  | default | Clave foránea que referencia la tabla `Routes`       |
