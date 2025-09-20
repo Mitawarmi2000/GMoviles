@@ -1578,29 +1578,582 @@ Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
 
-## 2.6. Tactical-Level Domain-Driven Design
-### 2.6.1. Bounded Context: IAM
+# 2.6. Tactical-Level Domain-Driven Design
+
+## 2.6.1. Bounded Context: IAM
+
+Siguiendo el modelo de arquitectura "Clean Architecture" hemos dividido el proyecto en capas. A continuación detallamos las capas del Bounded Context referenciado.
+
 ### 2.6.1.1. Domain Layer
-#### 2.6.1.2. Interface Layer
-#### 2.6.1.3. Application Layer
-#### 2.6.1.4 Infrastructure Layer
-#### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
-#### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### Sub-capa Model - Aggregates:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Aggregate | User | Clase para definir el Usuario de la aplicación | Ser el punto de entrada para modificar y mantener la integridad del usuario como entidad del dominio de identidad | Relacionado con los demás boundedContext, ya que encapsula toda la lógica de negocio. |
+
+#### Sub-capa Model - Commands:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Command | SignInCommand | Comando para el inicio de sesión | Representar la intención de iniciar sesión | Usado en la implementación del servicio de autenticación. |
+| Command | SignUpCommand | Comando para registro | Representa la intención de registrarse a la aplicación | Usado en la implementación del servicio de autenticación |
+
+#### Sub-capa Model - Queries:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Query | GetAllUsersQuery | Consulta para obtener todos los usuarios | Representar la intención de obtener la lista completa de usuarios | Usado en la implementación del servicio de consultas |
+| Query | GetUserByEmailQuery | Consulta para obtener un usuario por email | Representar la intención de buscar un usuario específico por su dirección de email | Usado en la implementación del servicio de consultas |
+| Query | GetUserByIdQuery | Consulta para obtener un usuario por ID | Representar la intención de buscar un usuario específico por su identificador único | Usado en la implementación del servicio de consultas |
+| Query | GetUserByUsernameQuery | Consulta para obtener un usuario por nombre de usuario | Representar la intención de buscar un usuario específico por su nombre de usuario | Usado en la implementación del servicio de consultas |
+
+#### Sub-capa Model - Value Objects:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Value Object | Role | Rol del usuario en el sistema | Representar los diferentes roles y permisos que puede tener un usuario | usado en "User" |
+
+#### Sub-capa Services:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IUserCommandService | Servicio para métodos de autenticación | Estipular una estructura clara a seguir | Uso en la capa "application" para implementar los métodos dados |
+| Interface | IUserQueryService | Servicio para métodos de consulta de usuarios | Estipular una estructura clara a seguir | uso en la capa "Infrastructure" para la implementación de los métodos. |
+
+#### Sub-capa Repositories:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IUserRepository | Repositorio para operaciones de persistencia del modelo User | Definir contratos para operaciones CRUD del usuario | Implementado en la capa de Infrastructure |
+
+### 2.6.1.2. Interface Layer
+
+#### Sub-capa REST - Resources:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Resource | AuthenticatedUserResource | Estructura de respuesta para usuario autenticado | Representar datos del usuario autenticado de forma estructurada | Usado en AuthenticationController para respuestas de autenticación exitosa |
+| Resource | SignInResource | Estructura de una petición para iniciar sesión | Representar y exponer datos del dominio de forma accesible y estructurada para el cliente | Uso en el "AuthenticationController" para peticionar datos de una manera predeterminada en la autenticación |
+| Resource | SignUpResource | Estructura de una petición para registrar un usuario | Representar y exponer datos del dominio de forma accesible y estructurada para el cliente | Uso en el "AuthenticationController" para peticionar datos de una manera predeterminada en el registro |
+| Resource | UserResource | Estructura de datos del usuario | Representar y exponer datos del dominio de forma accesible y estructurada para el cliente | Uso en el "UsersController" para emitir datos de una manera predeterminada sobre usuarios |
+
+#### Sub-capa REST - Transform:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Assembler | AuthenticatedUserResourceFromEntityAssembler | Transformador de entidad User a AuthenticatedUserResource | Convertir la entidad del dominio a su representación REST correspondiente | Usado en controladores para transformar respuestas |
+| Assembler | SignInCommandFromResourceAssembler | Transformador de SignInResource a SignInCommand | Convertir la petición REST a comando del dominio | Usado en AuthenticationController para procesar peticiones de login |
+| Assembler | SignUpCommandFromResourceAssembler | Transformador de SignUpResource a SignUpCommand | Convertir la petición REST a comando del dominio | Usado en AuthenticationController para procesar peticiones de registro |
+| Assembler | UserResourceFromEntityAssembler | Transformador de entidad User a UserResource | Convertir la entidad del dominio a su representación REST correspondiente | Usado en UsersController para transformar respuestas |
+
+#### Sub-capa REST - Controllers:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Controller | AuthenticationController | Controlador para operaciones de autenticación | Manejar las peticiones HTTP relacionadas con autenticación y registro | Usa los services de aplicación y los assemblers para procesar peticiones |
+| Controller | UsersController | Controlador para operaciones de gestión de usuarios | Manejar las peticiones HTTP relacionadas con operaciones CRUD de usuarios | Usa los query services y assemblers para procesar peticiones |
+
+#### Sub-capa ACL:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Service | IamContextFacade | Servicio de fachada para IAM | Proporcionar una interfaz simplificada para interactuar con el contexto IAM desde otros bounded contexts | Relacionado con otros bounded contexts que necesitan servicios de identidad y acceso |
+
+### 2.6.1.3. Application Layer
+
+#### Sub-capa Internal - CommandServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| CommandHandler | UserCommandService | Implementación de los Comandos de Autenticación | Implementar los métodos para el servicio de autenticación | Implementa los métodos de la interface de su mismo nombre en la capa de "Services". |
+
+#### Sub-capa Internal - OutboundServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Service | IHashingService | Interfaz para servicios de hashing | Definir contratos para operaciones de hash de contraseñas | Implementado en la capa Infrastructure |
+| Service | ITokenService | Interfaz para servicios de tokens | Definir contratos para generación y validación de tokens | Implementado en la capa Infrastructure |
+
+#### Sub-capa Internal - QueryServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| QueryHandler | UserQueryService | Implementación de las consultas de usuarios | Implementar los métodos para las consultas de usuarios | Implementa los métodos de la interface de su mismo nombre en la capa de "Services". |
+
+### 2.6.1.4. Infrastructure Layer
+
+#### Sub-capa Hashing (BCrypt):
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Service | HashingService | Servicio para el hash de contraseñas usando BCrypt | Proporcionar métodos para hashear y verificar contraseñas de forma segura | Relacionado con la seguridad de la aplicación y usado en UserCommandService |
+
+#### Sub-capa Persistence (EFC):
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Repository | UserRepository | Repositorio para usar del modelo "User" con Entity Framework Core | Acceder y manipular datos persistidos en la base de datos | Usado en la Capa "Application" para implementar el registro y autenticación de un usuario. |
+
+#### Sub-capa Pipeline (Middleware):
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Attribute | AllowAnonymousAttribute | Atributo para permitir acceso anónimo | Marcar endpoints que no requieren autenticación | Usado en controladores para endpoints públicos |
+| Attribute | AuthorizeAttribute | Atributo para requerir autorización | Marcar endpoints que requieren autenticación y/o autorización específica | Usado en controladores para proteger endpoints |
+| Component | RequestAuthorizationMiddleware | Middleware para autorización de peticiones | Interceptar y validar autorización en cada petición HTTP | Relacionado con el pipeline de la aplicación |
+| Extension | RequestAuthorizationMiddlewareExtensions | Extensiones para el middleware de autorización | Proporcionar métodos de extensión para configurar el middleware | Usado para configurar el pipeline de autorización |
+
+#### Sub-capa Tokens (JWT):
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Config | TokenSettings | Configuración de tokens JWT | Almacenar configuraciones relacionadas con la generación y validación de tokens | Usado por TokenService para configurar JWT |
+| Service | TokenService | Servicio para manejo de tokens JWT | Encapsular toda la lógica relacionada con el manejo de tokens JWT (generación, validación, decodificación) | Relacionado con la seguridad de la aplicación y usado en autenticación |
+
+### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+Este diagrama representa la descomposición interna del container IAM Application, correspondiente al bounded context de identidad y autenticación (IAM) dentro del sistema. Se trata de un backend desarrollado bajo los principios de Clean Architecture y Domain-Driven Design (DDD), y se ilustra aquí en el Nivel 3 del C4 Model (Component Diagram).
+
+![IAM Component Diagram](assets/ClassIAM.png)
+
+### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
+
 #### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+**Diagrama de clases de la capa Domain:**
+
+En esta presente imagen, las clases del dominio IAM incluyen User como aggregate root, Commands para las operaciones de autenticación y registro, Value Objects para encapsular datos importantes, e interfaces para los servicios de dominio con sus respectivas implementaciones.
+
+![IAM Domain Class Diagram](assets/CompIAM.png)
+
 #### 2.6.1.6.2. Bounded Context Database Design Diagram
 
-### 2.6.2. Bounded Context: Profile
-#### 2.6.2.1. Domain Layer
-#### 2.6.2.2. Interface Layer
-#### 2.6.2.3. Application Layer
-#### 2.6.2.4 Infrastructure Layer
-#### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
-#### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
+![IAM Database Diagram](assets/DiagramBaseIAM.PNG)
+
+| Nombre | Descripción |
+|--------|-------------|
+| id | Identificador único del registro, generalmente una clave primaria. |
+| created_at | Fecha y hora en que se creó el registro. |
+| updated_at | Fecha y hora de la última actualización del registro. |
+| company_name | Nombre de la empresa asociada al usuario o entidad. |
+| email | Dirección de correo electrónico del usuario. |
+| first_name | Primer nombre del usuario. |
+| last_name | Apellido del usuario. |
+| password | Contraseña del usuario (almacenada de forma segura, usualmente encriptada). |
+| trial | Indica si el usuario está en un período de prueba (true/false). |
+| username | Nombre de usuario único utilizado para iniciar sesión. |
+
+## 2.6.2. Bounded Context: Profile
+
+Siguiendo el modelo de arquitectura "Clean Architecture" hemos dividido el proyecto en capas. A continuación detallamos las capas del Bounded Context Profile referenciado.
+
+### 2.6.2.1. Domain Layer
+
+#### Sub-capa Model - Aggregates:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Aggregate | Profile | Entidad que representa un perfil en el sistema | Ser el punto de entrada para modificar y mantener la integridad de la información del perfil como entidad del dominio | Relacionado con otros bounded contexts que requieren información de perfiles |
+
+#### Sub-capa Model - Commands:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Command | CreateProfileCommand | Comando para crear un nuevo perfil | Representar la intención de crear un nuevo perfil en el sistema | Usado en la implementación del servicio de comandos de perfil |
+| Command | CreateProfileWithFileCommand | Comando para crear un perfil con archivo adjunto | Representar la intención de crear un nuevo perfil incluyendo archivos de documentación | Usado en la implementación del servicio de comandos de perfil |
+| Command | DeleteProfileCommand | Comando para eliminar un perfil | Representar la intención de eliminar un perfil del sistema | Usado en la implementación del servicio de comandos de perfil |
+| Command | UpdateProfileCommand | Comando para actualizar información de perfil | Representar la intención de modificar los datos de un perfil existente | Usado en la implementación del servicio de comandos de perfil |
+
+#### Sub-capa Model - Queries:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Query | GetAllProfilesQuery | Consulta para obtener todos los perfiles | Representar la intención de obtener la lista completa de perfiles registrados | Usado en la implementación del servicio de consultas |
+| Query | GetProfileByRucUserQuery | Consulta para obtener perfil por RUC de usuario | Representar la intención de buscar un perfil específico por el RUC del usuario asociado | Usado en la implementación del servicio de consultas |
+| Query | GetProfileByIdQuery | Consulta para obtener perfil por ID | Representar la intención de buscar un perfil específico por su identificador único | Usado en la implementación del servicio de consultas |
+| Query | GetProfileByNameQuery | Consulta para obtener perfil por nombre | Representar la intención de buscar un perfil específico por su nombre comercial | Usado en la implementación del servicio de consultas |
+
+#### Sub-capa Repositories:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IProfileRepository | Repositorio para operaciones de persistencia del modelo Profile | Definir contratos para operaciones CRUD de perfiles | Implementado en la capa de Infrastructure |
+
+#### Sub-capa Services:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IProfileCommandService | Servicio para métodos de comandos de perfil | Estipular una estructura clara a seguir para operaciones de escritura | Uso en la capa "application" para implementar los métodos dados |
+| Interface | IProfileQueryService | Servicio para métodos de consulta de perfil | Estipular una estructura clara a seguir para operaciones de lectura | Usado en la capa "Infrastructure" para la implementación de los métodos |
+
+### 2.6.2.2. Interface Layer
+
+#### Sub-capa REST - Resources:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Resource | ProfileResource | Estructura de datos de perfil para API | Representar y exponer datos de perfil de forma accesible y estructurada para el cliente | Usado en controladores para estructurar respuestas de perfil |
+| Resource | CreateProfileFormResource | Estructura de petición para crear perfil con formulario | Representar datos de entrada para creación de perfil a través de formulario | Usado en controlador para procesar peticiones de creación |
+| Resource | CreateProfileResource | Estructura de petición para crear perfil | Representar datos de entrada para creación de perfil | Usado en controlador para procesar peticiones de creación estándar |
+| Resource | CreateProfileWithFileResource | Estructura de petición para crear perfil con archivos | Representar datos de entrada para creación de perfil incluyendo archivos adjuntos | Usado en controlador para procesar peticiones con documentos |
+| Resource | DeleteProfileResource | Estructura de petición para eliminar perfil | Representar datos necesarios para identificar y eliminar un perfil | Usado en controlador para procesar peticiones de eliminación |
+| Resource | UpdateProfileResource | Estructura de petición para actualizar perfil | Representar datos de entrada para actualización de información de perfil | Usado en controlador para procesar peticiones de actualización |
+| Resource | UpdateProfileWithFileResource | Estructura de petición para actualizar perfil con archivos | Representar datos de entrada para actualización de perfil incluyendo archivos adjuntos | Usado en controlador para procesar actualizaciones con documentos |
+
+#### Sub-capa REST - Transform:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Assembler | ProfileResourceFromEntityAssembler | Transformador de entidad Profile a ProfileResource | Convertir la entidad del dominio a su representación REST correspondiente | Usado en controladores para transformar respuestas |
+| Assembler | CreateProfileCommandFromResourceAssembler | Transformador de CreateProfileResource a CreateProfileCommand | Convertir la petición REST a comando del dominio | Usado en controlador para procesar peticiones de creación |
+| Assembler | DeleteProfileCommandFromResourceAssembler | Transformador de DeleteProfileResource a DeleteProfileCommand | Convertir la petición REST a comando del dominio | Usado en controlador para procesar peticiones de eliminación |
+| Assembler | UpdateProfileCommandFromResourceAssembler | Transformador de UpdateProfileResource a UpdateProfileCommand | Convertir la petición REST a comando del dominio | Usado en controlador para procesar peticiones de actualización |
+
+### 2.6.2.3. Application Layer
+
+#### Sub-capa Internal - CommandServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| CommandHandler | ProfileCommandService | Implementación de comandos de perfil | Implementar los métodos para el servicio de gestión de perfiles | Implementa los métodos de la interface IProfileCommandService en la capa de "Services" |
+
+#### Sub-capa Internal - QueryServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| QueryHandler | ProfileQueryService | Implementación de consultas de perfil | Implementar los métodos para las consultas de perfiles | Implementa los métodos de la interface IProfileQueryService en la capa de "Services" |
+
+### 2.6.2.4. Infrastructure Layer
+
+#### Sub-capa Persistence - Repositories:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Repository | ProfileRepository | Repositorio para usar del modelo "Profile" | Acceder y manipular datos persistidos de perfiles en la base de datos | Usado en la Capa "Application" para implementar operaciones CRUD de perfiles |
+
+### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+Este diagrama representa la descomposición interna del container Profile Application, correspondiente al bounded context de gestión de perfiles de empresa dentro del sistema. Se trata de un backend desarrollado bajo los principios de Clean Architecture y Domain-Driven Design (DDD), y se ilustra aquí en el Nivel 3 del C4 Model (Component Diagram).
+
+![Profile Component Diagram](assets/CompProfile.png)
+
+### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
+
 #### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+**Diagrama de clases de la capa Domain:**
+
+En esta imagen se muestran las clases del dominio Profile que incluyen Company como aggregate root, Commands para las operaciones CRUD de empresas, Queries para las consultas de información, e interfaces para los servicios de dominio con sus respectivas implementaciones.
+
+![Profile Domain Class Diagram](assets/ClassProfile.png)
+
 #### 2.6.2.6.2. Bounded Context Database Design Diagram
+
+![Profile Database Diagram](assets/BaseProfile.PNG)
+
+| Nombre | Descripción |
+|--------|-------------|
+| id | Identificador único del registro, generalmente una clave primaria. |
+| created_at | Fecha y hora en que se creó el registro. |
+| updated_at | Fecha y hora de la última actualización del registro. |
+| profile_name | Nombre oficial del perfil. |
+| profile_email | Dirección de correo electrónico del perfil. |
+| profile_phone | Número de teléfono principal del perfil. |
+| profile_address | Dirección física del perfil. |
+| profile_ruc | Registro Único de Contribuyentes del perfil. |
+| profile_description | Descripción detallada de las actividades y servicios del perfil. |
+| profile_logo_url | URL del logotipo del perfil almacenado en el sistema. |
 
 ### 2.6.3. Bounded Context: Stops
 #### 2.6.3.1. Domain Layer
+
+**Sub-Capa Model**<br>
+<table border="1" style="border-collapse:collapse; text-align:left; width:100%;">
+  <tr style="background-color:#f2f2f2;">
+    <th>Tipo</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Responsabilidad Principal</th>
+    <th>Relación con otros Elementos</th>
+  </tr>
+  <!-- Aggregate -->
+  <tr>
+    <td>Aggregate</td>
+    <td>Stop</td>
+    <td>
+      Representa una <b>parada</b> en el sistema (colectivo o transporte). 
+      Incluye información como nombre, dirección, referencia, empresa y ubicación geográfica.
+    </td>
+    <td>
+      Representar y mantener el estado consistente de una parada dentro del bounded context <b>Stops</b>, 
+      asegurando que los datos cumplan las reglas de negocio.
+    </td>
+    <td>
+      Se relaciona con los <b>Commands</b> y <b>Queries</b>. 
+      Puede ser consumido por otros bounded contexts, como <b>Routes</b>.
+    </td>
+  </tr>
+  <!-- Commands -->
+  <tr>
+    <td rowspan="3">Commands</td>
+    <td>CreateStopCommand</td>
+    <td>
+      Representa la intención de <b>crear</b> una nueva parada en el sistema. Contiene los datos iniciales necesarios:
+      nombre, dirección, referencia, empresa y distrito.
+    </td>
+    <td>
+      Transportar la información requerida desde la capa de aplicación hasta el dominio para 
+      permitir la creación de un nuevo aggregate <b>Stop</b>.
+    </td>
+    <td>
+      Se consume en el aggregate <b>Stop</b>, que lo utiliza para inicializar su estado.
+    </td>
+  </tr>
+  <tr>
+    <td>UpdateStopCommand</td>
+    <td>
+      Representa la intención de <b>actualizar</b> la información de una parada existente. 
+      Incluye el identificador de la parada y los nuevos valores de sus atributos.
+    </td>
+    <td>
+      Transportar los cambios desde la capa de aplicación hasta el dominio para 
+      mantener actualizada la información de un aggregate <b>Stop</b>.
+    </td>
+    <td>
+      Se consume en el aggregate <b>Stop</b>, que aplica los cambios al estado existente.
+    </td>
+  </tr>
+  <tr>
+    <td>DeleteStopCommand</td>
+    <td>
+      Representa la intención de <b>eliminar</b> una parada del sistema. 
+      Requiere el identificador de la parada a borrar.
+    </td>
+    <td>
+      Indicar la eliminación de un aggregate <b>Stop</b> dentro del bounded context <b>Stops</b>.
+    </td>
+    <td>
+      Se consume en el aggregate <b>Stop</b>, que interpreta la eliminación y ajusta su estado en consecuencia.
+    </td>
+  </tr>
+  <!-- DTOs -->
+  <tr>
+    <td rowspan="2">DTOs</td>
+    <td>GeoResponseDto</td>
+    <td>
+      Objeto de transferencia de datos que encapsula información geográfica: 
+      departamento (<code>NOMBDEP</code>), provincia (<code>NOMBPROV</code>), distrito (<code>NOMBDIST</code>) y código (<code>CODIGO</code>).
+    </td>
+    <td>
+      Transportar información geográfica de respuesta, principalmente para exponer datos jerárquicos de ubicación hacia 
+      la capa de aplicación o servicios externos.
+    </td>
+    <td>
+      Puede ser utilizado en consultas de paradas para complementar la información de localización. 
+      Relacionado indirectamente con el aggregate <b>Stop</b> mediante <code>FkIdDistrict</code>.
+    </td>
+  </tr>
+  <tr>
+    <td>LocationHierarchyDto</td>
+    <td>
+      DTO pensado para representar la jerarquía de localizaciones (departamento → provincia → distrito). 
+      Actualmente definido como clase vacía a la espera de ser completada.
+    </td>
+    <td>
+      Servirá como estructura de transporte para organizar la información de ubicaciones en diferentes niveles 
+      jerárquicos dentro del dominio.
+    </td>
+    <td>
+      Complementará al aggregate <b>Stop</b> al permitir exponer datos completos de localización. 
+      Se integrará con <b>GeoResponseDto</b> y claves foráneas de ubicación.
+    </td>
+  </tr>
+  <!-- Queries -->
+  <tr>
+    <td rowspan="3">Queries</td>
+    <td>GetAllStopsByFkIdCompanyQuery</td>
+    <td>
+      Consulta para obtener todas las paradas asociadas a una empresa específica 
+      mediante el campo <code>FkIdCompany</code>.
+    </td>
+    <td>
+      Permitir la recuperación de colecciones de paradas filtradas por empresa, 
+      facilitando la gestión de paradas en contextos multiempresa.
+    </td>
+    <td>
+      Se relaciona con el aggregate <b>Stop</b>, devolviendo un conjunto de entidades 
+      que cumplen con el criterio de la compañía.
+    </td>
+  </tr>
+  <tr>
+    <td>GetAllStopsQuery</td>
+    <td>
+      Consulta para recuperar la lista completa de paradas disponibles en el sistema, sin filtros adicionales.
+    </td>
+    <td>
+      Proporcionar una visión global de todas las paradas registradas en el dominio.
+    </td>
+    <td>
+      Devuelve una colección de aggregates <b>Stop</b>, utilizada en interfaces administrativas o reportes.
+    </td>
+  </tr>
+  <tr>
+    <td>GetStopByIdQuery</td>
+    <td>
+      Consulta para recuperar la información de una parada específica 
+      identificada por su <code>Id</code>.
+    </td>
+    <td>
+      Facilitar la obtención puntual de los datos de un aggregate <b>Stop</b>.
+    </td>
+    <td>
+      Se relaciona directamente con un único aggregate <b>Stop</b>, permitiendo exponer sus atributos al exterior.
+    </td>
+  </tr>
+</table>
+
+**Sub-Capa Services**<br>
+
+<table border="1" style="border-collapse:collapse; text-align:left; width:100%;">
+  <tr style="background-color:#f2f2f2;">
+    <th>Tipo</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Responsabilidad Principal</th>
+    <th>Relación con otros Elementos</th>
+  </tr>
+  <!-- Service: IGeoImportService -->
+  <tr>
+    <td>Interface</td>
+    <td>IGeoImportService</td>
+    <td>
+      Servicio de dominio que permite obtener información geográfica desde una API externa 
+      y trasladarla al dominio mediante <code>GeoResponseDto</code>.
+    </td>
+    <td>
+      Facilitar la integración con fuentes de datos externas, asegurando que la información 
+      geográfica pueda ser consumida en el bounded context <b>Stops</b>.
+    </td>
+    <td>
+      Produce <b>GeoResponseDto</b>, usado por otros componentes del dominio o aplicación.
+    </td>
+  </tr>
+  <!-- Service: IStopCommandService -->
+  <tr>
+    <td rowspan="2">Interfaces</td>
+    <td>IStopCommandService</td>
+    <td>
+      Servicio encargado de manejar los <b>Commands</b> relacionados con el agregado <b>Stop</b>. 
+      Define operaciones para crear, actualizar y eliminar paradas en el dominio.
+    </td>
+    <td>
+      Coordinar la ejecución de <b>CreateStopCommand</b>, <b>UpdateStopCommand</b> y <b>DeleteStopCommand</b>, 
+      garantizando la consistencia del agregado.
+    </td>
+    <td>
+      Se relaciona directamente con el aggregate <b>Stop</b> y los <b>Commands</b> de dominio.
+    </td>
+  </tr>
+  <!-- Service: IStopQueryService -->
+  <tr>
+    <td>IStopQueryService</td>
+    <td>
+      Servicio encargado de manejar las consultas (<b>Queries</b>) sobre el agregado <b>Stop</b>. 
+      Permite recuperar colecciones o instancias puntuales de paradas.
+    </td>
+    <td>
+      Ejecutar queries como <b>GetAllStopsQuery</b>, <b>GetStopByIdQuery</b>, 
+      <b>GetAllStopsByFkIdCompanyQuery</b>, <b>GetAllStopsByFkIdDistrictQuery</b> y 
+      <b>GetStopByNameAndFkIdDistrictQuery</b>.
+    </td>
+    <td>
+      Se relaciona directamente con el aggregate <b>Stop</b>, los <b>Queries</b> y 
+      potencialmente con DTOs para exponer resultados.
+    </td>
+  </tr>
+</table>
+
+#### 2.6.3.2. Interface Layer
+
+**Sub-Capa REST**<br>
+<table border="1" style="border-collapse:collapse; text-align:left; width:100%;">
+  <tr style="background-color:#f2f2f2;">
+    <th>Tipo</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Responsabilidad Principal</th>
+    <th>Relación con otros Elementos</th>
+  </tr>
+
+  <!-- RESOURCES -->
+  <tr>
+    <td>Resource</td>
+    <td>CreateStopFormResource</td>
+    <td>Modelo que representa los datos enviados desde un formulario para crear una parada, incluyendo imagen opcional.</td>
+    <td>Recibir y validar datos de entrada (multipart/form-data) para la creación de un Stop.</td>
+    <td>Consumido por <b>StopsController</b>, transformado a <b>CreateStopResource</b> y luego a <b>CreateStopCommand</b>.</td>
+  </tr>
+
+  <tr>
+    <td>Resource</td>
+    <td>CreateStopResource</td>
+    <td>Modelo simplificado de datos necesarios para crear una parada, incluyendo referencia a imagen ya procesada.</td>
+    <td>Transportar datos desde la capa Interface hacia el dominio en un formato limpio.</td>
+    <td>Convertido en <b>CreateStopCommand</b> mediante <b>CreateStopCommandFromResourceAssembler</b>.</td>
+  </tr>
+
+  <tr>
+    <td>Resource</td>
+    <td>DeleteStopResource</td>
+    <td>Modelo que encapsula el identificador de una parada a eliminar.</td>
+    <td>Permitir transportar el Id de la parada desde la capa Interface al dominio.</td>
+    <td>Usado por <b>DeleteStopCommandFromResourceAssembler</b> para generar un <b>DeleteStopCommand</b>.</td>
+  </tr>
+
+  <!-- ASSEMBLERS -->
+  <tr>
+    <td>Assembler</td>
+    <td>CreateStopCommandFromResourceAssembler</td>
+    <td>Convierte un <b>CreateStopResource</b> en un <b>CreateStopCommand</b>.</td>
+    <td>Traducir objetos de la capa Interface en comandos del dominio.</td>
+    <td>Usado en <b>StopsController</b> al procesar el endpoint de creación de paradas.</td>
+  </tr>
+
+  <tr>
+    <td>Assembler</td>
+    <td>DeleteStopCommandFromResourceAssembler</td>
+    <td>Convierte un <b>DeleteStopResource</b> en un <b>DeleteStopCommand</b>.</td>
+    <td>Traducir solicitudes de eliminación desde la capa Interface hacia el dominio.</td>
+    <td>Usado en <b>StopsController</b> al procesar eliminaciones.</td>
+  </tr>
+
+  <tr>
+    <td>Assembler</td>
+    <td>StopResourceFromEntityAssembler</td>
+    <td>Convierte una entidad <b>Stop</b> en un <b>StopResource</b> para exponerla en la API.</td>
+    <td>Transformar datos de entidades de dominio en recursos REST.</td>
+    <td>Usado en <b>StopsController</b> y otros controllers para exponer resultados en formato JSON.</td>
+  </tr>
+
+  <!-- CONTROLLERS -->
+  <tr>
+    <td>Controller</td>
+    <td>GeographicController</td>
+    <td>Controlador REST que maneja operaciones relacionadas con regiones, provincias y distritos.</td>
+    <td>Exponer endpoints GET para recuperar entidades geográficas (por id, o colecciones completas).</td>
+    <td>Se apoya en los servicios <b>IRegionCommandService</b>, <b>IRegionQueryService</b>, <b>IProvinceCommandService</b>, <b>IProvinceQueryService</b>, <b>IDistrictCommandService</b> y <b>IDistrictQueryService</b>.</td>
+  </tr>
+
+  <tr>
+    <td>Controller</td>
+    <td>StopsController</td>
+    <td>Controlador REST principal para la gestión de paradas (<b>Stop</b>).</td>
+    <td>Exponer endpoints CRUD (crear, obtener, actualizar, eliminar) y de consulta (por empresa, distrito, nombre).</td>
+    <td>Depende de <b>IStopCommandService</b>, <b>IStopQueryService</b> y <b>ICloudinaryService</b>; usa assemblers y resources para comunicar dominio e interfaz.</td>
+  </tr>
+</table>
+
 #### 2.6.3.2. Interface Layer
 #### 2.6.3.3. Application Layer
 #### 2.6.3.4 Infrastructure Layer
@@ -1611,10 +2164,92 @@ Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context 
 
 ### 2.6.4. Bounded Context: Carriage Routes
 #### 2.6.4.1. Domain Layer
+**Sub-capa Model:**  
+
+| Tipo      | Nombre                 | Descripción                                      | Responsabilidad Principal                                                                                   |
+| --------- | ---------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| Aggregate | Route                  | Clase para definir una ruta en la aplicación     | Ser el punto de entrada para modificar y mantener la integridad de la entidad ruta                           |
+| Entity    | RouteStops             | Representa las paradas que conforman una ruta    | Encapsular la lógica de negocio de cada parada de la ruta                                                    |
+| Entity    | Schedule               | Representa los horarios de una ruta              | Manejar los tiempos asociados a una ruta                                                                     |
+| Command   | CreateFullRouteCommand | Comando para la creación de rutas completas      | Representar la intención de crear una ruta                                                                   |
+| Command   | UpdateRouteCommand     | Comando para actualizar rutas                    | Representar la intención de actualizar una ruta                                                              |
+| Command   | DeleteRouteCommand     | Comando para eliminar rutas                      | Representar la intención de eliminar una ruta                                                                |
+| Query     | GetAllRoutesQuery      | Consulta de todas las rutas                      | Obtener el listado de rutas registradas                                                                      |
+| Query     | GetRouteByIdQuery      | Consulta de una ruta específica por ID           | Obtener la información detallada de una ruta                                                                 |
+
+**Sub-capa Services:**  
+
+| Tipo      | Nombre               | Descripción                                      | Responsabilidad Principal                                                           |
+| --------- | -------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| Interface | IRouteCommandService | Servicio para manejar los comandos de rutas      | Estipular una estructura clara a seguir para operaciones de creación, actualización y eliminación |
+| Interface | IRouteQueryService   | Servicio para manejar las consultas de rutas     | Estipular una estructura clara a seguir para operaciones de consulta                 |
+| Interface | IRouteRepository     | Servicio para operaciones de persistencia        | Definir contrato para acceso y manipulación de datos de rutas                        |
+
+  
 #### 2.6.4.2. Interface Layer
+| Tipo       | Nombre                            | Descripción                                          | Responsabilidad Principal                                                  |
+| ---------- | --------------------------------- | ---------------------------------------------------- | -------------------------------------------------------------------------- |
+| Controller | RoutesController                  | Controlador principal de rutas                       | Recibir solicitudes HTTP, coordinar la ejecución y devolver respuestas     |
+| Resource   | CreateFullRouteResource           | DTO para creación de rutas completas                 | Representar datos de entrada para creación de rutas                        |
+| Resource   | UpdateRouteResource               | DTO para actualización de rutas                      | Representar datos de entrada para actualizar rutas                         |
+| Assembler  | CreateFullRouteCommandFromResource| Convierte un recurso en un comando                   | Evitar la corrupción entre la comunicación de datos                        |
+
 #### 2.6.4.3. Application Layer
+**Sub-capa Internal:**  
+
+| Tipo            | Nombre              | Descripción                                  | Responsabilidad Principal                                   |
+| --------------- | ------------------- | -------------------------------------------- | ----------------------------------------------------------- |
+| CommandHandlers | RouteCommandService | Implementación de los comandos de rutas      | Implementar los métodos definidos en `IRouteCommandService` |
+| QueryHandlers   | RouteQueryService   | Implementación de las consultas de rutas     | Implementar los métodos definidos en `IRouteQueryService`   |
+
+
 #### 2.6.4.4 Infrastructure Layer
+**Sub-capa Repository:**  
+
+| Tipo       | Nombre          | Descripción                          | Responsabilidad Principal                      |
+| ---------- | --------------- | ------------------------------------ | ---------------------------------------------- |
+| Repository | RouteRepository | Repositorio de persistencia de rutas | Acceder y manipular datos persistidos de rutas |
+  
 #### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
+![ImagenDiagramaRoutes](assets/Bounded-Context-Software-Architecture-Component-Level-Diagrams.png)
+
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 #### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
+El diagrama implementa Domain-Driven Design (DDD) con CQRS, donde Route actúa como Aggregate Root controlando las entidades RouteStop y Schedule. Los CommandService y QueryService separan las operaciones de escritura y lectura, utilizando el Repository Pattern para abstraer la persistencia. Esta arquitectura garantiza consistencia de dominio, separación de responsabilidades y alta testabilidad mediante la centralización de la lógica de negocio en el agregado principal.
+
+![Domainlayer](assets/domain-layer.png)
+
 #### 2.6.4.6.2. Bounded Context Database Design Diagram
+![RouteD](assets/RoutesD.png)
+
+### Tabla: `Routes`
+
+| Campo        | Tipo   | Nulo | Default | Comentario                                |
+|--------------|--------|------|---------|-------------------------------------------|
+| id           | TEXT   | N-N  | default | Identificador único de la ruta             |
+| price        | FLOAT  | NULL | default | Precio de la ruta                          |
+| duration_min | INT    | NULL | default | Duración estimada de la ruta en minutos    |
+
+---
+
+### Tabla: `Stops_routes`
+
+| Campo        | Tipo | Nulo | Default | Comentario                                            |
+|--------------|------|------|---------|-------------------------------------------------------|
+| id           | TEXT | N-N  | default | Identificador único de la parada en la ruta           |
+| fk_id_route  | TEXT | N-N  | default | Clave foránea que referencia la tabla `Routes`        |
+| fk_id_stop   | TEXT | N-N  | default | Clave foránea que referencia la tabla de `Stops`      |
+
+---
+
+### Tabla: `Schedules`
+
+| Campo        | Tipo    | Nulo | Default | Comentario                                           |
+|--------------|---------|------|---------|------------------------------------------------------|
+| id           | TEXT    | N-N  | default | Identificador único del horario                       |
+| city         | TEXT    | NULL | default | Ciudad del horario                                   |
+| time_from    | TEXT    | NULL | default | Hora de inicio del horario                           |
+| time_to      | TEXT    | NULL | default | Hora de fin del horario                              |
+| is_available | BOOLEAN | NULL | default | Indica si el horario está disponible                 |
+| fk_id_route  | TEXT    | N-N  | default | Clave foránea que referencia la tabla `Routes`       |
+
