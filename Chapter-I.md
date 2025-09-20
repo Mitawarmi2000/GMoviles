@@ -27,11 +27,14 @@ Asimismo, proporcionaremos mayores facilidades a los usuarios, haciendo su día 
     <td>Mi nombre es Fabrizio Cutiri, tengo 23 años y soy estudiante de la carrera de Ingeniería de Software. Me considero una persona responsable, puntual y capaz de adaptarse a diferentes situaciones. Elegí esta carrera porque me apasiona la tecnología y disfruto diseñar y desarrollar aplicaciones innovadoras que ayuden a las personas y empresas a solucionar sus problemas.</td>
   </tr>
 <tr>
-    <th colspan="2"> Amir Gabriel Castro Sanchez </th>
+    <th colspan="2"> Renzo José Araujo Ingunza </th>
   </tr>
   <tr>
-    <td> <img src="resources/chapter-1/amir1.jpg" style="width: 300px"> </td>
-    <td> Hola, me llamo Amir Castro, estudiante universitario de la UPC de la carrera de Ingeniería de Software, apoyaré y colaborare en este trabajo grupal, siempre intento ser un poco mejor cada día y espero llegar muy lejos. En cuanto a mis conocimientos, siempre estoy en constante aprendizaje y reforzarmiento de lo que ya conozco. </td>
+    <td> <img width="324" height="326" alt="image" src="https://github.com/user-attachments/assets/0a4d4f91-af6f-445d-99ed-f169c31bce2b" />
+ </td>
+    <td> Estudiante de la Universidad Peruana de Ciencias Aplicadas de la carrera de Ingeniería de Software.
+Soy una persona responsable y aplicada en los estudios y para este proyecto cuento con conocimientos en lenguajes de programación como C + +, Python y html/css. 
+ </td>
   </tr>
 <tr>
 <tr>
@@ -178,5 +181,6 @@ Este grupo representa a los operadores informales que ofrecen servicios de trans
 - Generar ingresos diarios de forma flexible.
 - Maximizar recorridos eficientes con más pasajeros en menor tiempo.
 - Contar con herramientas que les permitan ser más visibles y captar pasajeros fácilmente.
+
 
 
