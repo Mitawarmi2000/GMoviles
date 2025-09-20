@@ -1867,6 +1867,293 @@ En esta imagen se muestran las clases del dominio Profile que incluyen Company c
 
 ### 2.6.3. Bounded Context: Stops
 #### 2.6.3.1. Domain Layer
+
+**Sub-Capa Model**<br>
+<table border="1" style="border-collapse:collapse; text-align:left; width:100%;">
+  <tr style="background-color:#f2f2f2;">
+    <th>Tipo</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Responsabilidad Principal</th>
+    <th>Relación con otros Elementos</th>
+  </tr>
+  <!-- Aggregate -->
+  <tr>
+    <td>Aggregate</td>
+    <td>Stop</td>
+    <td>
+      Representa una <b>parada</b> en el sistema (colectivo o transporte). 
+      Incluye información como nombre, dirección, referencia, empresa y ubicación geográfica.
+    </td>
+    <td>
+      Representar y mantener el estado consistente de una parada dentro del bounded context <b>Stops</b>, 
+      asegurando que los datos cumplan las reglas de negocio.
+    </td>
+    <td>
+      Se relaciona con los <b>Commands</b> y <b>Queries</b>. 
+      Puede ser consumido por otros bounded contexts, como <b>Routes</b>.
+    </td>
+  </tr>
+  <!-- Commands -->
+  <tr>
+    <td rowspan="3">Commands</td>
+    <td>CreateStopCommand</td>
+    <td>
+      Representa la intención de <b>crear</b> una nueva parada en el sistema. Contiene los datos iniciales necesarios:
+      nombre, dirección, referencia, empresa y distrito.
+    </td>
+    <td>
+      Transportar la información requerida desde la capa de aplicación hasta el dominio para 
+      permitir la creación de un nuevo aggregate <b>Stop</b>.
+    </td>
+    <td>
+      Se consume en el aggregate <b>Stop</b>, que lo utiliza para inicializar su estado.
+    </td>
+  </tr>
+  <tr>
+    <td>UpdateStopCommand</td>
+    <td>
+      Representa la intención de <b>actualizar</b> la información de una parada existente. 
+      Incluye el identificador de la parada y los nuevos valores de sus atributos.
+    </td>
+    <td>
+      Transportar los cambios desde la capa de aplicación hasta el dominio para 
+      mantener actualizada la información de un aggregate <b>Stop</b>.
+    </td>
+    <td>
+      Se consume en el aggregate <b>Stop</b>, que aplica los cambios al estado existente.
+    </td>
+  </tr>
+  <tr>
+    <td>DeleteStopCommand</td>
+    <td>
+      Representa la intención de <b>eliminar</b> una parada del sistema. 
+      Requiere el identificador de la parada a borrar.
+    </td>
+    <td>
+      Indicar la eliminación de un aggregate <b>Stop</b> dentro del bounded context <b>Stops</b>.
+    </td>
+    <td>
+      Se consume en el aggregate <b>Stop</b>, que interpreta la eliminación y ajusta su estado en consecuencia.
+    </td>
+  </tr>
+  <!-- DTOs -->
+  <tr>
+    <td rowspan="2">DTOs</td>
+    <td>GeoResponseDto</td>
+    <td>
+      Objeto de transferencia de datos que encapsula información geográfica: 
+      departamento (<code>NOMBDEP</code>), provincia (<code>NOMBPROV</code>), distrito (<code>NOMBDIST</code>) y código (<code>CODIGO</code>).
+    </td>
+    <td>
+      Transportar información geográfica de respuesta, principalmente para exponer datos jerárquicos de ubicación hacia 
+      la capa de aplicación o servicios externos.
+    </td>
+    <td>
+      Puede ser utilizado en consultas de paradas para complementar la información de localización. 
+      Relacionado indirectamente con el aggregate <b>Stop</b> mediante <code>FkIdDistrict</code>.
+    </td>
+  </tr>
+  <tr>
+    <td>LocationHierarchyDto</td>
+    <td>
+      DTO pensado para representar la jerarquía de localizaciones (departamento → provincia → distrito). 
+      Actualmente definido como clase vacía a la espera de ser completada.
+    </td>
+    <td>
+      Servirá como estructura de transporte para organizar la información de ubicaciones en diferentes niveles 
+      jerárquicos dentro del dominio.
+    </td>
+    <td>
+      Complementará al aggregate <b>Stop</b> al permitir exponer datos completos de localización. 
+      Se integrará con <b>GeoResponseDto</b> y claves foráneas de ubicación.
+    </td>
+  </tr>
+  <!-- Queries -->
+  <tr>
+    <td rowspan="3">Queries</td>
+    <td>GetAllStopsByFkIdCompanyQuery</td>
+    <td>
+      Consulta para obtener todas las paradas asociadas a una empresa específica 
+      mediante el campo <code>FkIdCompany</code>.
+    </td>
+    <td>
+      Permitir la recuperación de colecciones de paradas filtradas por empresa, 
+      facilitando la gestión de paradas en contextos multiempresa.
+    </td>
+    <td>
+      Se relaciona con el aggregate <b>Stop</b>, devolviendo un conjunto de entidades 
+      que cumplen con el criterio de la compañía.
+    </td>
+  </tr>
+  <tr>
+    <td>GetAllStopsQuery</td>
+    <td>
+      Consulta para recuperar la lista completa de paradas disponibles en el sistema, sin filtros adicionales.
+    </td>
+    <td>
+      Proporcionar una visión global de todas las paradas registradas en el dominio.
+    </td>
+    <td>
+      Devuelve una colección de aggregates <b>Stop</b>, utilizada en interfaces administrativas o reportes.
+    </td>
+  </tr>
+  <tr>
+    <td>GetStopByIdQuery</td>
+    <td>
+      Consulta para recuperar la información de una parada específica 
+      identificada por su <code>Id</code>.
+    </td>
+    <td>
+      Facilitar la obtención puntual de los datos de un aggregate <b>Stop</b>.
+    </td>
+    <td>
+      Se relaciona directamente con un único aggregate <b>Stop</b>, permitiendo exponer sus atributos al exterior.
+    </td>
+  </tr>
+</table>
+
+**Sub-Capa Services**<br>
+
+<table border="1" style="border-collapse:collapse; text-align:left; width:100%;">
+  <tr style="background-color:#f2f2f2;">
+    <th>Tipo</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Responsabilidad Principal</th>
+    <th>Relación con otros Elementos</th>
+  </tr>
+  <!-- Service: IGeoImportService -->
+  <tr>
+    <td>Interface</td>
+    <td>IGeoImportService</td>
+    <td>
+      Servicio de dominio que permite obtener información geográfica desde una API externa 
+      y trasladarla al dominio mediante <code>GeoResponseDto</code>.
+    </td>
+    <td>
+      Facilitar la integración con fuentes de datos externas, asegurando que la información 
+      geográfica pueda ser consumida en el bounded context <b>Stops</b>.
+    </td>
+    <td>
+      Produce <b>GeoResponseDto</b>, usado por otros componentes del dominio o aplicación.
+    </td>
+  </tr>
+  <!-- Service: IStopCommandService -->
+  <tr>
+    <td rowspan="2">Interfaces</td>
+    <td>IStopCommandService</td>
+    <td>
+      Servicio encargado de manejar los <b>Commands</b> relacionados con el agregado <b>Stop</b>. 
+      Define operaciones para crear, actualizar y eliminar paradas en el dominio.
+    </td>
+    <td>
+      Coordinar la ejecución de <b>CreateStopCommand</b>, <b>UpdateStopCommand</b> y <b>DeleteStopCommand</b>, 
+      garantizando la consistencia del agregado.
+    </td>
+    <td>
+      Se relaciona directamente con el aggregate <b>Stop</b> y los <b>Commands</b> de dominio.
+    </td>
+  </tr>
+  <!-- Service: IStopQueryService -->
+  <tr>
+    <td>IStopQueryService</td>
+    <td>
+      Servicio encargado de manejar las consultas (<b>Queries</b>) sobre el agregado <b>Stop</b>. 
+      Permite recuperar colecciones o instancias puntuales de paradas.
+    </td>
+    <td>
+      Ejecutar queries como <b>GetAllStopsQuery</b>, <b>GetStopByIdQuery</b>, 
+      <b>GetAllStopsByFkIdCompanyQuery</b>, <b>GetAllStopsByFkIdDistrictQuery</b> y 
+      <b>GetStopByNameAndFkIdDistrictQuery</b>.
+    </td>
+    <td>
+      Se relaciona directamente con el aggregate <b>Stop</b>, los <b>Queries</b> y 
+      potencialmente con DTOs para exponer resultados.
+    </td>
+  </tr>
+</table>
+
+#### 2.6.3.2. Interface Layer
+
+**Sub-Capa REST**<br>
+<table border="1" style="border-collapse:collapse; text-align:left; width:100%;">
+  <tr style="background-color:#f2f2f2;">
+    <th>Tipo</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Responsabilidad Principal</th>
+    <th>Relación con otros Elementos</th>
+  </tr>
+
+  <!-- RESOURCES -->
+  <tr>
+    <td>Resource</td>
+    <td>CreateStopFormResource</td>
+    <td>Modelo que representa los datos enviados desde un formulario para crear una parada, incluyendo imagen opcional.</td>
+    <td>Recibir y validar datos de entrada (multipart/form-data) para la creación de un Stop.</td>
+    <td>Consumido por <b>StopsController</b>, transformado a <b>CreateStopResource</b> y luego a <b>CreateStopCommand</b>.</td>
+  </tr>
+
+  <tr>
+    <td>Resource</td>
+    <td>CreateStopResource</td>
+    <td>Modelo simplificado de datos necesarios para crear una parada, incluyendo referencia a imagen ya procesada.</td>
+    <td>Transportar datos desde la capa Interface hacia el dominio en un formato limpio.</td>
+    <td>Convertido en <b>CreateStopCommand</b> mediante <b>CreateStopCommandFromResourceAssembler</b>.</td>
+  </tr>
+
+  <tr>
+    <td>Resource</td>
+    <td>DeleteStopResource</td>
+    <td>Modelo que encapsula el identificador de una parada a eliminar.</td>
+    <td>Permitir transportar el Id de la parada desde la capa Interface al dominio.</td>
+    <td>Usado por <b>DeleteStopCommandFromResourceAssembler</b> para generar un <b>DeleteStopCommand</b>.</td>
+  </tr>
+
+  <!-- ASSEMBLERS -->
+  <tr>
+    <td>Assembler</td>
+    <td>CreateStopCommandFromResourceAssembler</td>
+    <td>Convierte un <b>CreateStopResource</b> en un <b>CreateStopCommand</b>.</td>
+    <td>Traducir objetos de la capa Interface en comandos del dominio.</td>
+    <td>Usado en <b>StopsController</b> al procesar el endpoint de creación de paradas.</td>
+  </tr>
+
+  <tr>
+    <td>Assembler</td>
+    <td>DeleteStopCommandFromResourceAssembler</td>
+    <td>Convierte un <b>DeleteStopResource</b> en un <b>DeleteStopCommand</b>.</td>
+    <td>Traducir solicitudes de eliminación desde la capa Interface hacia el dominio.</td>
+    <td>Usado en <b>StopsController</b> al procesar eliminaciones.</td>
+  </tr>
+
+  <tr>
+    <td>Assembler</td>
+    <td>StopResourceFromEntityAssembler</td>
+    <td>Convierte una entidad <b>Stop</b> en un <b>StopResource</b> para exponerla en la API.</td>
+    <td>Transformar datos de entidades de dominio en recursos REST.</td>
+    <td>Usado en <b>StopsController</b> y otros controllers para exponer resultados en formato JSON.</td>
+  </tr>
+
+  <!-- CONTROLLERS -->
+  <tr>
+    <td>Controller</td>
+    <td>GeographicController</td>
+    <td>Controlador REST que maneja operaciones relacionadas con regiones, provincias y distritos.</td>
+    <td>Exponer endpoints GET para recuperar entidades geográficas (por id, o colecciones completas).</td>
+    <td>Se apoya en los servicios <b>IRegionCommandService</b>, <b>IRegionQueryService</b>, <b>IProvinceCommandService</b>, <b>IProvinceQueryService</b>, <b>IDistrictCommandService</b> y <b>IDistrictQueryService</b>.</td>
+  </tr>
+
+  <tr>
+    <td>Controller</td>
+    <td>StopsController</td>
+    <td>Controlador REST principal para la gestión de paradas (<b>Stop</b>).</td>
+    <td>Exponer endpoints CRUD (crear, obtener, actualizar, eliminar) y de consulta (por empresa, distrito, nombre).</td>
+    <td>Depende de <b>IStopCommandService</b>, <b>IStopQueryService</b> y <b>ICloudinaryService</b>; usa assemblers y resources para comunicar dominio e interfaz.</td>
+  </tr>
+</table>
+
 #### 2.6.3.2. Interface Layer
 #### 2.6.3.3. Application Layer
 #### 2.6.3.4 Infrastructure Layer
