@@ -1877,10 +1877,92 @@ En esta imagen se muestran las clases del dominio Profile que incluyen Company c
 
 ### 2.6.4. Bounded Context: Carriage Routes
 #### 2.6.4.1. Domain Layer
+**Sub-capa Model:**  
+
+| Tipo      | Nombre                 | Descripción                                      | Responsabilidad Principal                                                                                   |
+| --------- | ---------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| Aggregate | Route                  | Clase para definir una ruta en la aplicación     | Ser el punto de entrada para modificar y mantener la integridad de la entidad ruta                           |
+| Entity    | RouteStops             | Representa las paradas que conforman una ruta    | Encapsular la lógica de negocio de cada parada de la ruta                                                    |
+| Entity    | Schedule               | Representa los horarios de una ruta              | Manejar los tiempos asociados a una ruta                                                                     |
+| Command   | CreateFullRouteCommand | Comando para la creación de rutas completas      | Representar la intención de crear una ruta                                                                   |
+| Command   | UpdateRouteCommand     | Comando para actualizar rutas                    | Representar la intención de actualizar una ruta                                                              |
+| Command   | DeleteRouteCommand     | Comando para eliminar rutas                      | Representar la intención de eliminar una ruta                                                                |
+| Query     | GetAllRoutesQuery      | Consulta de todas las rutas                      | Obtener el listado de rutas registradas                                                                      |
+| Query     | GetRouteByIdQuery      | Consulta de una ruta específica por ID           | Obtener la información detallada de una ruta                                                                 |
+
+**Sub-capa Services:**  
+
+| Tipo      | Nombre               | Descripción                                      | Responsabilidad Principal                                                           |
+| --------- | -------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| Interface | IRouteCommandService | Servicio para manejar los comandos de rutas      | Estipular una estructura clara a seguir para operaciones de creación, actualización y eliminación |
+| Interface | IRouteQueryService   | Servicio para manejar las consultas de rutas     | Estipular una estructura clara a seguir para operaciones de consulta                 |
+| Interface | IRouteRepository     | Servicio para operaciones de persistencia        | Definir contrato para acceso y manipulación de datos de rutas                        |
+
+  
 #### 2.6.4.2. Interface Layer
+| Tipo       | Nombre                            | Descripción                                          | Responsabilidad Principal                                                  |
+| ---------- | --------------------------------- | ---------------------------------------------------- | -------------------------------------------------------------------------- |
+| Controller | RoutesController                  | Controlador principal de rutas                       | Recibir solicitudes HTTP, coordinar la ejecución y devolver respuestas     |
+| Resource   | CreateFullRouteResource           | DTO para creación de rutas completas                 | Representar datos de entrada para creación de rutas                        |
+| Resource   | UpdateRouteResource               | DTO para actualización de rutas                      | Representar datos de entrada para actualizar rutas                         |
+| Assembler  | CreateFullRouteCommandFromResource| Convierte un recurso en un comando                   | Evitar la corrupción entre la comunicación de datos                        |
+
 #### 2.6.4.3. Application Layer
+**Sub-capa Internal:**  
+
+| Tipo            | Nombre              | Descripción                                  | Responsabilidad Principal                                   |
+| --------------- | ------------------- | -------------------------------------------- | ----------------------------------------------------------- |
+| CommandHandlers | RouteCommandService | Implementación de los comandos de rutas      | Implementar los métodos definidos en `IRouteCommandService` |
+| QueryHandlers   | RouteQueryService   | Implementación de las consultas de rutas     | Implementar los métodos definidos en `IRouteQueryService`   |
+
+
 #### 2.6.4.4 Infrastructure Layer
+**Sub-capa Repository:**  
+
+| Tipo       | Nombre          | Descripción                          | Responsabilidad Principal                      |
+| ---------- | --------------- | ------------------------------------ | ---------------------------------------------- |
+| Repository | RouteRepository | Repositorio de persistencia de rutas | Acceder y manipular datos persistidos de rutas |
+  
 #### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
+![ImagenDiagramaRoutes](assets/Bounded-Context-Software-Architecture-Component-Level-Diagrams.png)
+
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 #### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
+El diagrama implementa Domain-Driven Design (DDD) con CQRS, donde Route actúa como Aggregate Root controlando las entidades RouteStop y Schedule. Los CommandService y QueryService separan las operaciones de escritura y lectura, utilizando el Repository Pattern para abstraer la persistencia. Esta arquitectura garantiza consistencia de dominio, separación de responsabilidades y alta testabilidad mediante la centralización de la lógica de negocio en el agregado principal.
+
+![Domainlayer](assets/domain-layer.png)
+
 #### 2.6.4.6.2. Bounded Context Database Design Diagram
+![RouteD](assets/RoutesD.png)
+
+### Tabla: `Routes`
+
+| Campo        | Tipo   | Nulo | Default | Comentario                                |
+|--------------|--------|------|---------|-------------------------------------------|
+| id           | TEXT   | N-N  | default | Identificador único de la ruta             |
+| price        | FLOAT  | NULL | default | Precio de la ruta                          |
+| duration_min | INT    | NULL | default | Duración estimada de la ruta en minutos    |
+
+---
+
+### Tabla: `Stops_routes`
+
+| Campo        | Tipo | Nulo | Default | Comentario                                            |
+|--------------|------|------|---------|-------------------------------------------------------|
+| id           | TEXT | N-N  | default | Identificador único de la parada en la ruta           |
+| fk_id_route  | TEXT | N-N  | default | Clave foránea que referencia la tabla `Routes`        |
+| fk_id_stop   | TEXT | N-N  | default | Clave foránea que referencia la tabla de `Stops`      |
+
+---
+
+### Tabla: `Schedules`
+
+| Campo        | Tipo    | Nulo | Default | Comentario                                           |
+|--------------|---------|------|---------|------------------------------------------------------|
+| id           | TEXT    | N-N  | default | Identificador único del horario                       |
+| city         | TEXT    | NULL | default | Ciudad del horario                                   |
+| time_from    | TEXT    | NULL | default | Hora de inicio del horario                           |
+| time_to      | TEXT    | NULL | default | Hora de fin del horario                              |
+| is_available | BOOLEAN | NULL | default | Indica si el horario está disponible                 |
+| fk_id_route  | TEXT    | N-N  | default | Clave foránea que referencia la tabla `Routes`       |
+
