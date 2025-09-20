@@ -578,7 +578,7 @@ Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context 
 
 
 #### 2.6.4.6.2. Bounded Context Database Design Diagram
-![RouteD](RoutesD.png)
+![RouteD](assets/RoutesD.png)
 
 ### Tabla: `Routes`
 
