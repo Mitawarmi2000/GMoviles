@@ -544,7 +544,10 @@ Esta capa orquesta las operaciones de negocio para la gestión de rutas.
 - **Servicios:** Las clases `RouteCommandService` y `RouteQueryService` implementan las interfaces correspondientes de la capa de Dominio.
 
 #### 2.6.4.4 Infrastructure Layer
+Esta capa se encarga de los detalles técnicos, como la persistencia de datos para las rutas.
 
+- **Repositorio:** La clase `RouteRepository` proporciona la implementación para la interfaz `IRouteRepository`, permitiendo el acceso a los datos.
+  
 #### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 #### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
