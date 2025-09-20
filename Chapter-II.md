@@ -1571,11 +1571,17 @@ Muestra los principales componentes involucrados en el proceso: validación de d
 <img width="712" height="969" alt="image" src="https://github.com/user-attachments/assets/7d99fa5e-7642-4e76-92a8-490411224a1d" />
 
 **Diagrama de contenedor del bounded context de Rutas:**<br>
-Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context de Rutas, encargado de la gestión de las rutas. Detalla cómo las solicitudes de usuarios y conductores fluyen a través de controladores y servicios, cómo la información se persiste en MySQL, y cómo el sistema se integra con servicios externos como Google Maps para validar rutas.<br>
-<img width="561" height="796" alt="image" src="https://github.com/user-attachments/assets/96704170-eebe-4aaa-b48b-2b0ce9220d2d" />
+El siguiente diagrama de contenedores representa los principales componentes del sistema y cómo interactúan entre sí.
+Se muestra la aplicación móvil para pasajeros y conductores, el gestor de backend que centraliza la lógica de negocio, y los bounded contexts de IAM, Profile, Routes y Stops, así como la base de datos y la integración con Google Maps.
+
+<img width="652" height="727" alt="image" src="https://github.com/user-attachments/assets/dac1dd93-8866-453c-9243-173040f6adba" />
 
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
+
+El siguiente diagrama de despliegue describe la infraestructura física y lógica en la que se ejecutan los principales componentes del sistema.
+
+<img width="1705" height="543" alt="image" src="https://github.com/user-attachments/assets/a0b97d71-cfab-4f42-a7cd-6d37958be4e4" />
 
 
 # 2.6. Tactical-Level Domain-Driven Design
@@ -2155,8 +2161,145 @@ En esta imagen se muestran las clases del dominio Profile que incluyen Company c
 </table>
 
 #### 2.6.3.2. Interface Layer
+
+**Sub-Capa REST**<br>
+<table border="1" style="border-collapse:collapse; text-align:left; width:100%;">
+  <tr style="background-color:#f2f2f2;">
+    <th>Tipo</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Responsabilidad Principal</th>
+    <th>Relación con otros Elementos</th>
+  </tr>
+
+  <!-- RESOURCES -->
+  <tr>
+    <td>Resource</td>
+    <td>CreateStopFormResource</td>
+    <td>Modelo que representa los datos enviados desde un formulario para crear una parada, incluyendo imagen opcional.</td>
+    <td>Recibir y validar datos de entrada (multipart/form-data) para la creación de un Stop.</td>
+    <td>Consumido por <b>StopsController</b>, transformado a <b>CreateStopResource</b> y luego a <b>CreateStopCommand</b>.</td>
+  </tr>
+
+  <tr>
+    <td>Resource</td>
+    <td>CreateStopResource</td>
+    <td>Modelo simplificado de datos necesarios para crear una parada, incluyendo referencia a imagen ya procesada.</td>
+    <td>Transportar datos desde la capa Interface hacia el dominio en un formato limpio.</td>
+    <td>Convertido en <b>CreateStopCommand</b> mediante <b>CreateStopCommandFromResourceAssembler</b>.</td>
+  </tr>
+
+  <tr>
+    <td>Resource</td>
+    <td>DeleteStopResource</td>
+    <td>Modelo que encapsula el identificador de una parada a eliminar.</td>
+    <td>Permitir transportar el Id de la parada desde la capa Interface al dominio.</td>
+    <td>Usado por <b>DeleteStopCommandFromResourceAssembler</b> para generar un <b>DeleteStopCommand</b>.</td>
+  </tr>
+
+  <!-- ASSEMBLERS -->
+  <tr>
+    <td>Assembler</td>
+    <td>CreateStopCommandFromResourceAssembler</td>
+    <td>Convierte un <b>CreateStopResource</b> en un <b>CreateStopCommand</b>.</td>
+    <td>Traducir objetos de la capa Interface en comandos del dominio.</td>
+    <td>Usado en <b>StopsController</b> al procesar el endpoint de creación de paradas.</td>
+  </tr>
+
+  <tr>
+    <td>Assembler</td>
+    <td>DeleteStopCommandFromResourceAssembler</td>
+    <td>Convierte un <b>DeleteStopResource</b> en un <b>DeleteStopCommand</b>.</td>
+    <td>Traducir solicitudes de eliminación desde la capa Interface hacia el dominio.</td>
+    <td>Usado en <b>StopsController</b> al procesar eliminaciones.</td>
+  </tr>
+
+  <tr>
+    <td>Assembler</td>
+    <td>StopResourceFromEntityAssembler</td>
+    <td>Convierte una entidad <b>Stop</b> en un <b>StopResource</b> para exponerla en la API.</td>
+    <td>Transformar datos de entidades de dominio en recursos REST.</td>
+    <td>Usado en <b>StopsController</b> y otros controllers para exponer resultados en formato JSON.</td>
+  </tr>
+
+  <!-- CONTROLLERS -->
+  <tr>
+    <td>Controller</td>
+    <td>GeographicController</td>
+    <td>Controlador REST que maneja operaciones relacionadas con regiones, provincias y distritos.</td>
+    <td>Exponer endpoints GET para recuperar entidades geográficas (por id, o colecciones completas).</td>
+    <td>Se apoya en los servicios <b>IRegionCommandService</b>, <b>IRegionQueryService</b>, <b>IProvinceCommandService</b>, <b>IProvinceQueryService</b>, <b>IDistrictCommandService</b> y <b>IDistrictQueryService</b>.</td>
+  </tr>
+
+  <tr>
+    <td>Controller</td>
+    <td>StopsController</td>
+    <td>Controlador REST principal para la gestión de paradas (<b>Stop</b>).</td>
+    <td>Exponer endpoints CRUD (crear, obtener, actualizar, eliminar) y de consulta (por empresa, distrito, nombre).</td>
+    <td>Depende de <b>IStopCommandService</b>, <b>IStopQueryService</b> y <b>ICloudinaryService</b>; usa assemblers y resources para comunicar dominio e interfaz.</td>
+  </tr>
+</table>
+
 #### 2.6.3.3. Application Layer
+
+<table border="1" style="border-collapse:collapse; text-align:left; width:100%;">
+  <tr style="background-color:#f2f2f2;">
+    <th>Tipo</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Responsabilidad Principal</th>
+    <th>Relación con otros Elementos</th>
+  </tr>
+
+  <!-- COMMAND SERVICE -->
+  <tr>
+    <td>Command Service</td>
+    <td>StopCommandService</td>
+    <td>Implementación concreta de <b>IStopCommandService</b> para manejar comandos de creación, actualización y eliminación de paradas.</td>
+    <td>Orquestar la lógica de aplicación para procesar comandos (Create, Update, Delete) sobre el aggregate <b>Stop</b>, utilizando el repositorio y el unit of work.</td>
+    <td>Depende de <b>IStopRepository</b> y <b>IUnitOfWork</b>. Se comunica con el dominio a través de comandos (<b>CreateStopCommand</b>, <b>UpdateStopCommand</b>, <b>DeleteStopCommand</b>). Es consumido por los controllers de la capa Interface.</td>
+  </tr>
+
+  <!-- QUERY SERVICE -->
+  <tr>
+    <td>Query Service</td>
+    <td>StopQueryService</td>
+    <td>Implementación de <b>IStopQueryService</b> que gestiona consultas relacionadas con las paradas (Stops).</td>
+    <td>Ejecutar queries para obtener datos de paradas según criterios (por empresa, distrito, id, nombre) o listar todas las existentes.</td>
+    <td>Depende de <b>IStopRepository</b>. Responde a queries como <b>GetAllStopsByFkIdCompanyQuery</b>, <b>GetAllStopsByFkIdDistrictQuery</b>, <b>GetStopByIdQuery</b>, <b>GetStopByNameAndFkIdDistrictQuery</b> y <b>GetAllStopsQuery</b>. Es utilizado en la capa Interface por <b>StopsController</b>.</td>
+  </tr>
+</table>
+
 #### 2.6.3.4 Infrastructure Layer
+
+<table border="1" style="border-collapse:collapse; text-align:left; width:100%;">
+  <tr style="background-color:#f2f2f2;">
+    <th>Tipo</th>
+    <th>Nombre</th>
+    <th>Descripción</th>
+    <th>Responsabilidad Principal</th>
+    <th>Relación con otros Elementos</th>
+  </tr>
+
+  <!-- STOP REPOSITORY -->
+  <tr>
+    <td>Repository</td>
+    <td>StopRepository</td>
+    <td>Implementación concreta de <b>IStopRepository</b> utilizando Entity Framework Core.</td>
+    <td>Acceder y manipular datos persistidos de la entidad <b>Stop</b> en la base de datos. Provee métodos específicos como búsqueda por compañía, distrito y nombre.</td>
+    <td>Extiende de <b>BaseRepository&lt;Stop&gt;</b>. Depende de <b>AppDbContext</b>. Es utilizado por <b>StopCommandService</b> y <b>StopQueryService</b> en la capa Application.</td>
+  </tr>
+
+  <!-- GEOGRAPHIC DATA SEEDER -->
+  <tr>
+    <td>Seeder</td>
+    <td>GeographicDataSeeder</td>
+    <td>Clase encargada de inicializar datos de regiones, provincias y distritos consumiendo información de una API externa.</td>
+    <td>Consultar la API de geolocalización mediante <b>IGeoImportService</b>, y poblar la base de datos con <b>Region</b>, <b>Province</b> y <b>District</b> usando servicios de comando.</td>
+    <td>Depende de <b>IGeoImportService</b>, <b>IRegionCommandService</b>, <b>IRegionQueryService</b>, <b>IProvinceCommandService</b>, <b>IDistrictCommandService</b> y <b>ILogger</b>. Se ejecuta típicamente en la fase de inicialización del sistema para preparar datos base.</td>
+  </tr>
+</table>
+
 #### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
 #### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
 #### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
