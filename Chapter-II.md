@@ -462,6 +462,24 @@ El Impact Mapping permite alinear los objetivos del proyecto con las necesidades
 
 ### 2.5.1. EventStorming
 
+Para el proceso de EventStorming utilizamos la herramienta Miro y realizamos 4 pasos para llegar a definir los bounded context que se van a trabajar.
+
+En primer lugar, debemos identificar los eventos y trazarlos mediante una linea de tiempo imaginaria que va de izquierda a derecha. Además, se usa post-it anaranjado para identificar a los eventos.
+
+![event-storming-step-1.png](assets/event-storming-step-1.png)
+
+Como segundo paso, identificamos los comandos que disparan o llevan a acabo el evento. Identificamos a estos con un post-it de color azul.
+
+![event-storming-step-2.png](assets/event-storming-step-2.png)
+
+Como tercer paso, identificamos los agentes que realizan o usan el comando. Estos se representan mediante un post-it de color amarillo.
+
+![event-storming-step-3.png](assets/event-storming-step-3.png)
+
+Como último paso, identificamos los eventos que se relacionen entre sí mediante los agregados y entidades que utilizan, agrupandolos por Bounded Context.
+
+![event-storming-step-4.png](assets/event-storming-step-4.png)
+
 #### 2.5.1.1. Candidate Context Discovery
 
 #### 2.5.1.2. Domain Message Flow Modeling
