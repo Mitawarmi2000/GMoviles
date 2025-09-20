@@ -571,6 +571,8 @@ Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context 
 | Repository | RouteRepository | Repositorio de persistencia de rutas | Acceder y manipular datos persistidos de rutas |
   
 #### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
+!ImagenDiagramaRoutes[assets/Bounded-Context-Software-Architecture-Component-Level-Diagrams.png]
+
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 #### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
 #### 2.6.4.6.2. Bounded Context Database Design Diagram
