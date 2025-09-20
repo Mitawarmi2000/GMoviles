@@ -1448,6 +1448,33 @@ El Impact Mapping permite alinear los objetivos del proyecto con las necesidades
 
 ### 2.4.3. Product Backlog
 
+| #Orden | ID    | User Story                                               | Story Points |
+|:-------|:------|:---------------------------------------------------------|:-------------|
+| 01     | SS01  | Integración de Google Maps                               | 8            |
+| 02     | US08  | Buscar rutas disponibles                                 | 8            |
+| 03     | US09  | Activar disponibilidad de ruta                           | 8            |
+| 04     | US10  | Gestión de Rutas                                         | 8            |
+| 05     | US11  | Ver detalles completos de una ruta                       | 8            |
+| 06     | US12  | Ver demanda de rutas por horario                         | 8            |
+| 07     | US13  | Ver paraderos en el mapa                                 | 8            |
+| 08     | US14  | Gestión de paraderos                                     | 8            |
+| 09     | US15  | Ver paraderos en la página de inicio                     | 8            |
+| 10     | US16  | Hacer una búsqueda de colectivos cercanos a mi ubicación | 5            |
+| 11     | US01  | Navegación Sencilla                                      | 5            |
+| 12     | US02  | Consultar cómo funciona el servicio                      | 5            |
+| 13     | US03  | Conocer las ventajas del servicio                        | 5            |
+| 14     | US04  | Acceder a preguntas frecuentes (FAQ)                     | 5            |
+| 15     | US05  | Postular como colaborador                                | 5            |
+| 16     | US06  | Video about the product                                  | 5            |
+| 17     | US07  | Video About the team                                     | 5            |
+| 18     | US17  | Crear Perfil                                             | 3            |
+| 19     | US18  | Editar Perfil                                            | 3            |
+| 20     | US19  | Ver información del conductor                            | 3            |
+| 21     | US20  | Registrar Usuario                                        | 3            |
+| 22     | US21  | Iniciar Sesión                                           | 3            |
+| 23     | US22  | Cerrar Sesión                                            | 3            |
+
+
 ## 2.5. Strategic-Level Domain-Driven Design
 
 ### 2.5.1. EventStorming
