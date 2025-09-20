@@ -526,6 +526,43 @@ En esta sección se presentan los Bounded Context Canvases correspondientes a lo
 
 ### 2.5.2. Context Mapping
 
+![context-mapping.png](assets/context-mapping.png)
+
+**IAM – Profile (ACL)**
+
+* En esta relación, IAM es Upstream, pues provee la identidad validada de los usuarios.
+
+* Profile es Downstream, ya que consume la información de identidad para complementarla con atributos datos personales.
+
+* Se propone el uso de un Anti-Corruption Layer (ACL) en Profile, ya que esto garantiza que cambios en IAM no afecten directamente al contexto Profile.
+
+
+**Profile – Rutas (Conformist)**
+
+* El contexto de Rutas necesita información de los conductores o usuarios para registrar qué persona creó y administra una ruta.
+
+* Profile es Upstream, ya que provee los datos del usuario.
+
+* Rutas es Downstream, adoptando el modelo de Profile de forma directa.
+* La relación es de tipo Conformist, ya que Rutas depende del modelo definido en Profile
+
+**Profile – Paraderos (Conformist)**
+
+De manera similar, el contexto de Paraderos depende de los datos de usuario para registrar quién creó, modificó o eliminó un paradero.
+
+* Profile es Upstream, como fuente de información de usuario.
+
+* Paraderos es Downstream, ajustándose al modelo de Profile.
+* La relación se establece como Conformist, ya que Paraderos adopta directamente el modelo de usuario de Profile para mantener coherencia e integridad en los datos.
+
+**Rutas – Paraderos (Customer/Supplier)**
+
+El contexto de Rutas necesita consumir información de los paraderos para construir recorridos y definir los puntos de inicio, intermedio y final.
+
+* En esta relación, Paraderos es Upstream (Supplier), ya que provee la información de los paraderos disponibles.
+
+* Rutas es Downstream (Customer), pues consume esa información para asociarla a una ruta.
+
 ### 2.5.3. Software Architecture
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
