@@ -524,29 +524,51 @@ Este diagrama ilustra la arquitectura a nivel de contenedor del Bounded Context 
 
 ### 2.6.4. Bounded Context: Carriage Routes
 #### 2.6.4.1. Domain Layer
-Esta capa contiene la lógica de negocio central del dominio de **"rutas"**.
+**Sub-capa Model:**  
 
-- **Modelo:** El Aggregate principal es `Route`. Las Entities son `RoutesStops` y `Schedule`.  
-- **Comandos:** Se definen los Commands `CreateFullRouteCommand`, `DeleteRouteCommand` y `UpdateRouteCommand`.  
-- **Consultas:** Se definen Queries como `GetAllRoutesQuery` y `GetRouteByIdQuery`.  
-- **Interfaces:** Se establecen las interfaces `IRouteCommandService`, `IRouteQueryService` e `IRouteRepository`.
+| Tipo      | Nombre                 | Descripción                                      | Responsabilidad Principal                                                                                   |
+| --------- | ---------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| Aggregate | Route                  | Clase para definir una ruta en la aplicación     | Ser el punto de entrada para modificar y mantener la integridad de la entidad ruta                           |
+| Entity    | RouteStops             | Representa las paradas que conforman una ruta    | Encapsular la lógica de negocio de cada parada de la ruta                                                    |
+| Entity    | Schedule               | Representa los horarios de una ruta              | Manejar los tiempos asociados a una ruta                                                                     |
+| Command   | CreateFullRouteCommand | Comando para la creación de rutas completas      | Representar la intención de crear una ruta                                                                   |
+| Command   | UpdateRouteCommand     | Comando para actualizar rutas                    | Representar la intención de actualizar una ruta                                                              |
+| Command   | DeleteRouteCommand     | Comando para eliminar rutas                      | Representar la intención de eliminar una ruta                                                                |
+| Query     | GetAllRoutesQuery      | Consulta de todas las rutas                      | Obtener el listado de rutas registradas                                                                      |
+| Query     | GetRouteByIdQuery      | Consulta de una ruta específica por ID           | Obtener la información detallada de una ruta                                                                 |
+
+**Sub-capa Services:**  
+
+| Tipo      | Nombre               | Descripción                                      | Responsabilidad Principal                                                           |
+| --------- | -------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| Interface | IRouteCommandService | Servicio para manejar los comandos de rutas      | Estipular una estructura clara a seguir para operaciones de creación, actualización y eliminación |
+| Interface | IRouteQueryService   | Servicio para manejar las consultas de rutas     | Estipular una estructura clara a seguir para operaciones de consulta                 |
+| Interface | IRouteRepository     | Servicio para operaciones de persistencia        | Definir contrato para acceso y manipulación de datos de rutas                        |
+
   
 #### 2.6.4.2. Interface Layer
-Esta capa maneja la comunicación externa del sistema para las operaciones de rutas.
-
-- **REST:** El Controller `RoutesController` es el punto de entrada para las peticiones HTTP.  
-- **Recursos:** Los Resources (`CreateFullRouteResource`, `UpdateRouteResource`, etc.) se usan como DTOs.  
-- **Transformadores:** Clases como `CreateFullRouteCommandFromResource` convierten los recursos en comandos.
+| Tipo       | Nombre                            | Descripción                                          | Responsabilidad Principal                                                  |
+| ---------- | --------------------------------- | ---------------------------------------------------- | -------------------------------------------------------------------------- |
+| Controller | RoutesController                  | Controlador principal de rutas                       | Recibir solicitudes HTTP, coordinar la ejecución y devolver respuestas     |
+| Resource   | CreateFullRouteResource           | DTO para creación de rutas completas                 | Representar datos de entrada para creación de rutas                        |
+| Resource   | UpdateRouteResource               | DTO para actualización de rutas                      | Representar datos de entrada para actualizar rutas                         |
+| Assembler  | CreateFullRouteCommandFromResource| Convierte un recurso en un comando                   | Evitar la corrupción entre la comunicación de datos                        |
 
 #### 2.6.4.3. Application Layer
-Esta capa orquesta las operaciones de negocio para la gestión de rutas.
+**Sub-capa Internal:**  
 
-- **Servicios:** Las clases `RouteCommandService` y `RouteQueryService` implementan las interfaces correspondientes de la capa de Dominio.
+| Tipo            | Nombre              | Descripción                                  | Responsabilidad Principal                                   |
+| --------------- | ------------------- | -------------------------------------------- | ----------------------------------------------------------- |
+| CommandHandlers | RouteCommandService | Implementación de los comandos de rutas      | Implementar los métodos definidos en `IRouteCommandService` |
+| QueryHandlers   | RouteQueryService   | Implementación de las consultas de rutas     | Implementar los métodos definidos en `IRouteQueryService`   |
+
 
 #### 2.6.4.4 Infrastructure Layer
-Esta capa se encarga de los detalles técnicos, como la persistencia de datos para las rutas.
+**Sub-capa Repository:**  
 
-- **Repositorio:** La clase `RouteRepository` proporciona la implementación para la interfaz `IRouteRepository`, permitiendo el acceso a los datos.
+| Tipo       | Nombre          | Descripción                          | Responsabilidad Principal                      |
+| ---------- | --------------- | ------------------------------------ | ---------------------------------------------- |
+| Repository | RouteRepository | Repositorio de persistencia de rutas | Acceder y manipular datos persistidos de rutas |
   
 #### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
