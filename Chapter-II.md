@@ -482,6 +482,18 @@ Como último paso, identificamos los eventos que se relacionen entre sí mediant
 
 #### 2.5.1.1. Candidate Context Discovery
 
+En esta sesión aplicamos la técnica de Candidate Context Discovery para identificar y separar los posibles bounded contexts. Para ello, aplicamos principalmente la técnica look-for-pivotal-events para analizar los eventos que marcan un cambio de estado en el negocio. Al identificar eventos como **ParaderoCreado**, **RutaCreada**,  **UsuarioRegistrado**, entre otros; pudimos detectar que cada uno implicaba responsabilidades y reglas distintas.
+
+Este proceso nos llevo a crear los siguientes Bounded Contexts:
+
+| Bounded Context       | Descripción                                                                 | Eventos clave                                                   |
+|-----------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------|
+| IAM                   | Maneja la autenticación y autorización de los usuarios, asegurando accesos. | `Usuario Registrado`, `Usuario Autenticado`                     |
+| Profile               | Administra la información de perfil de conductores y pasajeros.             | `Perfil Creado`, `Perfil Actualizado`                           |
+| Gestión de Paraderos  | Permite crear, editar y eliminar paraderos, que sirven como puntos de ruta. | `Paradero Creado`, `Paradero Actualizado`, `Paradero Eliminado` |
+| Gestión de Rutas      | Administra la creación, edición y eliminación de rutas con paraderos.       | `Ruta Creada`, `Ruta Actualizada`, `Ruta Eliminada`             |
+
+
 #### 2.5.1.2. Domain Message Flow Modeling
 
 #### 2.5.1.3. Bounded Context Canvases
