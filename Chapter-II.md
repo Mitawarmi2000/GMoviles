@@ -532,6 +532,11 @@ Esta capa contiene la lógica de negocio central del dominio de **"rutas"**.
 - **Interfaces:** Se establecen las interfaces `IRouteCommandService`, `IRouteQueryService` e `IRouteRepository`.
   
 #### 2.6.4.2. Interface Layer
+Esta capa maneja la comunicación externa del sistema para las operaciones de rutas.
+
+- **REST:** El Controller `RoutesController` es el punto de entrada para las peticiones HTTP.  
+- **Recursos:** Los Resources (`CreateFullRouteResource`, `UpdateRouteResource`, etc.) se usan como DTOs.  
+- **Transformadores:** Clases como `CreateFullRouteCommandFromResource` convierten los recursos en comandos.
 
 #### 2.6.4.3. Application Layer
 #### 2.6.4.4 Infrastructure Layer
