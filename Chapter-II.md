@@ -1674,15 +1674,126 @@ En esta presente imagen, las clases del dominio IAM incluyen User como aggregate
 | trial | Indica si el usuario está en un período de prueba (true/false). |
 | username | Nombre de usuario único utilizado para iniciar sesión. |
 
-### 2.6.2. Bounded Context: Profile
-#### 2.6.2.1. Domain Layer
-#### 2.6.2.2. Interface Layer
-#### 2.6.2.3. Application Layer
-#### 2.6.2.4 Infrastructure Layer
-#### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
-#### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
+## 2.6.2. Bounded Context: Profile
+
+Siguiendo el modelo de arquitectura "Clean Architecture" hemos dividido el proyecto en capas. A continuación detallamos las capas del Bounded Context Profile referenciado.
+
+### 2.6.2.1. Domain Layer
+
+#### Sub-capa Model - Aggregates:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Aggregate | Profile | Entidad que representa un perfil en el sistema | Ser el punto de entrada para modificar y mantener la integridad de la información del perfil como entidad del dominio | Relacionado con otros bounded contexts que requieren información de perfiles |
+
+#### Sub-capa Model - Commands:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Command | CreateProfileCommand | Comando para crear un nuevo perfil | Representar la intención de crear un nuevo perfil en el sistema | Usado en la implementación del servicio de comandos de perfil |
+| Command | CreateProfileWithFileCommand | Comando para crear un perfil con archivo adjunto | Representar la intención de crear un nuevo perfil incluyendo archivos de documentación | Usado en la implementación del servicio de comandos de perfil |
+| Command | DeleteProfileCommand | Comando para eliminar un perfil | Representar la intención de eliminar un perfil del sistema | Usado en la implementación del servicio de comandos de perfil |
+| Command | UpdateProfileCommand | Comando para actualizar información de perfil | Representar la intención de modificar los datos de un perfil existente | Usado en la implementación del servicio de comandos de perfil |
+
+#### Sub-capa Model - Queries:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Query | GetAllProfilesQuery | Consulta para obtener todos los perfiles | Representar la intención de obtener la lista completa de perfiles registrados | Usado en la implementación del servicio de consultas |
+| Query | GetProfileByRucUserQuery | Consulta para obtener perfil por RUC de usuario | Representar la intención de buscar un perfil específico por el RUC del usuario asociado | Usado en la implementación del servicio de consultas |
+| Query | GetProfileByIdQuery | Consulta para obtener perfil por ID | Representar la intención de buscar un perfil específico por su identificador único | Usado en la implementación del servicio de consultas |
+| Query | GetProfileByNameQuery | Consulta para obtener perfil por nombre | Representar la intención de buscar un perfil específico por su nombre comercial | Usado en la implementación del servicio de consultas |
+
+#### Sub-capa Repositories:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IProfileRepository | Repositorio para operaciones de persistencia del modelo Profile | Definir contratos para operaciones CRUD de perfiles | Implementado en la capa de Infrastructure |
+
+#### Sub-capa Services:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Interface | IProfileCommandService | Servicio para métodos de comandos de perfil | Estipular una estructura clara a seguir para operaciones de escritura | Uso en la capa "application" para implementar los métodos dados |
+| Interface | IProfileQueryService | Servicio para métodos de consulta de perfil | Estipular una estructura clara a seguir para operaciones de lectura | Usado en la capa "Infrastructure" para la implementación de los métodos |
+
+### 2.6.2.2. Interface Layer
+
+#### Sub-capa REST - Resources:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Resource | ProfileResource | Estructura de datos de perfil para API | Representar y exponer datos de perfil de forma accesible y estructurada para el cliente | Usado en controladores para estructurar respuestas de perfil |
+| Resource | CreateProfileFormResource | Estructura de petición para crear perfil con formulario | Representar datos de entrada para creación de perfil a través de formulario | Usado en controlador para procesar peticiones de creación |
+| Resource | CreateProfileResource | Estructura de petición para crear perfil | Representar datos de entrada para creación de perfil | Usado en controlador para procesar peticiones de creación estándar |
+| Resource | CreateProfileWithFileResource | Estructura de petición para crear perfil con archivos | Representar datos de entrada para creación de perfil incluyendo archivos adjuntos | Usado en controlador para procesar peticiones con documentos |
+| Resource | DeleteProfileResource | Estructura de petición para eliminar perfil | Representar datos necesarios para identificar y eliminar un perfil | Usado en controlador para procesar peticiones de eliminación |
+| Resource | UpdateProfileResource | Estructura de petición para actualizar perfil | Representar datos de entrada para actualización de información de perfil | Usado en controlador para procesar peticiones de actualización |
+| Resource | UpdateProfileWithFileResource | Estructura de petición para actualizar perfil con archivos | Representar datos de entrada para actualización de perfil incluyendo archivos adjuntos | Usado en controlador para procesar actualizaciones con documentos |
+
+#### Sub-capa REST - Transform:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Assembler | ProfileResourceFromEntityAssembler | Transformador de entidad Profile a ProfileResource | Convertir la entidad del dominio a su representación REST correspondiente | Usado en controladores para transformar respuestas |
+| Assembler | CreateProfileCommandFromResourceAssembler | Transformador de CreateProfileResource a CreateProfileCommand | Convertir la petición REST a comando del dominio | Usado en controlador para procesar peticiones de creación |
+| Assembler | DeleteProfileCommandFromResourceAssembler | Transformador de DeleteProfileResource a DeleteProfileCommand | Convertir la petición REST a comando del dominio | Usado en controlador para procesar peticiones de eliminación |
+| Assembler | UpdateProfileCommandFromResourceAssembler | Transformador de UpdateProfileResource a UpdateProfileCommand | Convertir la petición REST a comando del dominio | Usado en controlador para procesar peticiones de actualización |
+
+### 2.6.2.3. Application Layer
+
+#### Sub-capa Internal - CommandServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| CommandHandler | ProfileCommandService | Implementación de comandos de perfil | Implementar los métodos para el servicio de gestión de perfiles | Implementa los métodos de la interface IProfileCommandService en la capa de "Services" |
+
+#### Sub-capa Internal - QueryServices:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| QueryHandler | ProfileQueryService | Implementación de consultas de perfil | Implementar los métodos para las consultas de perfiles | Implementa los métodos de la interface IProfileQueryService en la capa de "Services" |
+
+### 2.6.2.4. Infrastructure Layer
+
+#### Sub-capa Persistence - Repositories:
+
+| Tipo | Nombre | Descripción | Responsabilidad Principal | Relación con otros elementos |
+|------|--------|-------------|---------------------------|------------------------------|
+| Repository | ProfileRepository | Repositorio para usar del modelo "Profile" | Acceder y manipular datos persistidos de perfiles en la base de datos | Usado en la Capa "Application" para implementar operaciones CRUD de perfiles |
+
+### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+Este diagrama representa la descomposición interna del container Profile Application, correspondiente al bounded context de gestión de perfiles de empresa dentro del sistema. Se trata de un backend desarrollado bajo los principios de Clean Architecture y Domain-Driven Design (DDD), y se ilustra aquí en el Nivel 3 del C4 Model (Component Diagram).
+
+![Profile Component Diagram](assets/CompProfile.png)
+
+### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
+
 #### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+**Diagrama de clases de la capa Domain:**
+
+En esta imagen se muestran las clases del dominio Profile que incluyen Company como aggregate root, Commands para las operaciones CRUD de empresas, Queries para las consultas de información, e interfaces para los servicios de dominio con sus respectivas implementaciones.
+
+![Profile Domain Class Diagram](assets/ClassProfile.png)
+
 #### 2.6.2.6.2. Bounded Context Database Design Diagram
+
+![Profile Database Diagram](assets/BaseProfile.PNG)
+
+| Nombre | Descripción |
+|--------|-------------|
+| id | Identificador único del registro, generalmente una clave primaria. |
+| created_at | Fecha y hora en que se creó el registro. |
+| updated_at | Fecha y hora de la última actualización del registro. |
+| profile_name | Nombre oficial del perfil. |
+| profile_email | Dirección de correo electrónico del perfil. |
+| profile_phone | Número de teléfono principal del perfil. |
+| profile_address | Dirección física del perfil. |
+| profile_ruc | Registro Único de Contribuyentes del perfil. |
+| profile_description | Descripción detallada de las actividades y servicios del perfil. |
+| profile_logo_url | URL del logotipo del perfil almacenado en el sistema. |
 
 ### 2.6.3. Bounded Context: Stops
 #### 2.6.3.1. Domain Layer
