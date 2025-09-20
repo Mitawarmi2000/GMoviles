@@ -863,6 +863,9 @@ El siguiente diagrama de despliegue describe la infraestructura física y lógic
 
 
 #### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+<img width="1497" height="855" alt="image" src="https://github.com/user-attachments/assets/92a252f4-627e-4f60-9ea5-771eb68ea37f" />
+
 #### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
 #### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
 #### 2.6.3.6.2. Bounded Context Database Design Diagram
